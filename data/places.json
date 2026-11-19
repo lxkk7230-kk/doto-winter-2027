@@ -897,54 +897,193 @@
   },
   {
     "id": "s01",
-    "name": "Guest House Le Pou（ゲストハウス ルポ）",
-    "cn": "美幌站前整栋民宿",
+    "name": "ゲストハウス ルポ（GUESTHOUSE LE REPOS）",
+    "cn": "美幌站前民宿 ルポ",
     "region": "美幌·网走",
     "layer": "stay",
-    "type": "整栋住宿",
-    "highlight": "前四晚住美幌站前。两间独立卧室各有三张单人床，可停三辆车。",
+    "type": "行程住宿",
+    "highlight": "两对各住一间。两间独立卧室都在二楼，每间有三张单人床。一楼是客厅、浴室和卫生间。",
     "signature": "",
-    "price": "四晚 ¥33,188/人（约 1,390 元）",
-    "hours": "2/6 入住，2/10 离开",
-    "closed": "资料列 2/5 前可免费取消，以下单条款为准",
-    "review": "两对家人分房，适合作为网走和知床的出发点。",
+    "price": "四晚税前约 ¥35,248/人（约 1,480 元） · 三晚税前约 ¥27,451/人（约 1,153 元）",
+    "hours": "入住 15:00–22:00，10:00 前退房。2/6 入住，方案一 2/10 退房，方案二 2/9 退房。",
+    "closed": "本次 Airbnb 两个日期都显示 2/5 前免费取消，具体截止时刻见订单条件。",
+    "review": "美幌站前整栋，冬季也能停三辆车。夜里从卧室去卫生间需要下楼。",
     "drive": "女满别机场至住处约 15 分钟",
     "url": "https://www.airbnb.jp/rooms/1806958276032753119",
-    "lat": 43.8343,
-    "lng": 144.1047,
-    "precision": "房源公开的大致位置，入住地址以房东通知为准",
-    "geoSource": "https://www.airbnb.jp/rooms/1806958276032753119",
+    "lat": 43.8341934,
+    "lng": 144.104757,
+    "precision": "图钉取自楽天トラベル的住宿地图。到店停车和入住入口以房东指引为准。",
+    "geoSource": "https://travel.rakuten.co.jp/HOTEL/194144/rtmap.html",
     "image": "img/s01.jpg",
     "photoSource": "https://www.airbnb.jp/rooms/1806958276032753119",
-    "extra": "Airbnb 房源 1806958276032753119。地图使用房源公开的大致位置，精确入住地址以房东通知为准。",
-    "links": []
+    "extra": "原行程写作 Guest House Le Pou，原四晚参考价为每人 ¥33,188（约 1,394 元）。本次四位成人的 Airbnb 页面显示四晚整栋 ¥140,990、三晚整栋 ¥109,802，均为税前显示价。最终应付以结算明细为准。",
+    "links": [
+      {
+        "name": "Airbnb · 四晚四人",
+        "url": "https://www.airbnb.jp/rooms/1806958276032753119?check_in=2027-02-06&check_out=2027-02-10&adults=4&guests=4&currency=JPY"
+      },
+      {
+        "name": "Airbnb · 三晚四人",
+        "url": "https://www.airbnb.jp/rooms/1806958276032753119?check_in=2027-02-06&check_out=2027-02-09&adults=4&guests=4&currency=JPY"
+      },
+      {
+        "name": "楽天トラベル · 登记名称与照片",
+        "url": "https://travel.rakuten.co.jp/HOTEL/194144/194144.html"
+      }
+    ],
+    "address": "北海道網走郡美幌町新町1-53-1"
   },
   {
     "id": "s02",
     "name": "Aioi House",
-    "cn": "津别相生整栋小屋",
+    "cn": "津别相生 Aioi House",
     "region": "阿寒·津别",
     "layer": "stay",
-    "type": "整栋住宿",
-    "highlight": "后三晚住约 50 平方米的整栋，两间卧室分别为一张双人床、两张单人床。",
+    "type": "行程住宿",
+    "highlight": "约 50 平方米的整栋小屋，四人分住两间独立卧室。一间有一张双人床，另一间有两张单人床。",
     "signature": "",
     "price": "三晚 ¥16,500/人（约 690 元）",
-    "hours": "2/10 入住，2/13 清晨离开",
-    "closed": "Booking 资料列 2/9 前可免费取消，以订单为准",
-    "review": "两对家人分房；提前备好晚饭、早餐和第二天饮水。",
-    "drive": "阿寒湖约 25 分钟，至女满别机场约 1 小时",
+    "hours": "方案一 2/10–2/13，住三晚。方案二 2/9–2/13，住四晚，需重新报价。",
+    "closed": "原 Booking 三晚报价列 2/9 前可免费取消。改为四晚需另核价格和取消期限。",
+    "review": "从住处步行难买到食材。方案一在美幌出发前买，方案二在津别镇买。道の駅あいおい周二休息。",
+    "drive": "到阿寒湖约 25 分钟，到女满别机场约 1 小时",
     "url": "https://www.booking.com/searchresults.html?ss=Aioi+House+Tsubetsu",
-    "lat": 43.5433,
-    "lng": 143.9826,
-    "precision": "房源公开的大致位置，入住地址以房东通知为准",
-    "geoSource": "https://www.airbnb.jp/rooms/1425790170855532409",
+    "lat": 43.5433286,
+    "lng": 143.9826059,
+    "precision": "图钉取自公开的住宿地点。到店停车和入住入口以房东指引为准。",
+    "geoSource": "https://www.google.co.jp/travel/hotels/entity/CgoIjK6Tyc6X_5Q4EAE",
     "image": "img/s02.jpg",
     "photoSource": "https://www.airbnb.jp/rooms/1425790170855532409",
-    "extra": "按四人三晚合计 ¥66,000（约 2,770 元）估算。以 Booking.com 为准；同房源 Airbnb 曾列 2/5 前免费取消。公开图钉仅示大致位置，准确入住地址以房东通知为准。",
+    "extra": "人均按四人入住、Booking 三晚整栋报价 ¥66,000（约 2,770 元）折算。Airbnb 页可对照房间照片，取消期限以实际预订渠道为准。",
     "links": [
       {
         "name": "同一房源照片 · Airbnb",
         "url": "https://www.airbnb.jp/rooms/1425790170855532409"
+      }
+    ],
+    "address": "北海道網走郡津別町字相生102-8"
+  },
+  {
+    "id": "s04",
+    "name": "ゲストハウス ビホロノビ",
+    "cn": "美幌田间红屋",
+    "region": "美幌·网走",
+    "layer": "stay",
+    "type": "备选住宿",
+    "signature": "",
+    "highlight": "2023 年翻新的 103 平方米整栋。二楼两间卧室各有独立房门，一间双床，一间铺日式床垫。一楼另有一间铺双人床垫的卧室。",
+    "price": "四晚 ¥25,400/人（约 1,067 元） · 三晚 ¥19,550/人（约 821 元）",
+    "hours": "入住 15:00–19:00，10:00 退房。先到 Working Space KITEN 办手续，再开约 10 分钟到房子。钥匙最快 11:00 可领。",
+    "closed": "2/6–2/10 经营方公开日历未标占用，采用申请制，需等经营方确认。官网列入住前一天取消收房费 50%，当天 70%，无通知未到 100%。",
+    "review": "卧室分布在两层，浴室和厕所均在一楼。有厨房、桑拿小屋和约三个普通车位。经营方提供各间实拍与价目。",
+    "drive": "女满别机场至住处约 20 分钟，另留领取钥匙的时间。",
+    "lat": 43.7875153,
+    "lng": 144.0835988,
+    "address": "北海道網走郡美幌町字美富548-4",
+    "precision": "图钉是经营方地图上的住宿地址。入住先到美幌町字美禽252-2 的 KITEN 领钥匙。",
+    "geoSource": "https://goo.gl/maps/vko5Zaw1LAU8G41v8",
+    "url": "https://www.active-management.co.jp/guesthouse-bihoronobi/",
+    "image": "img/s04.jpg",
+    "photoSource": "https://www.active-management.co.jp/guesthouse-bihoronobi/",
+    "extra": "按四位成人及经营方公布费率计算，房费每人每晚 ¥5,750（约 242 元），三晚起清扫费四人平摊每人 ¥2,000（约 84 元），另含每人每晚 ¥100（约 4 元）住宿税。两档合计均已计入清扫费及住宿税。确认电话 050-1732-8726。",
+    "links": [
+      {
+        "name": "町方户型图 · 看二楼两扇房门",
+        "url": "https://www.bihoro-iju.com/wp-content/themes/bihoro-iju/img/house/plan_05@2x.jpg"
+      },
+      {
+        "name": "经营方日历 · 2027 年 2 月",
+        "url": "https://calendar.google.com/calendar/embed?src=reserve%40punctual.co.jp&ctz=Asia%2FTokyo&dates=20270201%2F20270228&mode=MONTH"
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/nobi-living.jpg",
+        "caption": "客厅与一楼和室",
+        "source": "https://www.active-management.co.jp/guesthouse-bihoronobi/"
+      }
+    ]
+  },
+  {
+    "id": "s05",
+    "name": "びほろエコハウス",
+    "cn": "美幌生态木屋",
+    "region": "美幌·网走",
+    "layer": "stay",
+    "type": "备选住宿",
+    "signature": "",
+    "highlight": "两对可各用一楼一间双床房。Room 1 与 Room 2 分处东西两端，各自有入口，公共餐厅与客厅在中间。楼上还有第三间双床房。",
+    "price": "四晚 ¥13,000/人（约 546 元） · 三晚 ¥9,750/人（约 410 元）",
+    "hours": "15:00 入住，10:00 退房。提前六个月起电话受理。",
+    "closed": "町方公布的是四人研修住宿费率。2/6 起连住三晚或四晚的空房、一般家庭可否全栋使用及含税实付，须由接待方电话确认。050-1732-8726。",
+    "review": "2010 年落成的北海道木材示范住宅。设厨房、浴室、停车场。Room 2 内有卫生间和洗手台。",
+    "drive": "位于美幌町西侧的みどりの村。雪天请按机场至美幌一带约 15–25 分钟预留。",
+    "lat": 43.8382187152,
+    "lng": 144.0891448215,
+    "address": "北海道網走郡美幌町字美禽258番地の2",
+    "precision": "图钉来自美幌町政府的生态屋专属地点页。",
+    "geoSource": "https://www.town.bihoro.hokkaido.jp/map/7.html",
+    "url": "https://www.town.bihoro.hokkaido.jp/site/kanko/2590.html",
+    "image": "img/s05.jpg",
+    "photoSource": "https://bihoro.jp/hotel/127/",
+    "extra": "官方四人价折每晚每人 ¥3,250（约 137 元）。表中金额按晚数计算，额外税费如有以电话为准。官网将冬季 10% 暖气附加说明列在按小时租用一栏。",
+    "links": [
+      {
+        "name": "町方平面图 · 一楼两间双床房",
+        "url": "https://www.town.bihoro.hokkaido.jp/uploaded/image/4764.png"
+      },
+      {
+        "name": "町方卧室实拍与床型",
+        "url": "https://www.town.bihoro.hokkaido.jp/uploaded/attachment/5756.png"
+      },
+      {
+        "name": "美幌町 · 住宿介绍",
+        "url": "https://www.bihoro-iju.com/experience/spot/"
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/eco-bedroom.jpg",
+        "caption": "东侧一楼双床卧室",
+        "source": "https://bihoro.jp/hotel/127/"
+      }
+    ]
+  },
+  {
+    "id": "s06",
+    "name": "BihoroStay A",
+    "cn": "美幌两层日式整栋",
+    "region": "美幌·网走",
+    "layer": "stay",
+    "type": "备选住宿",
+    "signature": "",
+    "highlight": "建议一对用一楼 A11 双床卧室，另一对独用二楼卧室区。A11 实拍可见房门，二楼两间之间是宽通口，平面图标有通向梯厅的门。",
+    "price": "四晚 ¥31,625/人（约 1,328 元） · 三晚 ¥24,250/人（约 1,019 元）",
+    "hours": "2/6 入住，2/9 或 2/10 退房。房东提供自助入住，交接时间见当次房源规则。",
+    "closed": "11/19 查询，两档都显示 2/1 前免费取消，具体截止时刻以订单条件为准。",
+    "review": "Airbnb 评分 4.84/5（31 条）。114 平方米、两个卫生间，门前可停 2–3 辆车。室内各房间设有暖气。",
+    "drive": "女满别机场至住处约 12 分钟（房东估计），超市约 5 分钟内车程。",
+    "lat": 43.8246,
+    "lng": 144.1236,
+    "address": "北海道網走郡美幌町（门牌以房东入住指引为准）",
+    "precision": "房源公开地图位置，未公开门牌。导航按房名搜索，最后一段请跟随入住指引。",
+    "geoSource": "https://www.airbnb.jp/rooms/1248045537734551104",
+    "url": "https://www.airbnb.jp/rooms/1248045537734551104?check_in=2027-02-06&check_out=2027-02-10&adults=4&guests=4&currency=JPY",
+    "image": "img/s06.jpg",
+    "photoSource": "https://www.airbnb.jp/rooms/1248045537734551104",
+    "extra": "Airbnb 已按四位成人显示四晚 ¥126,500、三晚 ¥97,000。价格明细标示无额外手续费，未单列当地住宿税。两对之间要能关门，请按一楼、二楼分住。",
+    "links": [
+      {
+        "name": "房东平面图 · A11 与二楼通口",
+        "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1248045537734551104/original/3d59464a-967d-489e-b424-550ff6beae8f.jpeg"
+      },
+      {
+        "name": "一楼卧室 · 房门实拍",
+        "url": "https://a0.muscache.com/im/pictures/miso/Hosting-1248045537734551104/original/53c3a0f1-7434-4729-a6bb-b841baad9f97.jpeg"
+      },
+      {
+        "name": "Airbnb · 三晚四人",
+        "url": "https://www.airbnb.jp/rooms/1248045537734551104?check_in=2027-02-06&check_out=2027-02-09&adults=4&guests=4&currency=JPY"
       }
     ]
   },

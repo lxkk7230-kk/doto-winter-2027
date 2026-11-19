@@ -65,6 +65,13 @@
         const img=place?.image?'<img src="'+esc(place.image)+'" alt="">':'';
         const hint=day?(geo.note||place?.highlight||''):'';
         el.innerHTML=img+'<strong>'+esc(preferred?geo.name:name)+'</strong>'+(hint?'<p>'+esc(hint)+'</p>':'');
+        if (chosen==='s01' || chosen==='s02') {
+          const compare=document.createElement('a');
+          compare.className='rt-poplink';
+          compare.href='#guide/'+scheme+'/stays';
+          compare.textContent='比较美幌住宿';
+          el.append(compare);
+        }
         if (day) {
           const ids=different.length ? [chosen,...different.filter(i=>i!==chosen)] : [chosen];
           for (const which of ids) {
@@ -116,7 +123,7 @@
       tracks.clearLayers(); pins.clearLayers(); groups=new Map(); bounds=L.latLngBounds([]);
       if(!selected) {
         Object.keys(data.days[scheme]).forEach(d=>drawDay(+d,true));
-        const labels=[['s01','住 · 美幌','left'],['s02','住 · 相生','left'],['a02','网走','right'],['a12','乌托罗','left'],['a22','阿寒湖','right'],['f001','钏路','left'],...(scheme==='B'?[['a28','摩周湖','right'],['f099','森林咖啡','left']]:[['a25','屈斜路湖','right']])];
+        const labels=[['s01','美幌站前 · ルポ','left'],['s02','住 · 相生','left'],['a02','网走','right'],['a12','乌托罗','left'],['a22','阿寒湖','right'],['f001','钏路','left'],...(scheme==='B'?[['a28','摩周湖','right'],['f099','森林咖啡','left']]:[['a25','屈斜路湖','right']])];
         labels.forEach(([id,name,dir])=>{const p=data.points[id];if(p)stopMarker(id,p,[],0,name,dir);});
       } else {
         drawDay(selected,false);

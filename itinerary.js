@@ -5,7 +5,7 @@
     A:{label:'方案一',title:'给流冰留一天',nights:'美幌 4 晚 · 相生 3 晚',photo:'a02',detail:'9 日网走看海雕，10 日经屈斜路湖换住'},
     B:{label:'方案二',title:'多一天看摩周湖',nights:'美幌 3 晚 · 相生 4 晚',photo:'a28',detail:'9 日森林午餐后换住，10 日专程看双湖'}
   };
-  const names = {airport:'女满别机场',s01:'美幌住处',s02:'相生住处',a01:'流冰祭',f024:'喜八',a02:'破冰船',f029:'温 · 荞麦面',a04:'网走监狱',f028:'烤羊肉（可选）',a17:'知床自然中心',f057:'GVO 午餐',a12:'流冰徒步',a05:'能取岬',a09:'观鹰集合点',a27:'美幌峠',a25:'砂湯湖岸',a26:'硫黄山',teshikaga:'弟子屈',tsubetsu:'津别镇',a28:'摩周湖',f099:'森林咖啡',a30:'霜之花（看天气）',a20:'湖面滑冰',f088:'温泉工房',a21:'阿伊努小镇',a22:'伊克罗',a24:'冬華美烟花',a32:'丹顶鹤',f001:'和商市场',f017:'六花亭',dinner:'炉ばた',orix:'Orix 还车'};
+  const names = {airport:'女满别机场',s01:'美幌 · 站前ルポ',s02:'相生住处',a01:'流冰祭',f024:'喜八',a02:'破冰船',f029:'温 · 荞麦面',a04:'网走监狱',f028:'烤羊肉（可选）',a17:'知床自然中心',f057:'GVO 午餐',a12:'流冰徒步',a05:'能取岬',a09:'观鹰集合点',a27:'美幌峠',a25:'砂湯湖岸',a26:'硫黄山',teshikaga:'弟子屈',tsubetsu:'津别镇',a28:'摩周湖',f099:'森林咖啡',a30:'霜之花（看天气）',a20:'湖面滑冰',f088:'温泉工房',a21:'阿伊努小镇',a22:'伊克罗',a24:'冬華美烟花',a32:'丹顶鹤',f001:'和商市场',f017:'六花亭',dinner:'炉ばた',orix:'Orix 还车'};
   const week = ['六','日','一','二','三','四','五','六'];
   const dates = [6,7,8,9,10,11,12,13];
   const esc = v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -15,16 +15,17 @@
     const parts=location.hash.slice(1).split('/');
     const scheme=parts[1]==='B'?'B':'A';
     const date=dates.includes(Number(parts[2]))?Number(parts[2]):0;
-    const key=scheme+'/'+date;
+    const study=parts[2]==='stays';
+    const key=scheme+'/'+(study?'stays':date);
     if(!view || view.root!==root) {
       const inventory=new Map(items.map(i=>[i.id,i]));
-      root.innerHTML='<div class="rt-wrap"><header class="rt-intro"><div><h1>行程路线</h1><p>2027 年 2 月 6–13 日 <span>·</span> 北海道道东</p></div><span class="rt-trip">'+icon('calendar',17)+' 8 天 7 晚 · 4 人同行</span></header>'+
-        '<nav class="rt-plans" aria-label="选择行程方案"></nav>'+
+      root.innerHTML='<div class="rt-wrap"><div class="rt-stay-page" hidden></div><div class="rt-route-page"><header class="rt-intro"><div><h1>行程路线</h1><p>2027 年 2 月 6–13 日 <span>·</span> 北海道道东</p></div><span class="rt-trip">'+icon('calendar',17)+' 8 天 7 晚 · 4 人同行</span></header>'+
+        '<nav class="rt-plans" aria-label="选择行程方案"></nav><a class="rt-stay-entry"></a>'+
         '<div class="rt-work"><aside class="rt-index"><h2>选一天看路线</h2><nav class="rt-days" aria-label="日期与停靠点"></nav></aside>'+
         '<div class="rt-right"><section class="rt-chart"><div class="rt-chartbar"><div><span class="rt-kicker"></span><h2 class="rt-maptitle"></h2></div><div class="rt-tools"><button type="button" class="rt-fit" title="显示整条路线" aria-label="显示整条路线">'+icon('focus',18)+'</button><button type="button" class="rt-expand" aria-label="展开大地图">'+icon('expand',17)+'<span>大图</span></button></div></div>'+
         '<div class="rt-mobile-picker"><label>看哪天 <select aria-label="选择要查看的路线日期"></select></label></div>'+
         '<div class="rt-chain"></div><div class="rt-canvas" aria-label="道东行车路线互动地图"></div><div class="rt-foot"></div></section><div class="rt-story"></div></div></div>'+
-        '<section class="rt-ref"><h2>行前资料</h2><div class="rt-refitems"></div></section></div>';
+        '<section class="rt-ref"><h2>行前资料</h2><div class="rt-refitems"></div></section></div></div>';
       const mapNode=root.querySelector('.rt-canvas');
       const frame=root.querySelector('.rt-chart');
       const chooseDay = d=>{location.hash=url(view.scheme,d)};
@@ -49,9 +50,20 @@
         if(pin) {view.map.focusStop(pin.dataset.rtFocus);frame.scrollIntoView({block:'nearest'});}
       });
     }
-    if(view.key===key){view.map.resize();return;}
+    if(view.key===key){if(!study)view.map.resize();return;}
     const {inventory,map}=view;
     view.key=key;view.scheme=scheme;view.date=date;
+    const research=root.querySelector('.rt-stay-page');
+    root.querySelector('.rt-route-page').hidden=study;
+    research.hidden=!study;
+    if(study){
+      research.innerHTML=window.dotoStayResearch(inventory,scheme);
+      root.scrollTop=0;
+      return;
+    }
+    const entry=root.querySelector('.rt-stay-entry');
+    entry.href=url(scheme,'stays');
+    entry.innerHTML=icon('home',18)+'<span>美幌住站前ルポ <i>·</i> 相生住 Aioi House</span><b>比较美幌民宿 ›</b>';
     const daily=plans[scheme].days;
     const colors=window.dotoMap.dayColors;
     root.querySelector('.rt-plans').innerHTML=Object.entries(meta).map(([id,m])=>{

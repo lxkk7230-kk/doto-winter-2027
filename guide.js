@@ -29,6 +29,8 @@
     return '<article class="dg-stay"><img src="' + escape(item?.image || 'img/' + id + '.jpg') + '" alt="' + escape(name) + '" loading="lazy"><div><p class="dg-tag">' + nights + '</p><h4>' + name + '</h4><b class="dg-price">' + rate + '</b><p>' + room + '</p><p>' + policy + '</p><div class="dg-links">' + links + '</div></div></article>';
   }
 
+  const stayChoices = scheme => '<a href="#guide/' + (scheme === 'B' ? 'B' : 'A') + '/stays">比较美幌住宿</a>';
+
   function logistics(inventory, scheme) {
     const moveEarly = scheme === 'B';
     const shopping = moveEarly
@@ -37,14 +39,14 @@
     return title('两处整栋住处','四人同行，每处都选两间独立卧室。') +
       '<div class="dg-twocol">' + stay('s01', inventory.get('s01'),
         moveEarly ? '2/6 入住 · 2/9 退房 · 3 晚' : '2/6 入住 · 2/10 退房 · 4 晚',
-        'Guest House Le Pou', '美幌站前。两间卧室各有 3 张单人床，可停 3 台车。女満別机场至住处约 15 分钟。',
-        moveEarly ? '3 晚房价待查' : '¥33,188 · 约 1,390 元/人',
-        moveEarly ? '按 2/6–2/9 重新查询四人整栋的空房、总价和取消截止时刻。' : '原报价在 2 月 5 日前可免费取消，截止时刻以 Airbnb 订单为准。',
-        link('airbnb1','Airbnb 房源')) +
+        '美幌站前 · ゲストハウス ルポ', '两间独立卧室都在二楼，每间 3 张单人床。可停 3 台车，女満別机场至住处约 15 分钟。',
+        moveEarly ? '3 晚人均 ¥27,451 · 约 1,153 元' : '4 晚人均 ¥35,248 · 约 1,480 元',
+        '11 月 19 日 Airbnb 四人入住税前价。报价列 2 月 5 日前免费取消，具体时刻见下单页。',
+        link('airbnb1','Airbnb 房源') + stayChoices(scheme)) +
       stay('s02', inventory.get('s02'),
         moveEarly ? '2/9 入住 · 2/13 退房 · 4 晚' : '2/10 入住 · 2/13 退房 · 3 晚',
         'Aioi House', '津別町相生，整栋约 50 平方米。一间双人床卧室，一间双单人床卧室。相生至阿寒湖约 25 分钟。',
-        moveEarly ? '4 晚房价待查' : '¥16,500 · 约 690 元/人',
+        moveEarly ? '4 晚房价待查' : '3 晚原报价人均 ¥16,500 · 约 690 元',
         moveEarly ? '按 2/9–2/13 在 Booking 重新核对四人整栋房价、空房和取消条款。' : '原 Booking 报价在 2 月 9 日前可免费取消。Airbnb 曾列 2 月 5 日，以实际下单渠道为准。',
         link('booking','Booking 搜索') + link('airbnb2','Airbnb 备查')) + '</div>' +
       title('航班与四驱租车','时间均为日本当地时间。') +
@@ -60,19 +62,22 @@
     const costs = [
       ['机票往返','JAL 去程，AIRDO 回程','¥27,225','约 1,140 元/人'],
       ['七座四驱租车','7 天，含雪胎与免责补偿','¥23,522','约 990 元/人'],
-      ['美幌住宿','Guest House Le Pou · ' + (moveEarly ? '3 晚' : '4 晚'),
-        moveEarly ? '待核价' : '¥33,188', moveEarly ? '2/6–2/9' : '约 1,390 元/人'],
+      ['美幌站前ルポ','Airbnb 税前 · ' + (moveEarly ? '2/6–2/9 三晚' : '2/6–2/10 四晚'),
+        moveEarly ? '¥27,451' : '¥35,248', moveEarly ? '约 1,153 元/人' : '约 1,480 元/人'],
       ['相生住宿','Aioi House · ' + (moveEarly ? '4 晚' : '3 晚'),
         moveEarly ? '待核价' : '¥16,500', moveEarly ? '2/9–2/13' : '约 690 元/人']
     ];
     const heading = moveEarly
-      ? title('机票和租车每人约 ¥50,747','约合人民币 2,130 元。两段住宿均需重新询价，核价后才能计算此方案的每人总额。')
-      : title('每人约 ¥100,435','约合人民币 4,220 元，包含往返机票、两处住宿和七座四驱租车。');
+      ? title('已知部分每人约 ¥78,198 · 约 3,284 元','含机票、租车及站前ルポ三晚税前价。相生四晚房价待查，七晚合计待定。')
+      : title('目前估算每人约 ¥102,495 · 约 4,305 元','含机票、租车、站前ルポ四晚税前价，以及相生三晚原报价。');
     return heading + '<div class="dg-budget">' +
       costs.map(([name,info,amount,detail]) => '<div><span><b>' + name + '</b><small>' + info + '</small></span><span><b>' + amount + '</b><small>' + detail + '</small></span></div>').join('') + '</div>' +
       '<div class="dg-twocol dg-budget-notes">' + transportCard('可选 NOC','¥2,310 · 约 100 元/人','额外租车保障，单独决定是否购买。','') +
       transportCard('另付费用','按实际选择','油费、门票、体验和餐食均另付。日程与地图列出的活动、餐食价格为人均参考。','') +
-      '</div><p class="dg-note">按 2026 年 11 月 19 日资料估算，100 日元约合 4.20 元。机票和原美幌住宿报价曾按 1 美元约 150 日元换算。请在下单时核对总额和取消条款。</p>';
+      '</div><p class="dg-note">' + (moveEarly
+        ? '相生 2/9–2/13 的房价及取消期限以四晚订单为准。'
+        : '原预算按站前ルポ四晚人均 ¥33,188（约 1,390 元）计算，原合计人均 ¥100,435（约 4,220 元）。') +
+      ' 人民币按 100 日元约合 4.20 元折算。另收的住宿税以结算时为准。</p><div class="dg-links">' + stayChoices(scheme) + '</div>';
   }
 
   function winter() {
