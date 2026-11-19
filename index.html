@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#184d45"><meta name="description" content="北海道道东冬季自驾地图。浏览住宿、36项玩乐和100家餐厅，保存全家想去的地方。"><title>道东冬季自驾 2027 · 旅行地图</title>
+<link rel="icon" href="compass.svg" type="image/svg+xml"><link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="vendor/markercluster.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="catalog.css"><link rel="stylesheet" href="guide.css"></head>
+<body><header class="topbar"><a class="brand" href="#map" aria-label="道东旅行手册首页"><img src="compass.svg" width="42" height="42" alt=""><span><b>道东旅行手册</b><small>北海道 · 冬季自驾 2027</small></span></a><nav id="mainnav" aria-label="主要导航"></nav><button class="plan-top" data-page="plan"><span data-icon="bookmark"></span><b>想去清单</b><span id="plan-count">0</span></button></header>
+<main>
+<section id="workspace" class="page active" aria-label="地图探索"><aside id="sidebar">
+<div class="side-head"><div class="hero"><img src="img/ice-sea.jpg" alt="網走的おーろら破冰船穿过鄂霍次克海流冰"><div class="hero-copy"><span><i></i>北海道 · 道东</span><h1>道东冬季自驾</h1><p>2027.02.06 — 02.13 <em></em> 4 人同行</p></div><a href="https://www.ms-aurora.com/abashiri/" target="_blank" rel="noopener" aria-label="封面照片来自網走流氷観光砕氷船おーろら" title="照片来源：流氷観光砕氷船おーろら"><span data-icon="camera"></span></a></div>
+<label class="search-box"><span data-icon="search"></span><input id="map-search" autocomplete="off" type="search" placeholder="搜索地点、店名或料理" aria-label="搜索地图地点"></label>
+<div id="quickfilters" class="quick" aria-label="选择地点类别"></div></div>
+<div class="list-head"><h2>地点一览 <span id="result-count"></span></h2><button class="text-btn" id="extra-filter"><span data-icon="sliders"></span> 筛选</button></div>
+<div id="filterbox" hidden><label>地区<select id="region-select"></select></label><label>料理类型<select id="type-select"></select></label><label class="tick"><input type="checkbox" id="must-filter"> 只看必去项目</label><label class="tick"><input type="checkbox" id="saved-filter"> 只看想去地点</label><button class="text-btn" id="clearfilters">重置筛选</button></div>
+<div id="side-list" aria-label="地点列表"><p class="loading">正在打开地点手册…</p></div>
+</aside>
+<div id="mapframe"><div id="map" aria-label="北海道道东互动地图"></div>
+<div class="map-tools"><div class="map-tools-left"><button id="area-button" class="map-pill" aria-expanded="false" aria-controls="area-menu"><span data-icon="map"></span><span id="area-name">道东全域</span><span data-icon="chevron"></span></button><button id="layer-button" class="map-pill" aria-expanded="false" aria-controls="layers-menu"><span data-icon="layers"></span>图层<span data-icon="chevron"></span></button></div><button id="expand-map" class="square" aria-label="展开大地图" title="展开大地图"><span data-icon="expand"></span></button></div>
+<div id="area-menu" class="floatmenu" hidden></div><div id="layers-menu" class="floatmenu" hidden></div>
+<div class="map-bottom"><div class="legend" aria-label="地图图例"><span><i class="dot play"></i>景点</span><span><i class="dot food"></i>美食</span><span><i class="dot stay"></i>住宿</span></div><button id="mob-list" class="map-pill" aria-expanded="false" aria-controls="sidebar"><span data-icon="list"></span>地点列表</button></div>
+<div class="map-zoom"><button id="fit-map" class="square" title="显示全部地点" aria-label="显示全部地点"><span data-icon="focus"></span></button><div class="zoom-stack"><button id="zoom-in" aria-label="放大地图" title="放大"><span data-icon="plus"></span></button><button id="zoom-out" aria-label="缩小地图" title="缩小"><span data-icon="minus"></span></button></div></div>
+</div></section>
+<section id="catalog" class="page contentpage" aria-label="图鉴"></section><section id="guide" class="page contentpage" aria-label="每日行程"></section><section id="wishlist" class="page contentpage" aria-label="想去清单"></section>
+</main><dialog id="detail" class="detail-dialog"><div id="detail-body"></div></dialog><div id="toast" role="status" aria-live="polite"></div>
+<script src="vendor/leaflet.js"></script><script src="vendor/markercluster.js"></script><script src="map.js"></script><script src="catalog.js"></script><script src="guide.js"></script><script src="app.js"></script></body></html>
