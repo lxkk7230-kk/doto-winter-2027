@@ -37,18 +37,22 @@
     let groups = new Map();
     let scheme = 'A';
     let selected = 0;
+    let alternative = '';
 
     function fit() {
       map.invalidateSize({pan:false});
       if (!bounds || !bounds.isValid()) return;
       const narrow = node.clientWidth < 580;
-      map.fitBounds(bounds,{paddingTopLeft:narrow?[22,22]:[48,32],paddingBottomRight:narrow?[24,32]:[54,37],maxZoom:13,animate:false});
+      map.fitBounds(bounds,{paddingTopLeft:narrow?[22,22]:[48,32],paddingBottomRight:narrow?[24,32]:[54,37],maxZoom:selected===12?17:13,animate:false});
     }
-    function routeFor(day) {return data.days[scheme][String(day)];}
+    function routeFor(day) {
+      if (day === 12 && alternative) return data.alternatives[alternative];
+      return data.days[scheme][String(day)];
+    }
     function stopMarker(id, point, nums, day, label, direction, entries=[]) {
       const item = inventory.get(id);
       const tag = nums.join('·');
-      const color = day ? dayColors[day] : (id==='s01' || id==='s02' ? '#173f3a' : '#4d615c');
+      const color = day ? dayColors[day] : (id==='s05' || id==='s02' ? '#173f3a' : '#4d615c');
       const name = label || point.name || item?.title || id;
       const size = tag.length>2?34:25;
       const marker = L.marker([point.lat,point.lng],{title:name,alt:name,keyboard:true,riseOnHover:true,
@@ -65,12 +69,12 @@
         const img=place?.image?'<img src="'+esc(place.image)+'" alt="">':'';
         const hint=day?(geo.note||place?.highlight||''):'';
         el.innerHTML=img+'<strong>'+esc(preferred?geo.name:name)+'</strong>'+(hint?'<p>'+esc(hint)+'</p>':'');
-        if (chosen==='s01' || chosen==='s02') {
-          const compare=document.createElement('a');
-          compare.className='rt-poplink';
-          compare.href='#guide/'+scheme+'/stays';
-          compare.textContent='比较美幌住宿';
-          el.append(compare);
+        if (chosen==='s05' || chosen==='s02') {
+          const stay=document.createElement('a');
+          stay.className='rt-poplink';
+          stay.href='#guide/'+scheme+'/stays';
+          stay.textContent='查看住宿';
+          el.append(stay);
         }
         if (day) {
           const ids=different.length ? [chosen,...different.filter(i=>i!==chosen)] : [chosen];
@@ -117,17 +121,23 @@
         }
       }
     }
-    function paint(which,day) {
+    function paint(which,day,variant) {
       scheme=which; selected=+day||0;
+      alternative=selected===12 && variant==='kushiro' ? 'kushiro' : '';
       map.closePopup();
       tracks.clearLayers(); pins.clearLayers(); groups=new Map(); bounds=L.latLngBounds([]);
       if(!selected) {
-        Object.keys(data.days[scheme]).forEach(d=>drawDay(+d,true));
-        const labels=[['s01','美幌站前 · ルポ','left'],['s02','住 · 相生','left'],['a02','网走','right'],['a12','乌托罗','left'],['a22','阿寒湖','right'],['f001','钏路','left'],...(scheme==='B'?[['a28','摩周湖','right'],['f099','森林咖啡','left']]:[['a25','屈斜路湖','right']])];
+        Object.keys(data.days[scheme]).forEach(d=>{
+          if (scheme==='A' && +d===9) return;
+          drawDay(+d,true);
+        });
+        const labels=[['s05','美幌生态木屋','left'],['s02','相生 · Aioi House','left'],['a02','网走','right'],['a12','乌托罗','left'],['a22','阿寒湖','right']];
+        if(scheme==='B') labels.push(['a28','摩周湖','right']);
         labels.forEach(([id,name,dir])=>{const p=data.points[id];if(p)stopMarker(id,p,[],0,name,dir);});
       } else {
         drawDay(selected,false);
-        const stops=window.DOTO_PLANS[scheme].days[selected].stops;
+        const plan=window.DOTO_PLANS[scheme];
+        const stops=(alternative ? plan.alternatives[alternative] : plan.days[selected]).stops;
         const marks=new Map();
         stops.forEach((s,i)=>{
           const id=s.mapId||s.id;
@@ -140,8 +150,9 @@
           const pin=stopMarker(m.id,m.p,m.nums,selected,undefined,undefined,m.ids.map(id=>({id})));
           m.ids.forEach(id=>groups.set(id,pin));
         });
-        const extra=selected===11?'akanpark':selected===6?'orix':null;
-        if(extra && data.points[extra]) groups.set(extra,stopMarker(extra,data.points[extra],[selected===11?'P':'接'],selected));
+        if(selected===11 && !groups.has('akanpark')) {
+          groups.set('akanpark',stopMarker('akanpark',data.points.akanpark,['P'],selected));
+        }
       }
       fit();
     }

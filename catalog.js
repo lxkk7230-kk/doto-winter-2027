@@ -5,7 +5,6 @@
   const active = new WeakMap();
   const foodGroups = ['钏路', '网走', '女满别·大空', '美幌·津别', '知床·斜里', '清里·小清水', '弟子屈·阿寒湖'];
   const playGroups = ['美幌·网走', '知床', '阿寒·津别', '钏路'];
-  const musts = new Set(['a01', 'a02', 'a12', 'a22', 'a24', 'dinner']);
   const specialities = [
     ['炭火炉端烧', 'dinner', '钏路的炉边，鱼贝交给炭火。'],
     ['勝手丼', 'f001', '自己挑刺身，盖在热饭上。'],
@@ -18,9 +17,9 @@
   ];
   const alerts = {
     f022: '2/7、2/8 店休', f058: '冬季营业待确认', f078: '出发前确认总本店地址',
-    f046: '返程起飞时尚未开门', f047: '返程起飞时尚未开门', dinner: '2/12 固定晚餐',
+    f046: '返程起飞时尚未开门', f047: '返程起飞时尚未开门', dinner: '钏路一日游可选',
     a01: '2/6 晚固定', a02: '优先 2/7', a12: '请量力，提前报名',
-    a22: '2/11 节日 15:00', a24: '2027 场次待公布', a18: '仅随认证向导进入',
+    a20: '必做滑冰 · 视冰场开放', a22: '2/11 节日 15:00', a24: '2027 场次待公布', a18: '仅随认证向导进入',
   };
 
   function escape(value) {
@@ -64,13 +63,13 @@
   }
 
   function hero(ctx, items, food) {
-    const item = items.find(p => p.id === (food?'dinner':'a02')) || items[0];
+    const item = items.find(p => p.id === (food?'f028':'a02')) || items[0];
     const title = food ? '道东美食图鉴' : '冬季玩乐菜单';
     const kicker = food ? '沿着自驾环线吃什么' : '从两处住宿出发';
-    const desc = food ? '从钏路的炉端炭火，到阿寒湖畔的阿伊努料理，沿途按口味挑一餐。' : '在海上看流冰，去湖边看天鹅，或找间温泉歇脚。挑好想去的地方，再决定哪天出发。';
+    const desc = food ? '网走的炭烤生羊肉、川汤的拉面、阿寒湖畔的阿伊努料理，沿途按口味挑一餐。' : '在海上看流冰，去湖边看天鹅，或找间温泉歇脚。挑好想去的地方，再决定哪天出发。';
     const count = food ? items.filter(p=>/^f\d{3}$/.test(p.id)).length : items.length;
-    const stats = food ? count+' 家自选餐厅 · 另收 1 家固定晚餐' : count+' 项体验 · 4 个地区';
-    const photo = item ? '<div class="wg-cover"><button type="button" data-wg-open="'+item.id+'" class="wg-cover-main">'+picture(item)+'<span class="wg-cover-cap"><span>'+ (food?'2 月 12 日晚 · 钏路荣町 3-1':'优先 2 月 7 日 · 网走')+'</span><strong>'+escape(item.name)+'</strong></span></button>'+bookmark(item,ctx,true)+'</div>' : '';
+    const stats = food ? count+' 家自选餐厅 · 另收钏路「炉ばた」' : count+' 项体验 · 4 个地区';
+    const photo = item ? '<div class="wg-cover"><button type="button" data-wg-open="'+item.id+'" class="wg-cover-main">'+picture(item)+'<span class="wg-cover-cap"><span>'+ (food?'网走 · 生羊肉成吉思汗烤肉':'优先 2 月 7 日 · 网走')+'</span><strong>'+escape(item.name)+'</strong></span></button>'+bookmark(item,ctx,true)+'</div>' : '';
     return '<header class="wg-mast"><div class="wg-mast-copy"><span class="wg-over">'+kicker+'</span><h1>'+title+'</h1><p>'+desc+'</p><span class="wg-stats">'+stats+'</span></div>'+photo+'</header>';
   }
 
@@ -88,7 +87,7 @@
       const p=items.find(i=>i.id===id);
       return p ? '<button class="wg-special" type="button" data-wg-open="'+id+'">'+picture(p)+'<span><strong>'+name+'</strong><small>'+note+'</small></span></button>' : '';
     }).join('');
-    return '<details class="wg-notes"><summary><span><strong>当地必吃</strong> 炉端烧、勝手丼、阿伊努料理等八种地方味。</span><span class="wg-disclosure" aria-hidden="true">⌄</span></summary><div class="wg-specialities">'+entries+'</div></details>';
+    return '<details class="wg-notes"><summary><span><strong>当地特色</strong> 炉端烧、勝手丼、阿伊努料理等八种地方味。</span><span class="wg-disclosure" aria-hidden="true">⌄</span></summary><div class="wg-specialities">'+entries+'</div></details>';
   }
 
   function card(item,ctx,food) {
@@ -120,7 +119,7 @@
   function match(item,s,food) {
     if (s.region!=='全部' && groupOf(item,food)!==s.region) return false;
     if (s.type!=='全部' && (item.type || (item.id==='dinner'?'炉端烧':''))!==s.type) return false;
-    if (s.must && !(item.must || musts.has(item.id))) return false;
+    if (s.must && !item.must) return false;
     if (food && s.region==='钏路' && s.part!=='全部' && item.id!=='dinner') {
       const upper=Number(item.id.slice(1))<=11;
       if ((s.part==='上篇')!==upper) return false;
@@ -150,12 +149,12 @@
   function results(ctx,normal,extra,s,food) {
     const root=ctx.root;
     const filtered=normal.filter(p=>match(p,s,food));
-    const extras=extra.filter(p=>match(p,s,food));
+    const extras=s.part==='全部' ? extra.filter(p=>match(p,s,food)) : [];
     const parts=root.querySelector('[data-wg-parts]');
     parts.innerHTML=food && s.region==='钏路' ? '<div class="wg-parts" aria-label="钏路分篇">'+['全部','上篇','下篇'].map((v,i)=>chip(['钏路全篇','上篇','下篇'][i],[21,11,10][i],'part',v,s.part===v)).join('')+'</div>' : '';
-    root.querySelector('[data-wg-count]').textContent=food ? filtered.length+' 家自选餐厅'+(extras.length?' · 另有 1 家固定晚餐':'') : filtered.length+' 项玩乐';
+    root.querySelector('[data-wg-count]').textContent=food ? filtered.length+' 家自选餐厅'+(extras.length?' · 另收钏路「炉ばた」':'') : filtered.length+' 项玩乐';
     const displayed=filtered.slice(0,s.limit);
-    const all=[...extras,...displayed];
+    const all=displayed.length===filtered.length ? [...displayed,...extras] : displayed;
     root.querySelector('[data-wg-results]').innerHTML=all.length ? all.map(p=>card(p,ctx,food)).join('') :
     '<div class="wg-empty"><strong>没有符合条件的地点</strong><p>换个地区、菜式或关键词再找找。</p><button type="button" data-wg-reset>清除筛选</button></div>';
     root.querySelector('[data-wg-morebox]').innerHTML=filtered.length>displayed.length ? '<button type="button" class="wg-more" data-wg-more>继续查看'+(food?'餐厅':'玩乐')+' <small>还剩 '+(filtered.length-displayed.length)+(food?' 家':' 项')+'</small></button>' : '';

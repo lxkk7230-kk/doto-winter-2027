@@ -2,21 +2,22 @@
   'use strict';
   const plans = window.DOTO_PLANS;
   const meta = {
-    A:{label:'方案一',title:'给流冰留一天',nights:'美幌 4 晚 · 相生 3 晚',photo:'a02',detail:'9 日网走看海雕，10 日经屈斜路湖换住'},
-    B:{label:'方案二',title:'多一天看摩周湖',nights:'美幌 3 晚 · 相生 4 晚',photo:'a28',detail:'9 日森林午餐后换住，10 日专程看双湖'}
+    A:{label:'方案一 · 推荐',title:'给流冰留一天',nights:'美幌 4 晚 · 相生 3 晚',photo:'a02',detail:'9 日自由，10 日从美幌直接换住相生'},
+    B:{label:'方案二',title:'早一天住进相生',nights:'美幌 3 晚 · 相生 4 晚',photo:'a28',detail:'9 日直接换住，10 日放晴就去摩周湖'}
   };
-  const names = {airport:'女满别机场',s01:'美幌 · 站前ルポ',s02:'相生住处',a01:'流冰祭',f024:'喜八',a02:'破冰船',f029:'温 · 荞麦面',a04:'网走监狱',f028:'烤羊肉（可选）',a17:'知床自然中心',f057:'GVO 午餐',a12:'流冰徒步',a05:'能取岬',a09:'观鹰集合点',a27:'美幌峠',a25:'砂湯湖岸',a26:'硫黄山',teshikaga:'弟子屈',tsubetsu:'津别镇',a28:'摩周湖',f099:'森林咖啡',a30:'霜之花（看天气）',a20:'湖面滑冰',f088:'温泉工房',a21:'阿伊努小镇',a22:'伊克罗',a24:'冬華美烟花',a32:'丹顶鹤',f001:'和商市场',f017:'六花亭',dinner:'炉ばた',orix:'Orix 还车'};
+  const names = {airport:'女满别机场',s05:'美幌生态木屋',a31:'相生道之驿',s02:'相生住处',a01:'流冰祭',f024:'喜八',a02:'破冰船',f029:'温 · 荞麦面',a04:'网走监狱',f028:'烤羊肉（可选）',a17:'知床自然中心',f057:'GVO 午餐',a12:'流冰徒步',a05:'能取岬',a09:'观鹰集合点',a27:'美幌峠',a25:'砂湯湖岸',a26:'硫黄山',teshikaga:'弟子屈',tsubetsu:'津别镇',a28:'摩周湖',f099:'森林咖啡',a30:'霜之花（看天气）',a20:'湖面滑冰',f088:'温泉工房',a21:'阿伊努小镇',a22:'伊克罗',a24:'冬華美烟花',a32:'丹顶鹤',f001:'钏路市中心',f017:'六花亭',dinner:'炉ばた',orix:'Orix 还车'};
   const week = ['六','日','一','二','三','四','五','六'];
   const dates = [6,7,8,9,10,11,12,13];
   const esc = v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const url = (s,d) => '#guide/'+s+(d?'/'+d:'');
+  const url = (s,d,variant) => '#guide/'+s+(d?'/'+d:'')+(d===12 && variant==='kushiro'?'/kushiro':'');
   let view;
   function draw({root,items,showDetail,icon}) {
     const parts=location.hash.slice(1).split('/');
     const scheme=parts[1]==='B'?'B':'A';
     const date=dates.includes(Number(parts[2]))?Number(parts[2]):0;
     const study=parts[2]==='stays';
-    const key=scheme+'/'+(study?'stays':date);
+    const variant=date===12 && parts[3]==='kushiro'?'kushiro':'';
+    const key=scheme+'/'+(study?'stays':date)+'/'+variant;
     if(!view || view.root!==root) {
       const inventory=new Map(items.map(i=>[i.id,i]));
       root.innerHTML='<div class="rt-wrap"><div class="rt-stay-page" hidden></div><div class="rt-route-page"><header class="rt-intro"><div><h1>行程路线</h1><p>2027 年 2 月 6–13 日 <span>·</span> 北海道道东</p></div><span class="rt-trip">'+icon('calendar',17)+' 8 天 7 晚 · 4 人同行</span></header>'+
@@ -24,7 +25,7 @@
         '<div class="rt-work"><aside class="rt-index"><h2>选一天看路线</h2><nav class="rt-days" aria-label="日期与停靠点"></nav></aside>'+
         '<div class="rt-right"><section class="rt-chart"><div class="rt-chartbar"><div><span class="rt-kicker"></span><h2 class="rt-maptitle"></h2></div><div class="rt-tools"><button type="button" class="rt-fit" title="显示整条路线" aria-label="显示整条路线">'+icon('focus',18)+'</button><button type="button" class="rt-expand" aria-label="展开大地图">'+icon('expand',17)+'<span>大图</span></button></div></div>'+
         '<div class="rt-mobile-picker"><label>看哪天 <select aria-label="选择要查看的路线日期"></select></label></div>'+
-        '<div class="rt-chain"></div><div class="rt-canvas" aria-label="道东行车路线互动地图"></div><div class="rt-foot"></div></section><div class="rt-story"></div></div></div>'+
+        '<div class="rt-free-choice"></div><div class="rt-chain"></div><div class="rt-canvas" aria-label="道东行车路线互动地图"></div><div class="rt-foot"></div></section><div class="rt-story"></div></div></div>'+
         '<section class="rt-ref"><h2>行前资料</h2><div class="rt-refitems"></div></section></div></div>';
       const mapNode=root.querySelector('.rt-canvas');
       const frame=root.querySelector('.rt-chart');
@@ -63,12 +64,13 @@
     }
     const entry=root.querySelector('.rt-stay-entry');
     entry.href=url(scheme,'stays');
-    entry.innerHTML=icon('home',18)+'<span>美幌住站前ルポ <i>·</i> 相生住 Aioi House</span><b>比较美幌民宿 ›</b>';
+    entry.innerHTML=icon('home',18)+'<span>美幌生态木屋 <i>→</i> 津别相生 Aioi House · 全程换住一次</span><b>查看两处住宿</b>';
     const daily=plans[scheme].days;
+    const day=variant?plans[scheme].alternatives[variant]:daily[date];
     const colors=window.dotoMap.dayColors;
     root.querySelector('.rt-plans').innerHTML=Object.entries(meta).map(([id,m])=>{
       const item=inventory.get(m.photo);
-      return '<a href="'+url(id,date)+'" class="rt-plan" data-scheme="'+id+'" '+(id===scheme?'aria-current="true"':'')+'><img src="'+esc(item.image)+'" alt=""><div><span class="rt-planname">'+m.label+' <i>／</i> '+m.nights+'</span><strong>'+m.title+'</strong><small>'+m.detail+'</small></div><span class="rt-choice">'+(id===scheme?icon('check',15):'')+'</span></a>';
+      return '<a href="'+url(id,date,variant)+'" class="rt-plan" data-scheme="'+id+'" '+(id===scheme?'aria-current="true"':'')+'><img src="'+esc(item.image)+'" alt=""><div><span class="rt-planname">'+m.label+' <i>／</i> '+m.nights+'</span><strong>'+m.title+'</strong><small>'+m.detail+'</small></div><span class="rt-choice">'+(id===scheme?icon('check',15):'')+'</span></a>';
     }).join('');
     const nav=root.querySelector('.rt-days');
     nav.innerHTML='<a href="'+url(scheme)+'" class="rt-all" '+(!date?'aria-current="true"':'')+'>'+icon('map',18)+' 八天总览</a>'+
@@ -81,14 +83,20 @@
     selector.value=String(date);
     root.dataset.scheme=scheme;
     root.querySelector('.rt-kicker').textContent=meta[scheme].label+' · '+(date?'2 月 '+date+' 日 周'+week[date-6]:'全程');
-    root.querySelector('.rt-maptitle').textContent=date?daily[date].short:'八天行车路线';
-    const geo=window.DOTO_ROUTES.days[scheme][date];
-    const distance=geo && Number.isFinite(geo.km)?'约 '+Math.round(geo.km)+' 公里':'';
+    root.querySelector('.rt-maptitle').textContent=date?day.short:'八天行车路线';
+    const choice=root.querySelector('.rt-free-choice');
+    choice.hidden=Boolean(date && date!==12);
+    if(!choice.hidden){
+      const options=[['','留在相生','没有固定安排'],['kushiro','去钏路玩一天','单程约 2 小时']];
+      choice.innerHTML='<strong>2/12 自由日</strong><div>'+options.map(([v,label,note])=>'<a href="'+url(scheme,12,v)+'" '+(date===12 && variant===v?'aria-current="true"':'')+'><b>'+label+'</b><small>'+note+'</small></a>').join('')+'</div>';
+    }
+    const geo=variant?window.DOTO_ROUTES.alternatives[variant]:window.DOTO_ROUTES.days[scheme][date];
+    const distance=geo && Number.isFinite(geo.km)?'约 '+(geo.km<1?geo.km.toFixed(1):Math.round(geo.km))+' 公里':'';
     const chain=root.querySelector('.rt-chain');
     chain.hidden=!date;
     if(date) {
       chain.style.setProperty('--day',colors[date]);
-      chain.innerHTML=daily[date].stops.map((s,i)=>{
+      chain.innerHTML=day.stops.map((s,i)=>{
         const id=s.mapId||s.id;
         const label=names[id]||s.name;
         const caption=id==='s02'&&date===11?(i===0?'相生出发':'回相生'):label;
@@ -98,12 +106,11 @@
     }
     const modes=date===11?'实线自驾 · 虚线步行约 '+geo.walkKm+' 公里 · P 为停车场':date===6||date===13?'实线自驾 · 虚线为机场接驳':'沿道路估算，雪天预留时间';
     root.querySelector('.rt-foot').innerHTML=date?
-      '<b style="--day:'+colors[date]+'"><i></i>'+esc(distance||'当日路线')+'</b><span>'+esc(daily[date].summary)+'</span><small>'+esc(modes)+'</small>':
+      '<b style="--day:'+colors[date]+'"><i></i>'+esc(distance||'当日路线')+'</b><span>'+esc(day.summary)+'</span><small>'+esc(modes)+'</small>':
       '<b>'+icon('home',15)+' 两处住宿</b><span>'+meta[scheme].nights+'。选一天看当天的停靠顺序。</span>';
-    map.paint(scheme,date);
+    map.paint(scheme,date,variant);
     const story=root.querySelector('.rt-story');
     if(date) {
-      const day=daily[date];
       story.innerHTML='<article class="rt-agenda" style="--day:'+colors[date]+'"><div class="rt-agendahead"><div><span class="rt-kicker">当天安排</span><h2>'+esc(day.title)+'</h2></div><span class="rt-night">'+icon(date===13?'plane':'home',16)+' '+esc(day.night)+'</span></div><ol>'+
         day.stops.map((s,i)=>{
           const id=s.mapId||s.id;const onMap=id&&window.DOTO_ROUTES.points[id];

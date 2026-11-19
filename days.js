@@ -1,160 +1,107 @@
 (() => {
   'use strict';
-
-  const bihoro = '美幌站前 · ルポ';
+  const bihoro = '美幌 · びほろエコハウス';
   const aioi = '津别相生 · Aioi House';
   const stop = (time, name, note, id, mapId) => ({ time, name, note, id, mapId });
   const link = (name, url) => ({ name, url });
-
+  const roads = link('北海道冬季封路', 'https://www.kushiro.pref.hokkaido.lg.jp/kk/kkk/kanrika/toukikou.html');
+  const station = link('相生道之驿', 'https://michinoeki-aioi.com/');
   const arrival = {
-    short: '网走流冰祭', title: '放下行李，去网走看流冰祭晚场',
-    summary: '女满别机场 → 美幌 → 网走港 → 美幌', night: bihoro, hero: 'a01',
-    stops: [
-      stop('12:20–14:00', '羽田飞女满别', '乘 JAL 抵达，在机场柜台办理四驱车取车手续。', 'airport'),
-      stop('约 15:00', '到站前ルポ放行李', '约 15:00 起可入住。机场至美幌住处约 15 分钟，取车和雪路另留时间。', 's01'),
-      stop('15:40 后', '出发看網走流氷まつり', '美幌至网走约 30–40 分钟。会场在商港埠頭，首日晚场计划至 20:00，免费。', 'a01'),
-      stop('晚餐', '酒菜亭 喜八', '看完晚场在网走吃饭，再回美幌。可先和店家确认最后点单时间。', 'f024'),
-      stop('晚间', '回到美幌', '回站前ルポ休息。', 's01')
+    short:'网走流冰祭晚场', title:'安顿好，只去网走看晚场', summary:'女满别机场 → 美幌木屋 → 网走港 → 木屋', night:bihoro, hero:'a01',
+    stops:[
+      stop('12:20–14:00','JAL 羽田飞女满别','到达后取四驱车。','airport'),
+      stop('约 15:00','美幌木屋放行李','机场至木屋约 15–25 分钟。木屋的入住和交钥匙时间请提前电话确认。','s05'),
+      stop('15:40 后出发','網走流氷まつり','木屋至网走港约 30–40 分钟。晚场至 20:00，人均 ¥0（0 元）。','a01'),
+      stop('看完后','回木屋','晚饭在网走或回美幌吃，随当晚胃口。','s05')
     ],
-    note: '2 月 6 日晚固定看流冰祭。抵达当天的晚饭时间可以跟着晚场调整。',
-    links: [link('流冰祭官方日程', 'https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html')]
+    note:'当天唯一要赶的是流冰祭晚场。', links:[link('流冰祭官方日程','https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html')]
   };
-
   const boat = {
-    short: '破冰船与网走监狱', title: '上午坐破冰船，下午逛网走监狱',
-    summary: '美幌 → 网走港 → 天都山山麓 → 网走市区 → 美幌', night: bihoro, hero: 'a02',
-    stops: [
-      stop('约 08:00', '从美幌出发', '到网走码头通常约 30–40 分钟，雪天多留一点时间。', 's01'),
-      stop('09:30–10:30', '乘おーろら破冰船', '优先选这一班，提前订票，请在 09:10 前办妥乘船手续，现场排队另留时间。约 1 小时，人均 ¥7,000（约 290 元）。', 'a02'),
-      stop('11:30', 'そば切り 温吃荞麦', '周一至周三休。人均约 ¥1,500（约 63 元）。女满别「ウインズ2」留作经过时的替换午餐。', 'f029'),
-      stop('下午', '博物館 網走監獄', '给露天馆区留 1–2 小时，16:00 停止入馆。人均 ¥1,500（约 60 元）。', 'a04'),
-      stop('17:00 后 · 可选', 'フラミンゴ烤羊肉', '想吃网走生羊肉就留在市区晚餐，也可以提前回美幌休息。', 'f028'),
-      stop('晚间', '回美幌休息', '次日安排知床往返。', 's01')
+    short:'网走坐破冰船', title:'坐一班破冰船，下午留白',summary:'美幌木屋 → 网走港 → 木屋',night:bihoro,hero:'a02',
+    stops:[
+      stop('约 08:00','木屋出发','去网走港约 30–40 分钟，给雪路和办手续留时间。','s05'),
+      stop('09:30–10:30','流氷観光砕氷船 おーろら','建议提前订 09:30 班，09:10 前办手续。人均 ¥7,000（约 290 元）。','a02'),
+      stop('下船后自由','回美幌或在港边吃午饭','几点回木屋都可以。','s05')
     ],
-    note: '遇停航先逛监狱，「温」仍留在周日。船改到 2/8 后，将知床徒步顺延至 2/9，两项都要向运营方确认。',
-    links: [link('おーろら船班', 'https://www.ms-aurora.com/abashiri/prices/'), link('荞麦店营业日', 'https://visit-abashiri.jp/meal/4f801b02ac431204d8644ef1275d3def468aa470.html')]
+    note:'若 7 日停航，先确认 8 日船位，再问向导能否把知床移到 9 日。',links:[link('おーろら船班','https://www.ms-aurora.com/abashiri/prices/')]
   };
-
   const iceWalk = {
-    short: '知床流冰徒步', title: '在乌托罗吃午饭，跟向导走上流冰',
-    summary: '美幌 → 知床自然中心 → 乌托罗午餐、上冰 → 美幌', night: bihoro, hero: 'a12',
-    stops: [
-      stop('07:30', '从美幌出发', '到乌托罗单程约 2–2.5 小时，再开约 15–20 分钟到自然中心。', 's01'),
-      stop('上午', '知床自然センター', '晚到就看室内展。若走フレペの滝雪路，往返约 2 公里、1 小时。', 'a17'),
-      stop('11:00', '在 GVO 吃午餐', '回港边尝渔家料理，给 13:00 的上冰留足集合时间。若想在斜里的「しれとこ里味」吃午餐，需重排上午动线。', 'f057'),
-      stop('13:00–14:30', 'シンラ流氷ウォーク', '提前报名，按行前邮件确认的时间、地点集合。需能自行穿脱干式服、在凹凸的冰面行走。人均 ¥8,000（约 340 元）。', 'a12'),
-      stop('约 15:00 返程', '从乌托罗开回美幌', '2 月 8 日当地约 16:39 日落，回程会经过暮色。', 's01')
+    short:'知床走流冰',title:'把这一天留给乌托罗的流冰',summary:'美幌木屋 → ウトロ集合点 → 木屋',night:bihoro,hero:'a12',
+    stops:[
+      stop('约 08:30','木屋出发','到乌托罗单程约 2–2.5 小时，到了在港边吃午饭。','s05'),
+      stop('13:00–14:30','シンラ 流氷ウォーク','提前报名，按向导邮件到道の駅うとろ等指定地点集合。人均 ¥8,000（约 340 元）。需自行穿脱干式服并能在不平冰面行走，请量力。','a12'),
+      stop('约 14:45','回美幌','走完就返程，天黑前能多走一段。','s05')
     ],
-    note: '冰未接岸或风浪大时等向导通知。不上冰可在道の駅うとろ休息。原收藏 334 所在的北こぶし酒店现设「カフェ 知床焙煎所」。清里「秀峰庵」周一、二休，「おだし食堂」可提前一天订外带，「炉憩」17:00 开；三家留作备选。',
-    links: [link('シンラ集合与场次', 'https://www.shinra.or.jp/ryuhyo_walk.html'), link('瀑布冬季步道', 'https://center.shiretoko.or.jp/walking/'), link('GVO', 'https://www.shiretoko.asia/detail/gvo'), link('北こぶし酒店公告', 'https://www.shiretoko.co.jp/post-6497/'), link('清里餐厅营业时间', 'https://www.kiyosatokankou.com/restaurant.html')]
+    note:'不上冰的家人可在道の駅うとろ等。风浪大或流冰未接岸时，以向导通知为准。', links:[link('シンラ集合与场次','https://www.shinra.or.jp/ryuhyo_walk.html')]
   };
-
   const northReserve = {
-    short: '能取岬与海雕', title: '保留一天补流冰，天气顺利就去看海雕',
-    summary: '美幌 → 能取岬 → 网走码头集合观鸟 → 美幌', night: bihoro, hero: 'a09',
-    stops: [
-      stop('上午', '从美幌去能取岬', '单程约 35–45 分钟，先看风雪和当天道路通行情况。', 's01'),
-      stop('短停 20–30 分钟', '能取岬看海', '风小时从停车场附近远望灯塔与流冰，大风时直接去网走。', 'a05'),
-      stop('中午', '网走市区午饭', '留出前往道の駅「流氷街道網走」集合的时间。'),
-      stop('约 12:30–14:00', '自然堂观海雕', '约好在码头接送，向导开车找白尾海雕和虎头海雕。地图标示集合点，人均 ¥5,000（约 210 元）。', 'a09'),
-      stop('下午', '回美幌休息', '若想在网走吃晚饭，可等「きた鳥」17:00 开门。', 's01')
+    short:'美幌自由日',title:'给流冰留一天，也可以睡到自然醒',summary:'自由日 · 地图示意想看海雕时的往返',night:bihoro,hero:'a09',
+    stops:[
+      stop('上午','在木屋慢慢吃早餐','前两天都顺利，今天就由你们安排。','s05'),
+      stop('有兴致才去','网走看海雕','当天只挑这一件就够。自然堂向导行程约 90 分钟，人均 ¥5,000（约 210 元），需确认集合与空位。','a09'),
+      stop('下午','回木屋','也可以整天留在美幌，明天再换住处。','s05')
     ],
-    note: '破冰船改到 2/8 时，今天优先补知床。若更想运动，可把观鸟换成 Connectrip 胖胎车（约 2 小时，两人起每人 ¥15,000，约 630 元）。',
-    links: [link('自然堂海雕团', 'https://www.jinendo.net/program_w/program03/'), link('胖胎车路线', 'https://connectrip-okhotsk.com/2026/11/01/fatbike-2/')]
+    note:'若船和知床顺延，今天直接用来补知床，观鸟留给下次。',links:[link('自然堂观鸟','https://www.jinendo.net/program_w/program03/')]
   };
-
-  const transferLakes = {
-    short: '经屈斜路湖换住', title: '沿美幌峠过湖，在相生住下',
-    summary: '美幌 → 美幌峠 → 砂湯 → 硫黄山 → 弟子屈 → 相生', night: aioi, hero: 'a25',
-    stops: [
-      stop('约 08:30', '美幌退房、先补给', '在美幌买好今晚和次日早餐的食材，免去傍晚再往返津别镇。', 's01'),
-      stop('上午', '美幌峠俯瞰屈斜路湖', '沿国道 243 号走。能见度好就停，大雪或临时封路时按道路公告改线。', 'a27'),
-      stop('短停 20–30 分钟', '屈斜路湖砂湯看天鹅', '从开放的湖岸远看。午餐在砂湯或川汤择一家营业的店。', 'a25'),
-      stop('短停 20–30 分钟', '硫黄山看喷气', '从观景停车区步行，不必走远。', 'a26'),
-      stop('下午', '经弟子屈、阿寒湖方向', '经过弟子屈镇区后向西走国道 241 号，再转国道 240 号前往相生。', undefined, 'teshikaga'),
-      stop('傍晚', '入住津别相生 Aioi House', '用早上买的食材晚餐。把整天留给沿途停靠和雪路。', 's02')
+  const transfer = {
+    short:'美幌换住相生',title:'买好食材，直接去相生住下',summary:'美幌木屋 → 经津别镇 → Aioi House',night:aioi,hero:'s02',
+    stops:[
+      stop('上午退房','离开美幌木屋','在美幌或顺路的津别镇买好晚饭和早餐。','s05'),
+      stop('下午','入住 Aioi House','沿国道 240 号到相生，两处住处相距约 40 公里，冬季可留 1 小时，另计采购和等候入住。','s02')
     ],
-    note: '搬家日不绕摩周湖。摩周第一展望台的北线、津別峠冬季封闭。川汤「まるはち」周三休，也不必为它折返。',
-    links: [link('北海道冬季封路', 'https://www.kushiro.pref.hokkaido.lg.jp/kk/kkk/kanrika/toukikou.html'), link('川汤まるはち', 'https://www.kawayu-onsen.com/food/shop/159/')]
+    note:'这是全程唯一一次搬行李。把下午留给新住处和周围，不绕去湖区。',links:[station,roads]
   };
-
-  const transferForest = {
-    short: '森林午餐与换住', title: '经津别镇吃森林午餐，提前住进相生',
-    summary: '美幌 → 津别镇 → 森林咖啡 → 津别镇买菜 → 相生', night: aioi, hero: 'f099',
-    stops: [
-      stop('上午', '美幌退房', '带上行李向津别镇出发。', 's01'),
-      stop('午餐前', '经津别镇去上里', '冬季从津别镇一侧进出森林，不走津別峠。', undefined, 'tsubetsu'),
-      stop('11:30–14:00', 'ノンノの森カフェ', '吃当地食材午餐或甜点。周四休，出发前确认冬季营业。人均约 ¥1,300（约 55 元）。', 'f099'),
-      stop('下午', '原路回津别镇买菜', '在グリーンマート或セイコーマート备晚餐和早餐。道の駅あいおい周二休。', undefined, 'tsubetsu'),
-      stop('傍晚', '入住 Aioi House', '早点收拾好行李，次日留一整天看湖。', 's02')
-    ],
-    note: '若 2/7 停航、2/8 补船，今天的知床徒步会撞上换住。先取消森林午餐，确认向导、雪路和入住时刻；若赶不到，需调整住宿或放弃顺延的体验。',
-    links: [link('森林咖啡馆', 'https://www.nonnonomori.com/ノンノの森カフェ'), link('相生道之驿', 'https://michinoeki-aioi.com/')]
-  };
-
+  const earlyTransfer = {...transfer,note:'方案二在周二提前一天换住，相生道之驿周二休，可在津别镇买菜。若冰上活动顺延至今天，提前与向导核对场次和到店时间；想给天气留完整一天，选方案一更宽松。'};
   const mashu = {
-    short: '摩周湖与屈斜路湖', title: '沿南线看摩周湖，再去硫黄山和砂湯',
-    summary: '相生 → 弟子屈 → 摩周湖 → 弟子屈 → 硫黄山 → 砂湯 → 相生', night: aioi, hero: 'a28',
-    stops: [
-      stop('约 08:00', '从相生出发', '能见度好就早些走，经阿寒湖方向到弟子屈镇区。雪天给山路和原路折返多留时间。', 's02'),
-      stop('上午', '从弟子屈南侧上山', '去第一展望台必须走镇区一侧的道道 52 号。', undefined, 'teshikaga'),
-      stop('天晴时', '摩周湖第一展望台', '短停看湖。暴风雪、展望台关闭或视线很差时，放弃这一段。', 'a28'),
-      stop('中午', '沿原路退回弟子屈', '在镇上吃午饭，再转国道 391 号去硫黄山。摩周湖北侧不能直通川汤。', undefined, 'teshikaga'),
-      stop('短停 20–30 分钟', '硫黄山看喷气', '走开放的观景停车区，然后去屈斜路湖。', 'a26'),
-      stop('短停 20–30 分钟', '砂湯湖岸看天鹅', '看日照和路况决定停多久，经弟子屈、阿寒湖方向返程。', 'a25'),
-      stop('傍晚', '回相生用晚餐', '川汤「まるはち」今晚周三休，住处有前一天买好的食材。', 's02')
+    short:'天气好去摩周湖',title:'有能见度，就去摩周湖看一眼',summary:'相生 → 经弟子屈镇 → 摩周第一展望台 → 原路回相生',night:aioi,hero:'a28',
+    stops:[
+      stop('早餐后','相生出发','先查展望台开放和山上能见度，再决定出门。','s02'),
+      stop('上午或午后','摩周湖カムイテラス','经弟子屈镇，从南线到第一展望台。冬季停车人均 ¥0（0 元）。停车后短走即可看湖。','a28'),
+      stop('看够就走','回相生','走同一条南线下山，可顺路在弟子屈吃碗拉面。','s02')
     ],
-    note: '这是方案二多出来的湖区整日。摩周湖第一展望台至跡佐登的北段、裏摩周冬季封路。',
-    links: [link('摩周湖第一展望台', 'https://mashuko-iozan.jp/mashuko-kamui-terrace'), link('冬季封路公告', 'https://www.kushiro.pref.hokkaido.lg.jp/kk/kkk/kanrika/toukikou.html')]
+    note:'只选一个湖。北侧去川汤的道道 52 号冬季封闭；遇大雪就在相生休息。',links:[link('摩周第一展望台','https://mashuko-iozan.jp/mashuko-kamui-terrace'),roads]
   };
-
   const lakeAkan = {
-    short: '阿寒湖滑冰与烟花', title: '在同一片湖岸滑冰、看舞、等烟花',
-    summary: '相生 → 阿寒湖温泉街与湖岸 → 相生', night: aioi, hero: 'a24',
-    stops: [
-      stop('清晨或早餐后', '从相生前往阿寒湖', '到阿寒湖畔第 1 停车场约 25 分钟，停好车后步行游览。', 's02'),
-      stop('清晨 · 看天气', '在岸边找霜之花', '相生到湖边约 25 分钟。严寒无风、岸边开放才早起，天气普通就晚点出发。', 'a30'),
-      stop('上午', 'あいすランド阿寒滑冰', '在开放的湖面冰场穿冰刀滑行。含冰鞋和场地，1 小时内人均 ¥1,100（约 46 元），按当日冰况开放。', 'a20'),
-      stop('午间', '温泉工房あかん', '尝点心或午餐，冬季营业时间出发前确认。', 'f088'),
-      stop('午后', 'アイヌコタン逛工坊', '走到小镇看木雕，剧场也在这一带。', 'a21'),
-      stop('15:00–15:30', '伊克罗《满月之舞》', '冬季周末和节假日有这场，2/11 是建国纪念日。人均 ¥2,200（约 90 元）。', 'a22'),
-      stop('约 20:00', '湖畔看冬華美烟花', '在温泉街提前吃晚饭，再到当日指定观赏处。市级计划覆盖 2/11，往年约 20:00，入场免费。', 'a24'),
-      stop('烟花结束后', '回津别相生', '按当晚天气和道路情况返回住处。', 's02')
+    short:'阿寒湖滑冰、烟花',title:'一个下午和晚上，都在阿寒湖',summary:'相生 → 阿寒湖温泉街和湖岸 → 相生',night:aioi,hero:'a24',
+    stops:[
+      stop('午前后','从相生去阿寒湖','单程约 25 分钟。车停湖边，接下来在同一个温泉小镇活动。','s02'),
+      stop('午后','あいすランド阿寒滑冰','冰场开放时，滑一小时就有充足时间换鞋、暖身。租鞋及场地人均约 ¥1,100（约 46 元）。','a20'),
+      stop('15:00–15:30','伊克罗《満月のリㇺセ》','建国纪念日按冬季节假日场次。人均 ¥2,200（约 90 元），看完坐下来吃饭、歇到烟花开场。','a22'),
+      stop('约 20:00','湖畔看冬華美烟花','人均 ¥0（0 元），具体时刻与观赏位置行前核对活动方公告。','a24'),
+      stop('烟花结束','回 Aioi House','沿来路返回，车程约 25 分钟。','s02')
     ],
-    note: '到湖畔后，活动之间可步行，停车与上冰区域听现场安排。20:00 的剧场晚场与烟花重合，今天保留烟花。',
-    links: [link('湖面冰场及价格', 'https://www.koudai-akan.com/iceland.html'), link('伊克罗演出日程', 'https://www.akanainu.jp/schedule/'), link('钏路市 2027 活动表', 'https://ja.kushiro-lakeakan.com/kushiroakanwp/wp-content/uploads/r8-ev.pdf#page=7')]
+    note:'下午的演出和晚上的烟花互不冲突。两场之间的时间都留给休息。',links:[link('湖面冰场','https://www.koudai-akan.com/iceland.html'),link('伊克罗演出日程','https://www.akanainu.jp/schedule/'),link('冬華美烟花','https://www.tsurugagroup.com/plans/fuyu_hanabi/')]
   };
-
+  const freeDay = {
+    short:'自由日 · 相生或钏路',title:'住处附近随意走走，几点出门都行',summary:'Aioi House → 道の駅あいおい（可选）→ 住处',night:aioi,hero:'a31',
+    stops:[
+      stop('睡到自然醒','在相生吃早餐','想留在屋里休息，今天就没有车程。','s02'),
+      stop('想出门时','道の駅あいおい','旧车站就在旁边。可买刚烤好的クマヤキ，人均一枚 ¥240（约 10 元），或坐下来吃午饭。','a31'),
+      stop('下午','回 Aioi House','收好行李，第二天早上直接去机场。','s02')
+    ],
+    note:'也可以把整天给钏路。上方切换后就能看往返路线。',links:[station,link('相生鉄道公園','https://michinoeki-aioi.com/look/')]
+  };
   const kushiro = {
-    short: '丹顶鹤与钏路炉端烧', title: '看丹顶鹤，去钏路吃一天',
-    summary: '相生 → 阿寒国际鹤中心 → 和商市场 → 六花亭 → 炉ばた → 相生', night: aioi, hero: 'dinner',
-    stops: [
-      stop('约 07:30', '从相生向钏路出发', '先经阿寒国际鹤中心，通常约 1–1.5 小时。', 's02'),
-      stop('约 09:00', '阿寒国際ツルセンター看鹤', '主馆 09:00 开门，观察野生丹顶鹤还要看当天情况。人均 ¥480（约 20 元）。', 'a32'),
-      stop('中午', '釧路和商市場吃勝手丼', '先买米饭，再挑自己想吃的海鲜。人均约 ¥2,500（约 105 元）。', 'f001'),
-      stop('下午', '六花亭 鶴見橋店', '买点心可短停，想坐茶室就在 16:00 最后点单前到。', 'f017'),
-      stop('17:00', '栄町 3-1「炉ばた」', '四人固定晚餐，提前电话订座 0154-22-6636。', 'dinner'),
-      stop('约 19:00 出发', '开车回相生', '单程约 2 小时，预计 21:00 左右到。备好次晨的行李与油料。', 's02')
+    short:'自由日 · 钏路一日游',title:'留一整天给钏路，只逛想逛的地方',summary:'Aioi House → 钏路市中心自由活动 → Aioi House',night:aioi,hero:'f001',
+    stops:[
+      stop('早餐后','从相生出发','沿阿寒方向去钏路，单程约 2 小时，遇雪更久。','s02'),
+      stop('白天自由','逛钏路市区','地图用和商市场标出市中心的落脚点。想吃海鲜可在这里做一碗勝手丼，人均约 ¥2,500（约 105 元）。吃什么、走多远，都到时再决定。','f001'),
+      stop('下午或晚饭后','回相生过夜','想早点回就下午走。想吃炉端烧才留到 17:00 开门，饭后还有约 2 小时雪夜车程。','s02')
     ],
-    note: '这一天四个收藏可以全部保留。晚上还有雪夜车程，下午留给六花亭和休息。',
-    links: [link('鹤中心', 'https://aiccgrus.wixsite.com/aiccgrus'), link('六花亭营业时间', 'https://www.rokkatei.co.jp/shop/kushiro/'), link('炉ばた官网', 'https://www.robata.cc/')]
+    note:'荣町 3-1「炉ばた」为可选晚饭。想去可电话 0154-22-6636 问位。次日仍在 06:30 从相生出发。',links:[link('釧路和商市場','https://www.washoichiba.com/'),link('炉ばた营业时间','https://www.robata.cc/'),link('相生至钏路车程','https://michinoeki-aioi.com/kumayaki/')]
   };
-
   const departure = {
-    short: '还车与返程', title: '06:30 离开相生，08:00 还车',
-    summary: '相生 → Orix 女满别空港店 → 女满别航站楼 → 羽田', night: '返抵羽田', hero: 'airport',
-    stops: [
-      stop('06:30', '从 Aioi House 出发', '到女满别机场一带约 1 小时，另留约 30 分钟雪路余量。', 's02'),
-      stop('约 08:00', 'Orix 女満別空港店还车', '按订单到门店交车，再乘接驳车去航站楼。', undefined, 'orix'),
-      stop('09:15–11:10', 'AIRDO 飞回羽田', '09:15 女满别起飞，11:10 羽田抵达。', 'airport')
+    short:'还车与返程',title:'06:30 离开相生，08:00 还车',summary:'相生 → Orix 女满别空港店 → 女满别航站楼 → 羽田',night:'返抵羽田',hero:'airport',
+    stops:[
+      stop('06:30','从 Aioi House 出发','到女满别约 1 小时，另留约半小时雪路余量。','s02'),
+      stop('约 08:00','Orix 女満別空港店还车','交车后乘门店接驳去航站楼，提车时提前核对早班交接。',undefined,'orix'),
+      stop('09:15–11:10','AIRDO 飞回羽田','09:15 女满别起飞，11:10 抵达羽田。','airport')
     ],
-    note: '最后一天只安排还车和乘机。取车时与门店确认早班交车和接驳安排。',
-    links: [link('Orix 女満別空港店', 'https://car.orix.co.jp/shops/?shops_pk=27'), link('AIRDO', 'https://www.airdo.jp/')]
+    note:'早餐和行李前一晚准备好。',links:[link('Orix 女満別空港店','https://car.orix.co.jp/shops/?shops_pk=27'),link('AIRDO','https://www.airdo.jp/')]
   };
-
-  const common = { 6: arrival, 7: boat, 8: iceWalk, 11: lakeAkan, 12: kushiro, 13: departure };
+  const common = {6:arrival,7:boat,8:iceWalk,11:lakeAkan,12:freeDay,13:departure};
   window.DOTO_PLANS = {
-    A: { days: { ...common, 9: northReserve, 10: transferLakes } },
-    B: { days: { ...common, 9: transferForest, 10: mashu } }
+    A:{days:{...common,9:northReserve,10:transfer},alternatives:{kushiro}},
+    B:{days:{...common,9:earlyTransfer,10:mashu},alternatives:{kushiro}}
   };
 })();

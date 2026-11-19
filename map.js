@@ -11,8 +11,8 @@ function createAtlas({boundsIndex,icon,esc,items,renderPopup,tip,toggle,showDeta
   const lookup=new Map(items.map(p=>[p.id,p]));
   const markers=new Map();
   const icons={stay:'home',play:'mountain',food:'utensils',transit:'plane'};
-  const isBase=p=>p.id==='s01'||p.id==='s02';
-  const markerIcon=p=>L.divIcon({className:'atlas-pin marker-'+p.layer+(isBase(p)?' lodging-pin':''),iconSize:[34,38],iconAnchor:[17,36],popupAnchor:[0,-30],tooltipAnchor:[0,-29],html:'<span class="pinshape '+(isSaved(p.id)?'saved':'')+'">'+icon(icons[p.layer],17)+'</span>'+(isBase(p)?'<span class="lodging-name">'+(p.id==='s01'?'美幌 · 站前ルポ':'相生 · Aioi House')+'</span>':'')});
+  const isBase=p=>p.layer==='stay'&&p.type==='行程住宿';
+  const markerIcon=p=>L.divIcon({className:'atlas-pin marker-'+p.layer+(isBase(p)?' lodging-pin':''),iconSize:[34,38],iconAnchor:[17,36],popupAnchor:[0,-30],tooltipAnchor:[0,-29],html:'<span class="pinshape '+(isSaved(p.id)?'saved':'')+'">'+icon(icons[p.layer],17)+'</span>'+(isBase(p)?'<span class="lodging-name">'+esc(p.id==='s05'?'美幌 · 生态木屋':p.title)+'</span>':'')});
   const lodging=L.layerGroup().addTo(map);
   const towns=[['网走市区',44.014,144.26,.13],['乌托罗',44.07,144.99,.08],['钏路市区',42.984,144.38,.09],['阿寒湖温泉',43.434,144.092,.08],['川汤温泉',43.638,144.435,.06],['斜里町',43.912,144.664,.08]];
   function clusterLabel(c){if(map.getZoom()>10.5||c.getChildCount()<5)return '';const pt=c.getLatLng();const t=towns.find(([,lat,lng,r])=>Math.hypot(pt.lat-lat,(pt.lng-lng)*.72)<r);return t?'<span class="cluster-name">'+t[0]+'</span>':''}
