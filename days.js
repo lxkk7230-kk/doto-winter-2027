@@ -1,54 +1,55 @@
 (() => {
   'use strict';
-  const repos = '美幌站前 · ルポ（待订）';
+  const kitami = '北见 · Miyoshi 別邸（待订）';
   const bihoro = '美幌 · びほろエコハウス';
   const aioi = '津别相生 · Aioi House';
   const stop = (time, name, note, id, mapId) => ({ time, name, note, id, mapId });
   const link = (name, url) => ({ name, url });
   const roads = link('北海道冬季封路', 'https://www.kushiro.pref.hokkaido.lg.jp/kk/kkk/kanrika/toukikou.html');
   const station = link('相生道之驿', 'https://michinoeki-aioi.com/');
-  const firstStay = link('ルポ · 房源与入住说明', window.dotoStaySearch?.repos || 'https://www.airbnb.jp/rooms/1806958276032753119');
+  const firstStay = link('Miyoshi 別邸 · 房源与入住说明', window.dotoStaySearch?.first || 'https://www.airbnb.jp/rooms/1691606985272696121?check_in=2027-02-06&check_out=2027-02-08&adults=4&currency=JPY');
+  const driveTimes = link('北见至网走 · 道东观光路线', 'https://ja.visit-eastern-hokkaido.jp/plans/route39/');
   const sailing = link('おーろら船班', 'https://www.ms-aurora.com/abashiri/prices/');
   const cabin = link('美幌木屋入住信息', 'https://bihoro.jp/hotel/127/');
-  const reposStop = (time, name, note) => stop(time, name, note, 's01');
-  const embark = stop('09:30–10:30','网走乘おーろら破冰船','建议提前订 09:30 班，09:10 前办完手续。航程约 1 小时，人均 ¥7,000（约 290 元）。','a02');
-  const cabinArrival = stop('约 15:00','入住びほろエコハウス','按你们与木屋约定的时间交接钥匙。住 8、9 日两晚，10 日上午退房。','s05');
+  const kitamiStop = (time, name, note) => stop(time, name, note, 's01');
+  const embark = stop('11:00–12:00','网走乘おーろら破冰船','提前订 11:00 班。建议 10:15 左右到道の駅流氷街道網走，最晚 10:40 办完手续。航程约 1 小时，人均 ¥7,000（约 290 元）。','a02');
+  const cabinArrival = stop('约 15:00','入住びほろエコハウス','以电话约定的交接时间为准。已约 8、9 日两晚，整栋每晚 ¥14,300（约 601 元），两晚人均 ¥7,150（约 300 元）。','s05');
   const arrival = {
-    short:'网走流冰祭晚场', title:'抵达后去网走，晚上看流冰祭', summary:'女满别机场 → 美幌站前ルポ → 网走商港埠头 → ルポ', night:repos, hero:'a01',
+    short:'网走流冰祭晚场', title:'下飞机直奔网走，看完流冰祭再去北见', summary:'女满别机场 → 网走商港埠头 → 北见 Miyoshi 別邸', night:kitami, hero:'a01',
     stops:[
-      stop('12:20–14:00','JAL 羽田飞女满别','14:00 抵达，取四驱车。取车点至美幌站前ルポ约 9 公里，机场至住处预留 15–25 分钟。','airport'),
-      reposStop('约 15:00','美幌站前ルポ放行李','前两晚选这家整栋，尚待预订。可在 15:00–22:00 自助入住。'),
-      stop('傍晚','網走流氷まつり','到商港埠头看冰雕和晚场，计划至 20:00。入场人均 ¥0（0 元）。','a01'),
-      reposStop('看完后','回首两晚的住处','沿原路开回美幌站前，约 30 公里。冬季预留 35–50 分钟。')
+      stop('12:20–14:00','JAL 羽田飞女满别','14:00 抵达女满别。取好行李后前往租车门店。','airport'),
+      stop('约 15:00','Orix 女満別空港店取车','取七座四驱，带行李直接去网走。门店到会场约 22 公里，雪天行车预留 40–60 分钟，另留停车时间。',undefined,'orix'),
+      stop('约 16:00 起','網走流氷まつり','在网走商港埠头看冰雕和晚场。会场至 20:00，入场人均 ¥0（0 元）。','a01'),
+      kitamiStop('晚场后','前往北见 Miyoshi 別邸','会场至北见住处约 48 公里，冬季单程预留 1 小时 10 分至 1 小时 35 分。若 20:00 离开，预计约 21:10–21:35 抵达，停车散场和降雪还可能延后。')
     ],
-    note:'先入住再出发，房子到会场约 30 公里，雪天单程预留 35–50 分钟。', links:[link('流冰祭官方日程','https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html'),firstStay]
+    note:'北见房源可自助入住。订前先确认约 21:30 到店能否取钥匙。若须早到，按房东截止时间倒推离场，提前约 1 小时 35 分钟再加散场余量。', links:[link('流冰祭官方日程','https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html'),firstStay,driveTimes]
   };
   const boat = {
-    short:'网走坐破冰船', title:'上午看流冰，下午留白',summary:'美幌站前ルポ → 破冰船码头 → ルポ',night:repos,hero:'a02',
+    short:'网走坐破冰船', title:'上午坐 11 点的船，下午留白',summary:'北见 Miyoshi 別邸 → 网走破冰船码头 → 北见',night:kitami,hero:'a02',
     stops:[
-      reposStop('约 08:00','从ルポ去网走港','至道の駅流氷街道網走约 29 公里。冬季行车预留 35–50 分钟，抵达后停车办手续。'),embark,
-      reposStop('下船后自由','原住处连住第二晚','在港边吃个午饭，下午想休息就回住处。')
-    ], note:'若船方取消 7 日的班次，切换到停航备选，问 8 日上午还有没有船位。',links:[sailing]
+      kitamiStop('约 08:35','从北见去网走港','早饭后出发，北见至码头约 47 公里，冬季单程预留 1 小时 10 分至 1 小时 35 分。先看船公司的运行通知，雪大时再提早。'),embark,
+      kitamiStop('午饭后','回北见连住第二晚','可在码头附近用午饭，下午按体力返回北见。')
+    ], note:'7 日若停航，先问 8 日上午的空位。若正常开船但海面无流冰，船公司可能改走能取岬观光航线。',links:[sailing,driveTimes]
   };
   const moveToCabin = {
-    short:'入住美幌小木屋',title:'退房后，下午搬进美幌小木屋',summary:'美幌站前ルポ → 美幌生态木屋',night:bihoro,hero:'s05',
+    short:'入住美幌小木屋',title:'北见退房，在美幌吃午饭、住木屋',summary:'北见 Miyoshi 別邸 → 美幌生态木屋',night:bihoro,hero:'s05',
     stops:[
-      reposStop('10:00 前','美幌站前ルポ退房','到生态木屋只约 2.7 公里，冬季预留 10–15 分钟。两家入住时间之间可在美幌镇上吃午饭。'),
+      kitamiStop('上午','北见退房','退房按房东约定。带行李向美幌出发，北见至木屋约 28 公里，冬季预留 40–55 分钟。'),
       cabinArrival
-    ],note:'今天只换住处。知床的车程留给明天。',links:[cabin]
+    ],note:'上午和下午交接之间，在美幌镇上吃午饭就好。今天只搬一次行李。',links:[firstStay,cabin]
   };
   const weatherDay = {
-    short:'停航时留在美幌',title:'船停航，就在美幌休息一天',summary:'美幌站前ルポ休息 · 当晚续住',night:repos,hero:'a01',
-    stops:[reposStop('全天自由','留在美幌休息','先联系船公司问 8 日上午的空位。若想再去网走，周日的流冰祭计划至 16:00 开放。')],
-    note:'第二晚继续住同一处。图上只有ルポ一个点，今天可以不开车。',links:[sailing]
+    short:'停航时留在北见',title:'船停航，当天就在北见休息',summary:'北见 Miyoshi 別邸 · 当晚续住',night:kitami,hero:'s01',
+    stops:[kitamiStop('全天自由','在北见休息','先向船公司查询 8 日上午的船位，再决定是否补船。住处步行范围内有超市和便利店。')],
+    note:'留在北见没有必要往返网走。8 日和 9 日已有木屋预约。',links:[sailing,firstStay]
   };
   const makeupBoat = {
-    short:'补船后入住小木屋',title:'上午在网走补船，下午再去美幌',summary:'美幌站前ルポ → 网走破冰船码头 → 美幌生态木屋',night:bihoro,hero:'a02',
+    short:'补船后入住小木屋',title:'上午网走补船，下午交接美幌木屋',summary:'北见 Miyoshi 別邸 → 网走破冰船码头 → 美幌生态木屋',night:bihoro,hero:'a02',
     stops:[
-      reposStop('早餐后','美幌站前ルポ退房','带好行李去网走港。单程约 29 公里，冬季预留 35–50 分钟，提前至少 20 分钟到码头办手续。'),
-      {...embark, time:'上午 · 以改订为准',note:'改订成功再去码头。航程约 1 小时，人均 ¥7,000（约 290 元）。若仍停航，下午照常去木屋。'},
-      cabinArrival
-    ],note:'午饭后再向美幌出发。9 日仍从木屋往返知床。',links:[sailing,cabin]
+      kitamiStop('约 08:35','北见退房，带行李去网走','按补订 11:00 班估算，至码头约 47 公里，冬季单程预留 1 小时 10 分至 1 小时 35 分。若班次有变，按实际开船时间倒推。'),
+      {...embark,name:'补乘おーろら破冰船'},
+      {...cabinArrival,note:'下船后在网走吃午饭，再开往美幌木屋，雪天预留约 40–60 分钟。按已约时间交接钥匙。'}
+    ],note:'先确认余位和当天运行。若 8 日仍停航，就从北见直接去美幌木屋，单程约 40–55 分钟。',links:[sailing,cabin,driveTimes]
   };
 
   const iceWalk = {

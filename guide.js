@@ -5,7 +5,8 @@
     eco: 'https://www.town.bihoro.hokkaido.jp/site/kanko/2590.html',
     airbnb2: 'https://www.airbnb.jp/rooms/1425790170855532409',
     booking: window.dotoStaySearch.aioi,
-    repos: window.dotoStaySearch.repos,
+    miyoshi: window.dotoStaySearch.first || 'https://www.airbnb.jp/rooms/1691606985272696121?check_in=2027-02-06&check_out=2027-02-08&adults=4&currency=JPY',
+    kitamiTax: 'https://www.city.kitami.lg.jp/administration/life/detail.php?content=13525',
     jal: 'https://www.jal.co.jp/jp/ja/', airdo: 'https://www.airdo.jp/',
     orix: 'https://car.orix.co.jp/shops/?shops_pk=27',
     car: 'https://www.tabirai.net/car/hokkaido/search/rentacar.aspx?SYF=20270206&SYT=20270213&SAFG=1&SATG=1&SAF=101206&SAT=101206&SSM=2&SYFT=15%3A00&SYTT=08%3A00&STP=6&SPF=101&SPT=101',
@@ -35,14 +36,17 @@
   function logistics(inventory, scheme) {
     const dates = window.dotoStayDates();
     const shopping = '2/10 周三换住相生，出美幌前或途经津别镇时买好晚餐与次日早餐。相生道之驿冬季营业到 16:00。';
-    return title('七晚住宿','2/6 美幌站前ルポ两晚 → 2/8 美幌生态木屋两晚 → 2/10 津别相生三晚。两个方案的住宿相同。') +
-      transportCard('第一段 · ' + dates.reposDates + ' · 两晚','美幌站前ルポ · 首选待订',
-        '两晚人均约 ¥19,654（约 825 元）。二楼两间卧室均有房门和三张单人床，客厅与两间卧室各配空调和煤油暖炉。',
-        link('repos','指定日期报价') + stayOverview(scheme)) +
+    return title('七晚住宿','2/6 北见两晚 → 2/8 美幌木屋两晚 → 2/10 津别相生三晚。7 日的船若停航，住宿日期照原定安排。') +
+      stay('s01', inventory.get('s01'),
+        '第一段 · ' + dates.firstDates + ' · 两晚', '北见 · Miyoshi 別邸（待订）',
+        '整栋，二楼两间卧室均可锁门。一间有小双人床和空调，另一间为两套单人地铺。一楼客厅有 FF 暖炉，地铺房关门后的供暖需问房东。',
+        '两晚人均 ¥13,000 · 约 546 元',
+        '四人两晚挂牌 ¥52,000（约 2,184 元）。若另收住宿税，两晚人均共 ¥13,600（约 571 元）。6 日先看网走流冰祭，向房东确认约 21:30 自助入住。',
+        link('miyoshi','房源与两晚报价') + link('kitamiTax','北见市住宿税')) +
       '<div class="dg-twocol">' + stay('s05', inventory.get('s05'),
         '第二段 · ' + dates.ecoDates + ' · 两晚', '美幌生态木屋 · びほろエコハウス',
         '一楼东西各有一间独立双床卧室，中间是客厅和餐厅。', '已约好，两晚人均 ¥7,150 · 约 300 元',
-        '8 日入住，8、9 日过夜，10 日退房。', link('eco','美幌町设施介绍') + stayOverview(scheme)) +
+        '北见出发约 40–55 分钟。8 日入住，8、9 日过夜，10 日退房。', link('eco','美幌町设施介绍')) +
       stay('s02', inventory.get('s02'),
         '第三段 · ' + dates.aioiDates + ' · 三晚', '津别相生 · Aioi House',
         '约 50 平方米整栋，一间双人床卧室，一间双单人床卧室。至阿寒湖温泉街约 19 公里，车程约 25 分钟。',
@@ -61,13 +65,13 @@
     const costs = [
       ['机票往返','JAL 去程，AIRDO 回程','¥27,225','约 1,140 元/人'],
       ['七座四驱租车','7 天，含雪胎与免责补偿','¥23,522','约 990 元/人'],
-      ['美幌站前ルポ',dates.reposDates + ' · 两晚 · 首选待订','约 ¥19,654','约 825 元/人'],
+      ['北见 Miyoshi 別邸',dates.firstDates + ' · 两晚 · 待订','约 ¥13,600','约 571 元/人 · 房费 ¥13,000（约 546 元），预留住宿税 ¥600（约 25 元）'],
       ['美幌生态木屋',dates.ecoDates + ' · 两晚 · 已约好','¥7,150','约 300 元/人 · 整栋每晚 ¥14,300（约 601 元），四人平摊'],
       ['津别相生住宿',dates.aioiDates + ' · Aioi House 三晚原报价','¥16,500','约 690 元/人']
     ];
-    const total = 27225 + 23522 + dates.reposPerPerson + dates.ecoPerPerson + dates.aioiPrice;
+    const total = 27225 + 23522 + dates.firstPerPerson + dates.ecoPerPerson + dates.aioiPrice;
     const heading = title('人均参考合计约 ¥' + Math.round(total).toLocaleString('zh-CN') + ' · 约 ' + Math.round(total * .042).toLocaleString('zh-CN') + ' 元',
-      '含往返机票、七座四驱租车与七晚住宿。前两晚按美幌站前ルポ四人整栋报价估算，最终以订房明细为准。');
+      '含往返机票、七座四驱租车与七晚住宿。北见两晚按另收住宿税预留。若房费已含该税，合计人均约 ¥87,397（约 3,671 元）。');
     return heading + '<div class="dg-budget">' +
       costs.map(([name,info,amount,detail]) => '<div><span><b>' + name + '</b><small>' + info + '</small></span><span><b>' + amount + '</b><small>' + detail + '</small></span></div>').join('') + '</div>' +
       '<div class="dg-twocol dg-budget-notes">' + transportCard('可选 NOC','¥2,310 · 约 100 元/人','额外租车保障，单独决定是否购买。','') +
@@ -92,7 +96,7 @@
       ['冬季休业与场次冲突',[
         '夕陽台の湯、ホテル知床日归汤、岩尾別温泉露天風呂冬季关闭。KIKI知床可能因客满暂停日归入浴，请先致电 0152-24-2104。',
         '鹤雅日归汤通常 14:00–18:00，最后入场 15:00。2/11 先看 15:00 イコㇿ，晚上为烟花保留 20:00。',
-        '自然堂網走湖公鱼钓 2027 年预约拟于 11 月 20 日开放。女満別湖畔冰钓在 2026 年曾于 2/11 提前收季，2027 年开放日与冰况须另查。'
+        '自然堂網走湖公鱼钓 2027 年预约拟于 2026 年 11 月 20 日开放。女満別湖畔冰钓在 2026 年曾于 2/11 提前收季，2027 年开放日与冰况须另查。'
       ]]
     ];
     return title('雪路与活动条件','出发前看封路公告，当天再查天气、路况和各设施营业情况。') +

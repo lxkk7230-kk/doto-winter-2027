@@ -12,7 +12,7 @@
     "hours": "2/6 10:00–20:00，2/7 10:00–16:00",
     "closed": "只办两天，第一晚固定",
     "review": "适合父母。海边风大，穿防滑鞋，累了就回车休息。",
-    "drive": "从美幌站前ルポ出发约 30 公里，冬季单程预留 35–50 分钟。",
+    "drive": "从北见住处街区约 48 公里，冬季预留 1 小时 10 分–1 小时 35 分。从美幌木屋约 33 公里，预留 40–55 分钟。",
     "url": "https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html",
     "lat": 44.0203333,
     "lng": 144.28275,
@@ -21,7 +21,8 @@
     "image": "img/a01.jpg",
     "photoSource": "https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html",
     "extra": "商港埠头与破冰船码头相隔约 10 分钟步行。节目以当日公告为准。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.28275,44.02033?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a02",
@@ -36,7 +37,7 @@
     "hours": "2 月 9:30 / 11:00 / 12:30 / 14:00 / 15:30，约 1 小时",
     "closed": "视海况、流冰和人数可能调整",
     "review": "适合父母。甲板风大，步行不稳时留在舱内。",
-    "drive": "从美幌站前ルポ出发约 30 公里，冬季单程预留 35–50 分钟。",
+    "drive": "从北见住处街区约 47 公里，冬季预留 1 小时 10 分–1 小时 35 分。从美幌木屋约 32 公里，预留 40–55 分钟。",
     "url": "https://www.ms-aurora.com/abashiri/prices/",
     "lat": 44.0220409,
     "lng": 144.273901,
@@ -45,7 +46,8 @@
     "image": "img/a02.jpg",
     "photoSource": "https://visit-abashiri.jp/play/666a64111dd7d0e1423d3e12b650d167eca2ae00.html",
     "extra": "优先 2/7，提前预约并在开船前 20 分钟办好手续。若 7 日停航，8 日退房后按船公司公布的班次再试，当天仍入住美幌木屋。两套路线都在 9 日去知床。无流冰时可能改成海上观光。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.27390,44.02204?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a03",
@@ -60,7 +62,7 @@
     "hours": "冬季 9:00–16:30，最后入馆 16:00",
     "closed": "全年开放",
     "review": "适合父母。父母按成人票，展望台可单独免费参观；馆方另有 75 岁起的优惠票 ¥790（约 33 元）。",
-    "drive": "从美幌站前ルポ出发约 30–40 分钟。",
+    "drive": "从北见约 46 公里，从美幌木屋约 27 公里。普通路况单程分别约 45 分钟、25 分钟，雪天另留时间。",
     "url": "https://www.ryuhyokan.com/use/",
     "lat": 44.0005808,
     "lng": 144.239651,
@@ -69,7 +71,8 @@
     "image": "img/a03.jpg",
     "photoSource": "https://www.visit-hokkaido.jp/spot/detail_10137.html",
     "extra": "流氷絶景スライダー往年约 1 月下旬至 3 月上旬，成人参考 ¥300（约 13 元），小学生及以下不可，先查当季开放。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.23965,44.00058?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a04",
@@ -84,7 +87,7 @@
     "hours": "9:00–17:00，最后入馆 16:00",
     "closed": "出发前查当日公告",
     "review": "适合父母。展馆之间有露天路段，路滑时缩短路线。",
-    "drive": "从美幌站前ルポ出发约 20 分钟，雪天另留时间。",
+    "drive": "从北见约 45 公里，从美幌木屋约 28 公里。普通路况单程分别约 40 分钟、25 分钟，雪天另留时间。",
     "url": "https://www.kangoku.jp/info/visit",
     "lat": 43.9956819,
     "lng": 144.229321,
@@ -93,7 +96,8 @@
     "image": "img/a04.jpg",
     "photoSource": "https://www.kangoku.jp/info/visit",
     "extra": "与仍在使用的網走刑務所分处两地，请导航到博物館入口。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.22932,43.99568?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a05",
@@ -108,7 +112,7 @@
     "hours": "白天随到随看，冬季公厕约 9:00–16:00",
     "closed": "暴风雪或封路时取消",
     "review": "适合短停。父母在平坦处观看，避开崖边和冰缘。",
-    "drive": "从美幌站前ルポ出发约 35–45 分钟。",
+    "drive": "从北见约 56 公里，从美幌木屋约 42 公里。普通路况单程分别约 50 分钟、35 分钟，雪天另留时间。",
     "url": "https://visit-abashiri.jp/scenery/b1b92ba8835b04de0cdaf87843cb6d0769a68f3d.html",
     "lat": 44.11222,
     "lng": 144.24306,
@@ -117,7 +121,8 @@
     "image": "img/a05.jpg",
     "photoSource": "https://visit-abashiri.jp/scenery/b1b92ba8835b04de0cdaf87843cb6d0769a68f3d.html",
     "extra": "能取岬海岸暴露在风中，能见度差就折返。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.24306,44.11222?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a06",
@@ -132,7 +137,7 @@
     "hours": "约 130 分钟；拟 1/15–3/22，可能提前结束",
     "closed": "按结冰情况开放，须预约",
     "review": "较适合父母。低温久坐，厚袜和保暖外套很重要。",
-    "drive": "从美幌站前ルポ至网走市区约 30–40 分钟。",
+    "drive": "从北见约 47 公里，从美幌木屋约 32 公里。普通路况单程分别约 40 分钟、25 分钟，雪天另留时间。按网走市区参考点估算，实际接送位置由向导通知。",
     "url": "https://www.jinendo.net/program01",
     "lat": 44.0220409,
     "lng": 144.273901,
@@ -141,7 +146,8 @@
     "image": "img/a06.jpg",
     "photoSource": "https://www.jinendo.net/program01",
     "extra": "2027 年预约拟于 2026/11/20 开放。图钉为可约接送的道の駅流氷街道網走，真正钓场及接送时间以向导通知为准。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.27390,44.02204?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a07",
@@ -156,7 +162,7 @@
     "hours": "2027 年开放日期待公布",
     "closed": "2026 年为保护鱼类于 2/11 提前结束",
     "review": "确认开放后较适合父母。只进入管理方开放的冰面。",
-    "drive": "美幌约 20 分钟",
+    "drive": "从北见约 41 公里，从美幌木屋约 16 公里。普通路况单程分别约 35 分钟、15 分钟，雪天另留时间。",
     "url": "https://ooz-kankou.com/02event/02event_hyoujyouwakasagitsuri/",
     "lat": 43.9271177,
     "lng": 144.1797935,
@@ -165,7 +171,8 @@
     "image": "img/a07.jpg",
     "photoSource": "https://ooz-kankou.com/02event/02event_hyoujyouwakasagitsuri/",
     "extra": "先查结冰和临时休场公告，再决定是否放进美幌的缓冲日。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.17979,43.92712?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a08",
@@ -180,7 +187,7 @@
     "hours": "拟 1/5–3/22，10:00 或 13:00，约 2 小时",
     "closed": "天气和冰况影响路线，须预约",
     "review": "较费体力。父母请量力，需能持续骑行、在雪地保持平衡。",
-    "drive": "美幌至網走呼人一带约 25–35 分钟",
+    "drive": "从北见约 50 公里，从美幌木屋约 25 公里。普通路况单程分别约 40 分钟、20 分钟，雪天另留时间。",
     "url": "https://connectrip-okhotsk.com/2026/11/01/fatbike-2/",
     "lat": 43.9869731,
     "lng": 144.2192887,
@@ -189,7 +196,8 @@
     "image": "img/a08.jpg",
     "photoSource": "https://connectrip-okhotsk.com/2026/11/01/fatbike-2/",
     "extra": "集合在 Connectrip，实际路线由向导安排。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.21929,43.98697?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a09",
@@ -204,7 +212,7 @@
     "hours": "2027/1/15–3/22，约 12:30 开始，含接送约 90 分钟。集合时刻因接送地点略有差别。",
     "closed": "天气影响观鸟，无法保证目击",
     "review": "向导开车找海雕，下车后可免费借双筒望远镜观察，适合全家一起参加。",
-    "drive": "从美幌站前ルポ至网走市区约 30–40 分钟。",
+    "drive": "从北见约 47 公里，从美幌木屋约 32 公里。普通路况单程分别约 40 分钟、25 分钟，雪天另留时间。按网走市区参考点估算，实际接送位置由向导通知。",
     "url": "https://www.jinendo.net/program_w/program03/",
     "lat": 44.0220409,
     "lng": 144.273901,
@@ -213,7 +221,8 @@
     "image": "img/a09.jpg",
     "photoSource": "https://www.jinendo.net/programlist_w/",
     "extra": "可约在破冰船码头、JR 網走駅或网走市区的指定住处接送。实际观鸟地点随海雕活动而变。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.27390,44.02204?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a10",
@@ -228,7 +237,7 @@
     "hours": "拟 1/15–3/15，约 2 小时",
     "closed": "须预约，恶劣天气可能停办",
     "review": "限 8–70 岁。父母五十多岁，在年龄范围内；需能穿雪鞋在不平的雪面行走约两小时，请量力。",
-    "drive": "美幌约 40–50 分钟",
+    "drive": "从北见约 67 公里，从美幌木屋约 42 公里。普通路况单程分别约 55 分钟、35 分钟，雪天另留时间。",
     "url": "https://h-takarajima.com/programs/5309/",
     "lat": 43.933499,
     "lng": 144.454322,
@@ -237,7 +246,8 @@
     "image": "img/a10.jpg",
     "photoSource": "https://h-takarajima.com/programs/5309/",
     "extra": "地图标示向导运营商公布的集合点。四人可按兴趣分别选海岸徒步或休息点。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.45432,43.93350?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a11",
@@ -252,7 +262,7 @@
     "hours": "10:00–22:00，最后受理 21:20，入浴至 21:45",
     "closed": "每月第二个周三，2/10 休",
     "review": "适合父母。浴室地面湿滑，慢进慢出。",
-    "drive": "美幌约 10–15 分钟",
+    "drive": "从北见约 33 公里，从美幌木屋约 8 公里。普通路况单程分别约 25 分钟、10 分钟，雪天另留时间。",
     "url": "https://www.tougenoyu.com/",
     "lat": 43.8093294,
     "lng": 144.1505722,
@@ -261,7 +271,8 @@
     "image": "img/a11.jpg",
     "photoSource": "https://www.bihoro-k.com/html/towninfo-tougenoyu.html",
     "extra": "在美幌住宿时可选，出发前查休息日与维护公告。",
-    "links": []
+    "links": [],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.15057,43.80933?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "a12",
@@ -313,7 +324,7 @@
     "hours": "白天随到随看",
     "closed": "积雪、结冰或封闭区域请绕开",
     "review": "适合父母在岸上远看。雪天不爬陡阶、不靠近冰缘。",
-    "drive": "美幌至乌托罗约 2–2.5 小时",
+    "drive": "从美幌生态木屋至乌托罗约 2–2.5 小时",
     "url": "https://www.shiretoko.asia/detail/scenic/oronkoiwa",
     "lat": 44.0735206,
     "lng": 144.9902571,
@@ -337,7 +348,7 @@
     "hours": "白天短停，距乌托罗约 10 分钟",
     "closed": "冬季上方道路封闭，厕所和卖店关闭",
     "review": "适合父母在下方看。结冰阶梯只走有把握的一段。",
-    "drive": "美幌至乌托罗约 2–2.5 小时，瀑布在到港前",
+    "drive": "从美幌生态木屋至乌托罗约 2–2.5 小时，瀑布在到港前",
     "url": "https://www.visit-hokkaido.jp/spot/detail_10414.html",
     "lat": 44.038165,
     "lng": 144.935303,
@@ -361,7 +372,7 @@
     "hours": "冬季 9:00–17:00，餐厅约 10:00–15:00",
     "closed": "年末年初及部分冬季日期休馆，行前查公告",
     "review": "2/9 知床世界遺産センター周二休馆。不参加流冰走的家人可以在道之驿休息等候。",
-    "drive": "美幌约 2–2.5 小时",
+    "drive": "从美幌生态木屋约 2–2.5 小时",
     "url": "https://www.shiretoko.asia/detail/tourist/utoromichi",
     "lat": 44.069034,
     "lng": 144.990695,
@@ -385,7 +396,7 @@
     "hours": "冬季 10/21–4/19 通常 9:00–16:30，周二休馆。",
     "closed": "冬季周二休馆。2/9 正逢周二，岸上等候请去旁边的道の駅うとろ・シリエトク。",
     "review": "开放日适合父母。2/9 的室内休息点选道之驿。",
-    "drive": "美幌约 2–2.5 小时",
+    "drive": "从美幌生态木屋约 2–2.5 小时",
     "url": "https://policies.env.go.jp/park/shiretoko/whcc/index.html",
     "lat": 44.0694826,
     "lng": 144.991301,
@@ -414,7 +425,7 @@
     "hours": "自然中心冬季 9:00–16:00，步道往返约 2 公里",
     "closed": "暴风雪或步道临时关闭则只逛室内",
     "review": "室内适合父母。雪地步行请量力，先向柜台问路况。",
-    "drive": "美幌至乌托罗约 2–2.5 小时，再开 15–20 分钟",
+    "drive": "从美幌生态木屋至乌托罗约 2–2.5 小时，再开 15–20 分钟",
     "url": "https://center.shiretoko.or.jp/walking/",
     "lat": 44.0905724,
     "lng": 145.0226292,
@@ -438,7 +449,7 @@
     "hours": "拟 1/22–3/22，约 4.5 小时",
     "closed": "一般道路冬季封闭，须参加向导团",
     "review": "13–74 岁，官网指定健脚者。父母请慎重，时长与体力要求明显高于流冰走。",
-    "drive": "美幌至乌托罗约 2–2.5 小时，集合安排须确认",
+    "drive": "从美幌生态木屋至乌托罗约 2–2.5 小时，集合安排须确认",
     "url": "https://www.shinra.or.jp/winter_goko_tour.html",
     "lat": 44.121153,
     "lng": 145.080652,
@@ -462,7 +473,7 @@
     "hours": "下午 15:00–18:00 受理，20:00 前离馆，另有早晨时段",
     "closed": "繁忙时可能暂停日归，先电询 0152-24-2104",
     "review": "较适合父母。注意湿滑地面与冷热温差。",
-    "drive": "美幌至乌托罗约 2–2.5 小时",
+    "drive": "从美幌生态木屋至乌托罗约 2–2.5 小时",
     "url": "https://www.kikishiretoko.co.jp/onsen/",
     "lat": 44.071805,
     "lng": 145.0002679,
@@ -915,44 +926,59 @@
   },
   {
     "id": "s01",
-    "name": "ゲストハウス ルポ（GUESTHOUSE LE REPOS）",
-    "cn": "美幌站前民宿 ルポ",
-    "region": "美幌·网走",
+    "name": "Miyoshi 別邸",
+    "cn": "北见 Miyoshi 別邸",
+    "region": "北见",
     "layer": "stay",
     "type": "行程住宿",
-    "highlight": "两间有门的二楼卧室各有三张单人床。客厅和两间卧室均配空调及煤油暖炉。",
+    "highlight": "整栋两层住宅，两间可上锁的卧室都在二楼。一间有小双人床，另一间铺两套单人日式床垫。",
     "signature": "",
-    "price": "前两晚人均约 ¥19,654（约 825 元）",
-    "hours": "2/6 入住，2/8 10:00 前退房。可在 15:00–22:00 自助入住。",
-    "closed": "前两晚首选，待订。11 月 20 日按四人查询，平台显示两晚整栋 ¥78,614（约 3,302 元）。",
-    "review": "浴缸和唯一的厕所在一楼，夜间从卧室要下楼。冬季可停三辆车。",
-    "drive": "女满别机场至住处约 15 分钟",
-    "url": "https://www.airbnb.jp/rooms/1806958276032753119?check_in=2027-02-06&check_out=2027-02-08&adults=4&currency=JPY",
-    "lat": 43.8341934,
-    "lng": 144.104757,
-    "precision": "图钉取自楽天トラベル的住宿地图。到店停车和入住入口以房东指引为准。",
-    "geoSource": "https://travel.rakuten.co.jp/HOTEL/194144/rtmap.html",
-    "image": "img/s01.jpg",
-    "photoSource": "https://www.airbnb.jp/rooms/1806958276032753119",
-    "extra": "原行程亦记为 Guest House Le Pou。门牌与地图据楽天トラベル登记，取钥匙和停车以房东入住指引为准。",
+    "price": "两晚人均 ¥13,000（约 546 元）；含住宿税预留 ¥13,600（约 571 元）",
+    "hours": "2/6、2/7 拟住，2/8 退房。可自助入住，抵达时段及取钥匙方式请与房东确认。",
+    "closed": "待订。四人两晚平台报价 ¥52,000（约 2,184 元）。若未含住宿税，整栋含税预算 ¥54,400（约 2,285 元）。",
+    "review": "房东的户型照片标明，客厅有 FF 暖炉和空调。二楼有床的卧室配空调，铺日式床垫的卧室只有风扇，冬季是否有独立暖气待确认。",
+    "drive": "冬季单程预留：女满别机场至北见 45–60 分钟，北见至网走两处码头 1 小时 10 分–1 小时 35 分，至美幌生态木屋 40–55 分钟。",
+    "url": "https://www.airbnb.jp/rooms/1691606985272696121?check_in=2027-02-06&check_out=2027-02-08&adults=4&currency=JPY",
+    "lat": 43.802717,
+    "lng": 143.882577,
+    "precision": "美芳町九丁目街区中心。精确门牌和车位请按房东发来的入住指引。",
+    "geoSource": "https://geoshape.ex.nii.ac.jp/ka/resource/01/01208017009.html",
+    "image": "img/miyoshi-living.jpg",
+    "photoSource": "https://www.airbnb.jp/rooms/1691606985272696121",
+    "extra": "浴室、卫生间在一楼。住处前可停一辆大型车。按每人每晚 ¥300（约 13 元）预留住宿税，结算时核对是否已含。",
     "links": [
       {
-        "name": "楽天トラベル · 登记名称与照片",
-        "url": "https://travel.rakuten.co.jp/HOTEL/194144/194144.html"
+        "name": "房东平面图 · 二楼卧室位置",
+        "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1691606985272696121/original/d63b8a01-fc9b-48ac-b922-e0c6ba812d36.jpeg?im_w=960"
       },
       {
-        "name": "实拍 · 二楼两扇卧室门",
-        "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1806958276032753119/original/70313425-8b4d-4cee-8c94-4fd55056b6da.jpeg?im_w=720"
+        "name": "北见市二地域生活协会 · 房源介绍",
+        "url": "https://www.2life.jp/"
+      },
+      {
+        "name": "北海道公布的住宿税率",
+        "url": "https://www.pref.hokkaido.lg.jp/fs/1/3/1/2/2/6/5/1/_/Accommodation_tax_notice202604..pdf"
       }
     ],
-    "address": "北海道網走郡美幌町新町1-53-1",
+    "address": "北海道北見市美芳町9丁目（街区范围）",
     "gallery": [
       {
-        "image": "img/repos-twin.jpg",
-        "caption": "二楼卧室 · 三张单人床",
-        "source": "https://www.airbnb.jp/rooms/1806958276032753119"
+        "image": "img/miyoshi-bedroom.jpg",
+        "caption": "二楼有床的卧室",
+        "source": "https://a0.muscache.com/im/pictures/hosting/Hosting-1691606985272696121/original/57e10feb-ddfc-45d7-b39a-8194d3a9e5b0.jpeg?im_w=960"
+      },
+      {
+        "image": "img/miyoshi-plan.jpg",
+        "caption": "房东户型图 · 两间卧室在二楼",
+        "source": "https://a0.muscache.com/im/pictures/hosting/Hosting-1691606985272696121/original/d63b8a01-fc9b-48ac-b922-e0c6ba812d36.jpeg?im_w=960"
+      },
+      {
+        "image": "img/miyoshi-ff.jpg",
+        "caption": "客厅的 FF 暖炉",
+        "source": "https://a0.muscache.com/im/pictures/hosting/Hosting-1691606985272696121/original/577e2abe-c454-4def-90ba-835aff622166.jpeg?im_w=960"
       }
-    ]
+    ],
+    "photoOriginal": "https://a0.muscache.com/im/pictures/hosting/Hosting-1691606985272696121/original/c84b0cb4-140a-4fc0-9423-c9c7939b3552.jpeg?im_w=960"
   },
   {
     "id": "s02",
@@ -964,8 +990,8 @@
     "highlight": "约 50 平方米的整栋小屋，四人分住两间独立卧室。一间有一张双人床，另一间有两张单人床。",
     "signature": "",
     "price": "三晚原报价 ¥16,500/人（约 690 元）",
-    "hours": "按原安排于 2/10 入住，10、11、12 日过夜，2/13 退房。",
-    "closed": "取消条件以实际预订渠道为准。",
+    "hours": "2/10 起拟住三晚，2/13 退房。",
+    "closed": "待订。取消条件以实际预订渠道为准。",
     "review": "附近缺少超市或饭馆。换住当天可提前在美幌或津别镇备齐食材。",
     "drive": "到阿寒湖约 25 分钟，到女满别机场约 1 小时",
     "url": "https://www.booking.com/searchresults.zh-cn.html?ss=Aioi+House+Tsubetsu&checkin=2027-02-10&checkout=2027-02-13&group_adults=4&group_children=0&no_rooms=1&selected_currency=JPY",
@@ -1045,7 +1071,7 @@
     "hours": "2/8 入住，2/8、2/9 连住两晚，2/10 退房。设施标示 15:00 入住、10:00 退房，交接以实际约定为准。",
     "closed": "已约 8、9 日两晚。家人确认整栋每晚 ¥14,300（约 601 元），四人平摊后每晚人均 ¥3,575（约 150 元）。",
     "review": "建筑档案列有温水地暖、起居室木颗粒炉和卧室辅助电暖板。原设计未设夏季制冷。卧室能否自行调温，请向住宿窗口确认。",
-    "drive": "位于美幌町西侧的みどりの村。雪天请按机场至美幌一带约 15–25 分钟预留。",
+    "drive": "从北见美芳町九丁目经公路约 28 公里，冬季预留 40–55 分钟。木屋到女满别机场约 12 公里。",
     "lat": 43.8382187152,
     "lng": 144.0891448215,
     "address": "北海道網走郡美幌町字美禽258番地の2",
@@ -1079,7 +1105,8 @@
         "caption": "东侧一楼双床卧室",
         "source": "https://bihoro.jp/hotel/127/"
       }
-    ]
+    ],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.08914,43.83822?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "s06",
@@ -1157,7 +1184,7 @@
     "hours": "2/6 JAL 羽田 12:20–女满别 14:00；2/13 AIRDO 女满别 09:15–羽田 11:10",
     "closed": "航班与还车时间按本次计划固定",
     "review": "父母和行李都要留够转乘、托运时间。",
-    "drive": "机场至美幌站前ルポ约 15 分钟。相生到机场约 1 小时，均须另留雪路余量。",
+    "drive": "机场至首晚北见住处街区约 34 公里，冬季留 45–60 分钟。返程从相生出发约 1 小时，雪天另留余量。",
     "url": "https://www.hokkaido-airports.com/ja/memanbetsu/",
     "lat": 43.8815542,
     "lng": 144.1596852,
@@ -1175,6 +1202,7 @@
         "name": "AIRDO",
         "url": "https://www.airdo.jp/"
       }
-    ]
+    ],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.15969,43.88155?sources=0;1&destinations=2&annotations=duration,distance"
   }
 ]

@@ -491,7 +491,7 @@
   "hours": "周一至周六 17:00–22:00（料理LO 21:00）；周日、祝日 17:00–21:00",
   "closed": "不定休。建议预约。",
   "review": "食べログ有页（预算约 ¥4,000–4,999，约 168–210 元，口碑价或更高）",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "北见住处至店约 46 公里，冬季预留 1 小时 10 分–1 小时 35 分。美幌木屋至店约 31 公里，冬季预留 40–55 分钟。",
   "url": "https://visit-abashiri.jp/meal/e86ee24b95d188b7668e69e7bb9144914dd235fb.html",
   "lat": 44.02033019967921,
   "lng": 144.26705880432795,
@@ -501,7 +501,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1003476/",
   "address": "北海道-網走市南5条西1丁目 太陽ビル1F",
   "highlight": "生蟹直接炭烤，想吃招牌烤蟹可以提前问当天供应。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/59975/59975403.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/59975/59975403.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.26706,44.02033?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f022",
@@ -515,7 +516,7 @@
   "hours": "周二至周四 17:30–24:00（LO 23:00）；周五、周六及祝前日 17:30–01:00（LO 24:00）",
   "closed": "周日、周一休息。另有お通し约 ¥440（约 18 元）。2027年2/7（日）、2/8（一）去不了",
   "review": "观光协会及美食小径有介绍；分数请以食べログ/谷歌为准",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "北见住处至店约 46 公里，冬季预留 1 小时 10 分–1 小时 35 分。美幌木屋至店约 31 公里，冬季预留 40–55 分钟。",
   "url": "https://ja.visit-eastern-hokkaido.jp/plans/foodtrail-easthokkaido/trail10/",
   "lat": 44.02089896485258,
   "lng": 144.26692365546808,
@@ -525,7 +526,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1050060/",
   "address": "北海道-網走市南4条西1丁目 セゾンビル２Ｆ",
   "highlight": "在吧台慢慢吃鄂霍次克海鲜寿司，周日和周一休息。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/69339/69339816.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/69339/69339816.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.26692,44.02090?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f023",
@@ -539,7 +541,7 @@
   "hours": "周一 11:00–16:00；周二、四、五 11:00–15:00；周六日 11:00–15:00、17:00–21:00",
   "closed": "每周三休息",
   "review": "食べログ 3.36",
-  "drive": "从美幌约25分钟，在天都山流冰馆2楼",
+  "drive": "从北见约 46 公里，从美幌木屋约 27 公里。普通路况单程分别约 45 分钟、25 分钟，雪天另留时间。",
   "url": "https://tabelog.com/hokkaido/A0110/A011001/1077211/",
   "lat": 44.00052062485682,
   "lng": 144.23961476528137,
@@ -549,7 +551,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1077211/",
   "address": "北海道網走市天都山244-3 オホーツク流氷館 ２F",
   "highlight": "看完天都山流冰馆，上楼就能吃当地食材做的意面或披萨。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/343647/3431f0956228bfb7cb67b1028dfcba42.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/343647/3431f0956228bfb7cb67b1028dfcba42.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.23961,44.00052?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f024",
@@ -563,7 +566,7 @@
   "hours": "周一至周六 16:00–22:00（LO 21:30）；周日 16:00–21:30（LO 21:00）",
   "closed": "不定休",
   "review": "食べログ 3.57",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "北见住处至店约 46 公里，冬季预留 1 小时 10 分–1 小时 35 分。美幌木屋至店约 31 公里，冬季预留 40–55 分钟。",
   "url": "https://tabelog.com/hokkaido/A0110/A011001/1006311/",
   "lat": 44.020470724852096,
   "lng": 144.26456916546542,
@@ -573,7 +576,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1006311/",
   "address": "北海道網走市南四条西3",
   "highlight": "想尝网走地方菜，可以从鲸肉拼盘或当令海鲜中选。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/137933/137933631.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/137933/137933631.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.26457,44.02047?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f025",
@@ -587,7 +591,7 @@
   "hours": "约11:00–15:30（设施冬季节日至18:00，餐饮以馆内公示为准）",
   "closed": "12/31–1/1前后休息；二月通常营业。",
   "review": "食べログ有页（キネマ馆）",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "北见住处至店约 47 公里，冬季预留 1 小时 10 分–1 小时 35 分。美幌木屋至店约 32 公里，冬季预留 40–55 分钟。",
   "url": "https://visit-abashiri.jp/meal/726b6111f5f97c04c2dd7a49df2e2f6950d28fab.html",
   "lat": 44.02189265483723,
   "lng": 144.27405926211333,
@@ -597,7 +601,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1009861/",
   "address": "北海道-網走市南3条東4丁目",
   "highlight": "破冰船码头楼上的热汤面，适合刚下船的一餐。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/2580/2580393.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/2580/2580393.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.27406,44.02189?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f026",
@@ -611,7 +616,7 @@
   "hours": "约9:00–15:00（以当天公示为准）",
   "closed": "请行前确认。",
   "review": "观光协会冬季路线推荐店",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "从北见约 43 公里，从美幌木屋约 28 公里。普通路况单程分别约 35 分钟、25 分钟，雪天另留时间。",
   "url": "https://visit-abashiri.jp/meal/abf98cd300614dbfe9d77e04ca93191503dca756.html",
   "lat": 44.01358257484696,
   "lng": 144.2346674454168,
@@ -621,7 +626,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1046348/",
   "address": "北海道網走市大曲1丁目13-6",
   "highlight": "在海产直销市场分着吃烤鱼、蟹和海鲜盖饭，还可顺路买土产。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/39283/39283123.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/39283/39283123.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.23467,44.01358?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f027",
@@ -635,7 +641,7 @@
   "hours": "11:15–21:00",
   "closed": "每月第一个周一休息（观光站有的资料写周一休，以店头为准）。",
   "review": "食べログ有页（预算约 ¥1,000–1,999，约 42–84 元）",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "从北见约 47 公里，从美幌木屋约 32 公里。普通路况单程分别约 40 分钟、25 分钟，雪天另留时间。",
   "url": "https://visit-abashiri.jp/meal/c208fee1e60fa680fd0399abe15c372fbb4697fc.html",
   "lat": 44.01958287485371,
   "lng": 144.2678767754541,
@@ -645,7 +651,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1028861/",
   "address": "北海道網走市南6条西1丁目8-6",
   "highlight": "招牌泥浊拉面汤色浓，吃起来比外表清爽。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/31912/31912048.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/31912/31912048.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.26788,44.01958?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f028",
@@ -659,7 +666,7 @@
   "hours": "17:00–22:00",
   "closed": "不定休，请电话确认。",
   "review": "食べログ有页（口碑预算约 ¥6,000–7,999，约 252–336 元）",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "北见住处至店约 46 公里，冬季预留 1 小时 10 分–1 小时 35 分。美幌木屋至店约 31 公里，冬季预留 40–55 分钟。",
   "url": "https://168.hokkaido.jp/shops/sc_abashiri_flamingo",
   "lat": 44.02049157485293,
   "lng": 144.26722681546374,
@@ -669,7 +676,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1076863/",
   "address": "北海道-網走市南5条西1 1F",
   "highlight": "想吃网走生羊肉，晚上在这一带围炉烤肉很顺路。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/360146/7e858057db3d0a87739491ec065cb1db.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/360146/7e858057db3d0a87739491ec065cb1db.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.26723,44.02049?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f029",
@@ -683,7 +691,7 @@
   "hours": "11:30–15:00",
   "closed": "周一至周三休息。周四至周日较稳妥。",
   "review": "观光协会记载；食べログ约3.57",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "从北见约 48 公里，从美幌木屋约 23 公里。普通路况单程分别约 40 分钟、20 分钟，雪天另留时间。",
   "url": "https://visit-abashiri.jp/meal/4f801b02ac431204d8644ef1275d3def468aa470.html",
   "lat": 43.966535414874855,
   "lng": 144.22844018494595,
@@ -693,7 +701,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1005037/",
   "address": "北海道網走市字呼人190-1",
   "highlight": "石臼现磨当地荞麦，只做午市，可和天都山排在同一天。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/74461/74461504.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/74461/74461504.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.22844,43.96654?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f030",
@@ -707,7 +716,7 @@
   "hours": "周一、周四至周日 10:00–18:00（部分资料写茶室冬季LO 17:00）",
   "closed": "周二、周三休息。",
   "review": "食べログ 3.35",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "从北见约 48 公里，从美幌木屋约 23 公里。普通路况单程分别约 35 分钟、20 分钟，雪天另留时间。",
   "url": "https://www.abashiri-fuka.com/",
   "lat": 43.96901245487236,
   "lng": 144.22556425497297,
@@ -717,7 +726,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1009694/",
   "address": "北海道網走市呼人121-7",
   "highlight": "天都山脚的甜点店用网走牛奶做蛋糕和布丁。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/343755/0a29d9e432de6c1beaa7ca847d042032.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/343755/0a29d9e432de6c1beaa7ca847d042032.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.22556,43.96901?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f031",
@@ -731,7 +741,7 @@
   "hours": "17:00–翌3:00",
   "closed": "每月第二、第四个周日休息。",
   "review": "食べログ有页（预算约 ¥2,000–2,999，约 84–126 元）",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "北见住处至店约 46 公里，冬季预留 1 小时 10 分–1 小时 35 分。美幌木屋至店约 31 公里，冬季预留 40–55 分钟。",
   "url": "https://visit-abashiri.jp/meal/68757de4331924ab8c7d6e77ab9e69480bebd2ea.html",
   "lat": 44.02122510485235,
   "lng": 144.26687487547142,
@@ -741,7 +751,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1009742/",
   "address": "北海道-網走市南3条西1丁目 ビルマロニエ１F",
   "highlight": "烤知床鸡串配当地的喜知次鱼，四人可先问包间。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/26897/26897698.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/26897/26897698.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.26687,44.02123?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f032",
@@ -755,7 +766,7 @@
   "hours": "17:00–23:00",
   "closed": "不定休。新址在南5条西1 金川ビル 1F，行前确认。",
   "review": "观光协会有介绍",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "北见住处至店约 46 公里，冬季预留 1 小时 10 分–1 小时 35 分。美幌木屋至店约 31 公里，冬季预留 40–55 分钟。",
   "url": "https://tabelog.com/hokkaido/A0110/A011001/1079741/",
   "lat": 44.020358255998644,
   "lng": 144.26727434069156,
@@ -765,7 +776,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1079741/",
   "address": "北海道-網走市南5条西1 金川ビル 1F",
   "highlight": "在网走市区换一顿现做大阪烧，适合逛完流冰祭的晚上。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/300084/1f8ca1f38e92b97af5e06fc3d84ccc6b.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/300084/1f8ca1f38e92b97af5e06fc3d84ccc6b.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.26727,44.02036?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f033",
@@ -779,7 +791,7 @@
   "hours": "周一至周四 17:00–22:00（LO 21:30）；周五 17:00–23:00；周六 16:00–23:00；周日及祝日 16:00–22:00",
   "closed": "无固定休息日",
   "review": "食べログ 3.47",
-  "drive": "从美幌站开车约25–30分",
+  "drive": "北见住处至店约 46 公里，冬季预留 1 小时 10 分–1 小时 35 分。美幌木屋至店约 31 公里，冬季预留 40–55 分钟。",
   "url": "https://www.homemate-research-tour.com/dtl/00000000000000025699/",
   "lat": 44.02148383404517,
   "lng": 144.26172046431586,
@@ -789,7 +801,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1007541/",
   "address": "北海道網走市南2条西4丁目1-2",
   "highlight": "想配烧肉尝当地精酿，来网走啤酒馆很方便。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/171931/8fa385d3006b10b2f17cafe5b606347a.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/171931/8fa385d3006b10b2f17cafe5b606347a.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.26172,44.02148?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f034",
@@ -803,7 +816,7 @@
   "hours": "町观光介绍写 11:30–22:00；食べログ写平日午餐 11:30–14:00、周六晚餐 17:00–22:00",
   "closed": "町介绍：每周二休。食べログ：周日、祝日休。2/7周日、2/11祝日请先电话确认（0152-73-2595）。",
   "review": "食べログ 3.06",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 29 公里，从美幌木屋约 4 公里。普通路况单程分别约 25 分钟、5 分钟，雪天另留时间。",
   "url": "http://www.bihoro-k.com/html/food_ajinoryugetu.html",
   "lat": 43.82228584492729,
   "lng": 144.1054381735751,
@@ -813,7 +826,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1009610/",
   "address": "北海道網走郡美幌町東二条南1丁目3",
   "highlight": "当地家常食堂有鸡骨白汤面，午晚时段资料不同，先电话确认。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/48924/48924851.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/48924/48924851.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.10544,43.82229?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f035",
@@ -827,7 +841,7 @@
   "hours": "冬季（11月–4月）9:00–17:00",
   "closed": "年末年初（12/31–1/3）休息。二月营业。峠道路遇暴风雪可能管制。",
   "review": "官方道之驿页",
-  "drive": "从美幌站沿国道 243 号约 28 公里、30 分钟，雪天另留余量。",
+  "drive": "从北见约 55 公里，从美幌木屋约 30 公里。普通路况单程分别约 40 分钟、25 分钟，雪天另留时间。沿国道 243 号上美幌峠，行前查通行情况。",
   "url": "https://www.okhotsk.or.jp/bihoro/guest.html",
   "lat": 43.64836683427777,
   "lng": 144.24797666055667,
@@ -837,7 +851,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1005673/",
   "address": "北海道-網走郡美幌町字古梅 道の駅　ぐるっとパノラマ美幌峠",
   "highlight": "美幌峠休息站能一边看屈斜路湖，一边吃热食或炸土豆。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/303646/efa1a5b4ed900c40b84517cdc16e4a79.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/303646/efa1a5b4ed900c40b84517cdc16e4a79.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.24798,43.64837?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f036",
@@ -851,7 +866,7 @@
   "hours": "町官方：11:00–20:00；食べログ：11:00–14:00、17:00–19:30",
   "closed": "周日休息。两个来源的结束时间不同，请以当天为准。",
   "review": "食べログ有页",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 29 公里，从美幌木屋约 4 公里。普通路况单程分别约 25 分钟、5 分钟，雪天另留时间。",
   "url": "https://www.town.bihoro.hokkaido.jp/site/kanko/13362.html",
   "lat": 43.823604924926144,
   "lng": 144.10446789358912,
@@ -861,7 +876,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1031211/",
   "address": "北海道網走郡美幌町東一条北1丁目7",
   "highlight": "美幌老店的盐拉面、炒面和手作饺子，适合住处附近吃一顿。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/355574/631950f77b68536396f85f45a9e51aa0.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/355574/631950f77b68536396f85f45a9e51aa0.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.10447,43.82360?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f037",
@@ -875,7 +891,7 @@
   "hours": "11:30–14:30、17:00–20:30（町官方）",
   "closed": "周二休息",
   "review": "町观光介绍；食べログ有页",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 31 公里，从美幌木屋约 6 公里。普通路况单程分别约 25 分钟、5 分钟，雪天另留时间。",
   "url": "https://www.town.bihoro.hokkaido.jp/site/kanko/15777.html",
   "lat": 43.81731095493607,
   "lng": 144.1230667935125,
@@ -885,7 +901,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1006628/",
   "address": "北海道網走郡美幌町字稲美140-42",
   "highlight": "逛累了可坐下来分披萨、吃意面，晚餐也营业。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/332703/e0e4d9dd287e47078f9b70978d57aefa.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/332703/e0e4d9dd287e47078f9b70978d57aefa.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.12307,43.81731?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f038",
@@ -899,7 +916,7 @@
   "hours": "11:00–13:30、17:00–22:15（町官方）",
   "closed": "请以店头为准。",
   "review": "町观光介绍；食べログ有页",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 29 公里，从美幌木屋约 4 公里。普通路况单程分别约 25 分钟、5 分钟，雪天另留时间。",
   "url": "https://www.town.bihoro.hokkaido.jp/site/kanko/15377.html",
   "lat": 43.82396369492637,
   "lng": 144.10587219359175,
@@ -909,7 +926,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1010501/",
   "address": "北海道網走郡美幌町東一条北2",
   "highlight": "拉面、炒菜和定食都有，适合家人一起点几样热菜。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/287208/3f63563c2ceadd86b1ea09f61966f386.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/287208/3f63563c2ceadd86b1ea09f61966f386.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.10587,43.82396?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f039",
@@ -923,7 +941,7 @@
   "hours": "11:00–21:00（町官方）",
   "closed": "有资料写周三休息，请确认。",
   "review": "町观光介绍；食べログ有页",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 30 公里，从美幌木屋约 5 公里。普通路况单程分别约 25 分钟、5 分钟，雪天另留时间。",
   "url": "https://www.town.bihoro.hokkaido.jp/site/kanko/13358.html",
   "lat": 43.81849997493338,
   "lng": 144.11701241352876,
@@ -933,7 +951,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1076558/",
   "address": "北海道網走郡美幌町字稲美68-84",
   "highlight": "回转寿司可按胃口挑盘，适合住美幌时轻松吃海鲜。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/392383/93513e05aeef9c997feb17814616e09a.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/392383/93513e05aeef9c997feb17814616e09a.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.11701,43.81850?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f040",
@@ -947,7 +966,7 @@
   "hours": "10:30–15:00、17:00–19:30（町官方）",
   "closed": "有资料写周一休息，请确认。",
   "review": "町观光介绍",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 28 公里，从美幌木屋约 2 公里。普通路况单程分别约 20 分钟、5 分钟，雪天另留时间。",
   "url": "https://www.town.bihoro.hokkaido.jp/site/kanko/13360.html",
   "lat": 43.83493736576171,
   "lng": 144.10616394227873,
@@ -957,7 +976,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1009447/",
   "address": "北海道網走郡美幌町新町2丁目",
   "highlight": "午餐或早点吃晚饭，都能来美幌老店吃一碗热荞麦。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/377376/50b9a35d743ddfb555631bdb9dbd8e22.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/377376/50b9a35d743ddfb555631bdb9dbd8e22.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.10616,43.83494?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f041",
@@ -971,7 +991,7 @@
   "hours": "周二至周日 17:00–22:00（LO 21:30）",
   "closed": "每周一休息（若周一为祝日则次日休）",
   "review": "食べログ有页",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 29 公里，从美幌木屋约 4 公里。普通路况单程分别约 25 分钟、5 分钟，雪天另留时间。",
   "url": "https://tabelog.com/hokkaido/A0110/A011001/1024516/",
   "lat": 43.82808250492885,
   "lng": 144.12189623362212,
@@ -981,7 +1001,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1024516/",
   "address": "北海道網走郡美幌町日の出2-3-8",
   "highlight": "住美幌想吃烧肉时，晚上可来这里围桌烤肉。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/298215/d1b127405397c7a243ae8b805db7e4df.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/298215/d1b127405397c7a243ae8b805db7e4df.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.12190,43.82808?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f042",
@@ -995,7 +1016,7 @@
   "hours": "9:30–18:30，卖完为止",
   "closed": "通常周日休息（以店头为准）",
   "review": "町观光介绍",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 28 公里，从美幌木屋约 3 公里。普通路况单程分别约 20 分钟、5 分钟，雪天另留时间。",
   "url": "https://www.town.bihoro.hokkaido.jp/site/kanko/13375.html",
   "lat": 43.829945844922065,
   "lng": 144.10428653365327,
@@ -1005,7 +1026,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1049290/",
   "address": "北海道網走郡美幌町仲町1-116",
   "highlight": "给第二天车程备点小食，也可买当地老铺的日式伴手礼。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/372869/5d7cc530ddae7f6d7488cdf46271d934.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/372869/5d7cc530ddae7f6d7488cdf46271d934.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.10429,43.82995?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f043",
@@ -1019,7 +1041,7 @@
   "hours": "10:30–18:30",
   "closed": "周一、周二休息",
   "review": "食べログ有页",
-  "drive": "从美幌站开车约5–10分",
+  "drive": "从北见约 30 公里，从美幌木屋约 4 公里。普通路况单程分别约 25 分钟、5 分钟，雪天另留时间。",
   "url": "https://tabelog.com/hokkaido/A0110/A011001/1044898/",
   "lat": 43.824633514930156,
   "lng": 144.11910056358926,
@@ -1029,7 +1051,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1044898/",
   "address": "北海道網走郡美幌町日の出1-3-1",
   "highlight": "上午开门后的蛋糕和烘焙点心，可打包回整栋住宿分享。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/332703/c9acb5af7ddd0519d05fa0e8f5719a90.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/332703/c9acb5af7ddd0519d05fa0e8f5719a90.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.11910,43.82463?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f044",
@@ -1043,7 +1066,7 @@
   "hours": "11:00–14:30、17:30–20:00（食べログ）；观光协会有的资料写11:00–20:00",
   "closed": "周三休息",
   "review": "食べログ有页",
-  "drive": "从美幌站开车约15–20分",
+  "drive": "从北见约 40 公里，从美幌木屋约 15 公里。普通路况单程分别约 30 分钟、15 分钟，雪天另留时间。",
   "url": "https://tabelog.com/hokkaido/A0110/A011001/1066826/",
   "lat": 43.90698542489444,
   "lng": 144.17118724438456,
@@ -1053,7 +1076,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1066826/",
   "address": "北海道網走郡大空町女満別西5条5-1-12",
   "highlight": "机场沿途来碗厚切炙烤叉烧面，午晚餐之间有休息。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/240863/120220a5de82c481c5ac1d24cee16f3d.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/240863/120220a5de82c481c5ac1d24cee16f3d.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.17119,43.90699?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f045",
@@ -1067,7 +1091,7 @@
   "hours": "11:00–20:00（汤售完可能提早关）",
   "closed": "无休（也有资料写不定休）",
   "review": "食べログ 3.22",
-  "drive": "从美幌站开车约15–20分",
+  "drive": "从北见约 36 公里，从美幌木屋约 11 公里。普通路况单程分别约 30 分钟、10 分钟，雪天另留时间。",
   "url": "https://tabelog.com/hokkaido/A0110/A011001/1001895/",
   "lat": 43.88106483410088,
   "lng": 144.15660026297118,
@@ -1077,7 +1101,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1001895/",
   "address": "北海道網走郡大空町女満別中央201-24",
   "highlight": "机场前的人气拉面，招牌猪颊肉炖得酥软。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/359819/ac36db9dea6efe7e1dc298c54145e191.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/359819/ac36db9dea6efe7e1dc298c54145e191.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.15660,43.88106?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f046",
@@ -1091,7 +1116,7 @@
   "hours": "12:00–20:00",
   "closed": "周一休息，店铺在机场 2 楼。返程航班早于开店时间。",
   "review": "大空町观光协会；谷歌评分约3.8",
-  "drive": "从美幌站开车约15–20分",
+  "drive": "从北见约 34 公里，从美幌木屋约 12 公里。普通路况单程分别约 30 分钟、10 分钟，雪天另留时间。",
   "url": "https://www.sushi-yamashita.jp/standing-sushi-bar-end-memanbetsu",
   "lat": 43.88095973490702,
   "lng": 144.15881438413035,
@@ -1101,7 +1126,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1073500/",
   "address": "北海道網走郡大空町女満別中央201-3 女満別空港 2F",
   "highlight": "机场二楼吃一小贯站立寿司，适合去程落地后。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/382125/56d903282420edacdf38e6ff7f10f44f.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/382125/56d903282420edacdf38e6ff7f10f44f.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.15881,43.88096?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f047",
@@ -1115,7 +1141,7 @@
   "hours": "11:00–20:00（LO 19:30）",
   "closed": "不定休。返程航班早于开店时间。",
   "review": "食べログ有页；谷歌评分很高",
-  "drive": "从美幌站开车约15–20分",
+  "drive": "从北见约 34 公里，从美幌木屋约 12 公里。普通路况单程分别约 30 分钟、15 分钟，雪天另留时间。",
   "url": "https://okushiba.net/",
   "lat": 43.88171727490659,
   "lng": 144.1589610241379,
@@ -1125,7 +1151,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1060623/",
   "address": "北海道網走郡大空町女満別中央201 女満別空港",
   "highlight": "女满别机场二楼也能吃到北海道虾汤汤咖喱，适合去程。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/104593/104593168.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/104593/104593168.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.15896,43.88172?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f048",
@@ -1139,7 +1166,7 @@
   "hours": "食堂 11:00–20:00",
   "closed": "周一休息",
   "review": "大空町观光协会",
-  "drive": "从美幌站开车约35分",
+  "drive": "从北见约 46 公里，从美幌木屋约 21 公里。普通路况单程分别约 35 分钟、15 分钟，雪天另留时间。",
   "url": "https://ooz-kankou.com/03gourmet/03gourmet_meal/",
   "lat": 43.84494699497412,
   "lng": 144.29766663366925,
@@ -1149,7 +1176,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1008464/",
   "address": "北海道網走郡大空町東藻琴中央区316-8",
   "highlight": "食堂旁有棒球打击场，东藻琴长芋蛋包饭是当地味道。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/364683/81412ee5a491b5008b751cb9ed8ff6ce.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/364683/81412ee5a491b5008b751cb9ed8ff6ce.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.29767,43.84495?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f049",
@@ -1163,7 +1191,7 @@
   "hours": "约11:00–15:00",
   "closed": "不定休，请确认。",
   "review": "大空町观光协会；食べログ有「ウインズ２」页，店名以现场为准",
-  "drive": "从美幌站开车约15–20分",
+  "drive": "从北见约 41 公里，从美幌木屋约 16 公里。普通路况单程分别约 30 分钟、15 分钟，雪天另留时间。",
   "url": "https://denshobato.com/tokusen/rsr_winds/top.tks",
   "lat": 43.91777813118488,
   "lng": 144.1885772661178,
@@ -1173,7 +1201,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1007545/",
   "address": "北海道網走郡大空町女満別昭和96-1",
   "highlight": "网走湖蚬子煮成清甜拉面，可和女满别道之驿一起逛。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/367654/906338b975409e8e0aeaa302d380ecc4.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/367654/906338b975409e8e0aeaa302d380ecc4.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.18858,43.91778?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f050",
@@ -1187,7 +1216,7 @@
   "hours": "午餐 11:00–14:00；晚餐 17:00–21:00（LO 20:30）",
   "closed": "年末年初（12/31–1/5）休息，二月营业。",
   "review": "大空町观光协会",
-  "drive": "从美幌站开车约35分",
+  "drive": "从北见约 46 公里，从美幌木屋约 20 公里。普通路况单程分别约 35 分钟、15 分钟，雪天另留时间。",
   "url": "https://ooz-kankou.com/03gourmet/03gourmet_meal/",
   "lat": 43.845225528040324,
   "lng": 144.29499343538708,
@@ -1197,7 +1226,8 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1056521/",
   "address": "北海道網走郡大空町東藻琴100 道の駅 ノンキーランドひがしもこと",
   "highlight": "东藻琴道之驿里的餐厅，停好车就能吃当地食材做的定食。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/320912/5d81abfab50392177a2801ea032e95aa.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/320912/5d81abfab50392177a2801ea032e95aa.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.29499,43.84523?sources=0;1&destinations=2&annotations=duration,distance"
  },
  {
   "id": "f051",
@@ -1211,7 +1241,7 @@
   "hours": "11:00–14:00",
   "closed": "周日休息",
   "review": "大空町观光协会",
-  "drive": "从美幌站开车约15–20分",
+  "drive": "从北见约 40 公里，从美幌木屋约 14 公里。普通路况单程分别约 30 分钟、15 分钟，雪天另留时间。",
   "url": "https://ooz-kankou.com/03gourmet/03gourmet_meal/",
   "lat": 43.914273804890044,
   "lng": 144.17192455445763,
@@ -1221,6 +1251,7 @@
   "photoSource": "https://tabelog.com/hokkaido/A0110/A011001/1012855/",
   "address": "北海道網走郡大空町女満別西一条3-1-32",
   "highlight": "在女满别吃一碗绿色手打薮荞麦，午间营业。",
-  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/14748/14748932.jpg"
+  "photoOriginal": "https://tblg.k-img.com/restaurant/images/Rvw/14748/14748932.jpg",
+  "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.17192,43.91427?sources=0;1&destinations=2&annotations=duration,distance"
  }
 ]

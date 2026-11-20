@@ -49,3 +49,28 @@
 .rt-free-choice a[aria-current],.rt-free-choice a:hover{background:#e1eee1;border-color:#477661}
 .rt-free-choice small{font-size:13px;color:#476154}
 @media(max-width:680px){.rt-free-choice:not([hidden]){align-items:stretch;flex-direction:column;gap:6px}.rt-free-choice a{flex-direction:column;align-items:flex-start;gap:2px}}
+.rt-bases-view .rt-plans{display:none}
+.rt-bases-view .rt-stay-entry{margin-top:13px}
+.rt-bases-chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:0;gap:0;background:#f3f7f4}
+.rt-bases-chain button{padding:11px;gap:8px;align-items:flex-start;text-align:left;min-height:60px}
+.rt-bases-chain button+button{border-left:1px solid #d3dfd8}
+.rt-bases-chain button b{background:#235b4e;flex:none;font-size:13px;line-height:23px;width:23px;height:23px}
+.rt-bases-chain strong,.rt-bases-chain small{display:block}
+.rt-bases-chain strong{font-size:14px}.rt-bases-chain small{font-size:12px;line-height:1.5;color:#3f6156;margin-top:3px}
+.rt-firstdays{margin-top:13px;padding:16px 18px;background:white;border:1px solid var(--route-border);border-radius:12px}
+.rt-firstdays h2{font-size:17px}.rt-firstdays>div{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.rt-firstdays>div a{display:grid;gap:4px;font-size:14px;line-height:1.55}.rt-firstdays a:hover{text-decoration:underline}
+.rt-allroute{font-weight:650;color:#255d4f;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.rt-bases-view .rt-canvas{height:clamp(360px,54vh,740px)}
+.rt-bases-view .rt-expanded .rt-canvas{height:auto}
+.rt-base-legend{display:inline-flex;gap:6px;align-items:center;color:#345348;font-size:13px}
+.rt-base-legend:before{content:"";border-top:4px solid var(--leg);width:20px}
+@media(max-width:720px){.rt-bases-chain button{padding:8px 5px;gap:4px}.rt-bases-chain strong{font-size:13px}.rt-bases-chain small{font-size:11px}.rt-bases-chain button b{height:18px;width:18px;line-height:18px;font-size:11px}.rt-firstdays>div{grid-template-columns:1fr}.rt-bases-view .rt-canvas{height:45dvh;min-height:280px}.rt-foot .rt-base-legend{margin-right:8px}}
+
+@media(max-width:720px){
+  .rt-bases-view .rt-intro,.rt-bases-view .rt-stay-entry>span,.rt-bases-view .rt-stay-entry>svg{display:none}
+  .rt-bases-view .rt-stay-entry{display:flex;justify-content:flex-end;margin:0 0 8px;padding:3px 2px;background:transparent;border:none}
+  .rt-bases-view .rt-stay-entry b{text-decoration:underline;text-underline-offset:3px}
+  .rt-bases-view .rt-bases-chain button{flex-direction:column}
+  .rt-bases-view .rt-bases-chain small{line-height:1.4}
+}

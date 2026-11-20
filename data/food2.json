@@ -11,7 +11,7 @@
     "hours": "冬季常见 10:00–15:00（以道之驿当日公示为准）",
     "closed": "有资料写12月周四及年末年初休。行前看斜里观光协会页。",
     "review": "食べログ 3.28（查阅时）",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 93 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://www.shiretoko.asia/detail/utopiashiretoko_restaurant",
     "lat": 44.0690419,
     "lng": 144.9907035,
@@ -21,7 +21,8 @@
     "photoSource": "https://www.shiretoko.asia/detail/utopiashiretoko_restaurant",
     "image": "img/f052.jpg",
     "description": "用当地当季食材做海鲜盖饭、海胆、烤鲑鱼定食。停车场大，自驾最省心。冬季餐饮时段可能缩短。",
-    "address": "斜里郡斜里町ウトロ西186-8"
+    "address": "斜里郡斜里町ウトロ西186-8",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.99070,44.06904?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f053",
@@ -35,7 +36,7 @@
     "hours": "冬季（11–4月）约9:00–17:00（实际可能各短约30分钟）；夏季 8:30–18:30",
     "closed": "年末年始休息。二月营业",
     "review": "食べログ 3.28",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 93 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://tabelog.com/hokkaido/A0110/A011002/1030662/",
     "lat": 44.0687661,
     "lng": 144.990371,
@@ -45,7 +46,8 @@
     "photoSource": "https://tabelog.com/hokkaido/A0110/A011002/1030662/",
     "image": "img/f053.jpg",
     "description": "在道之驿乌托罗里，卖知床鹿肉汉堡和越橘、滨梨软冰等。散步回来买一份当点心正好。",
-    "address": "斜里郡斜里町ウトロ西186-8 道の駅「うとろ・シリエトク」内"
+    "address": "斜里郡斜里町ウトロ西186-8 道の駅「うとろ・シリエトク」内",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.99037,44.06877?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f054",
@@ -59,7 +61,7 @@
     "hours": "食べログ：11:00–14:00、17:00–22:00。另有旅行指南写11月–翌年2月仅17:00–23:30。",
     "closed": "食べログ列周三休。冬季午餐消息不一，请先致电 0152-24-3055。",
     "review": "食べログ约3.42",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 94 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://tabelog.com/hokkaido/A0110/A011002/1022993/",
     "lat": 44.0704667,
     "lng": 145.0007655,
@@ -69,7 +71,8 @@
     "photoSource": "https://tabelog.com/hokkaido/A0110/A011002/1022993/",
     "image": "img/f054.jpg",
     "description": "出租车司机也常推荐的海鲜店。有豪华生散寿司「最果ての生ちらし」、烤海螺、烤鲱鱼定食等。有资料称11月–2月只开晚餐，也有食べログ仍写午晚两段，请务必先打电话。",
-    "address": "斜里郡斜里町ウトロ香川180"
+    "address": "斜里郡斜里町ウトロ香川180",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;145.00077,44.07047?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f055",
@@ -83,7 +86,7 @@
     "hours": "拉面 11:00–14:30（LO 14:15）；晚上 17:30–21:00（LO 20:30，拉面+烧鸟）",
     "closed": "周日休息；晚间饮酒另收前菜费 ¥350（约 15 元/人）。",
     "review": "食べログ 3.50",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 93 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://namishibuki.jp/",
     "lat": 44.0669467,
     "lng": 144.9885544,
@@ -93,7 +96,8 @@
     "photoSource": "https://tabelog.com/hokkaido/A0110/A011002/1021053/",
     "image": "img/f055.jpg",
     "description": "乌托罗少有的冬天也稳定开门的店。中午只做拉面（盐、味噌、酱油，叉烧很厚），晚上变成烧鸟居酒屋，拉面也还卖。有掘炬燵，冬天很舒服。",
-    "address": "斜里郡斜里町ウトロ西176-10"
+    "address": "斜里郡斜里町ウトロ西176-10",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.98855,44.06695?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f056",
@@ -107,7 +111,7 @@
     "hours": "冬季常见 8:00–16:00（以观光协会为准）",
     "closed": "冬季周日休息",
     "review": "食べログ 3.09（查阅时）",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 93 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://www.shiretoko.asia/detail/exogashima",
     "lat": 44.0684713,
     "lng": 144.9914854,
@@ -117,7 +121,8 @@
     "photoSource": "https://www.shiretoko.asia/detail/exogashima",
     "image": "img/f056.jpg",
     "description": "乌托罗当地食堂，海鲜和定食都有。冬季周日休息，其余日子白天营业。",
-    "address": "斜里郡斜里町ウトロ西187-12"
+    "address": "斜里郡斜里町ウトロ西187-12",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.99149,44.06847?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f057",
@@ -131,7 +136,7 @@
     "hours": "咖啡 11:00–14:30（LO 14:00）；酒吧 18:00–21:30（LO 21:00）",
     "closed": "周三、周四休息。4–8月基本停业，二月在营业季内。不收信用卡。",
     "review": "食べログ 3.06（查阅时）",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 93 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://www.shiretoko.asia/detail/gvo",
     "lat": 44.0663731,
     "lng": 144.9873537,
@@ -141,7 +146,8 @@
     "photoSource": "https://www.shiretoko.asia/detail/gvo",
     "image": "img/f057.jpg",
     "description": "店主本业是海胆渔，大约9月到次年3月底才开门，正好赶上流冰季。窗户能看海面流冰。有海胆盖浇饭、海胆番茄奶油意面等。也有酒吧时段，店主偶尔会弹吉他。",
-    "address": "斜里町ウトロ西91-5"
+    "address": "斜里町ウトロ西91-5",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.98735,44.06637?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f058",
@@ -155,7 +161,7 @@
     "hours": "酒店设施页列カフェ知床焙煎所 10:00–18:00。",
     "closed": "冬季营业或外客接待情况，请向北こぶし确认。",
     "review": "旧店 334 的食べログ页面为「掲載保留」。酒店设施页当前列有カフェ知床焙煎所。",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 94 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://www.shiretoko.co.jp/facilities/#facilities10",
     "statusNote": "原收藏为 334。酒店别馆一楼现可到カフェ知床焙煎所喝咖啡。",
     "lat": 44.0717835,
@@ -174,7 +180,8 @@
         "name": "酒店咖啡更名公告",
         "url": "https://www.shiretoko.co.jp/post-6497/"
       }
-    ]
+    ],
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.99551,44.07178?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f059",
@@ -188,7 +195,7 @@
     "hours": "11:30–17:00（可能提早收）",
     "closed": "不定休。12–1月全休；7–9月无休。二月营业。不收信用卡。",
     "review": "食べログ 3.29（查阅时）",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 94 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://www.shiretoko.asia/detail/bonshome_restaurant",
     "lat": 44.0702974,
     "lng": 144.9945645,
@@ -198,7 +205,8 @@
     "photoSource": "https://www.shiretoko.asia/detail/bonshome_restaurant",
     "image": "img/f059.jpg",
     "description": "民宿一楼的咖啡店。用无农药合同栽培、再熟成约半年的「知床栗土豆」做焗菜、咖喱和布丁。2–3月改用得过日本土豆口味竞赛第一的越冬红男爵土豆。12–1月全休，二月有营业。",
-    "address": "斜里郡斜里町ウトロ東217"
+    "address": "斜里郡斜里町ウトロ東217",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.99456,44.07030?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f060",
@@ -212,7 +220,7 @@
     "hours": "午餐 10:30–14:30（每日）；周二、三、五、六晚餐 17:00–19:30；周日晚餐 17:00–19:00；周一、四仅午餐",
     "closed": "炉端烧需提前两天预约",
     "review": "食べログ 3.45（查阅时）",
-    "drive": "从美幌站开车约50分",
+    "drive": "从北见约 82 公里，从美幌木屋约 57 公里。普通路况单程分别约 1 小时、45 分钟，雪天另留时间。",
     "url": "https://www.wbf.co.jp/hokkaido/gourmet/hokkaido-shiretokoutorokaisen/",
     "lat": 43.9007712,
     "lng": 144.6519969,
@@ -222,7 +230,8 @@
     "photoSource": "https://tabelog.com/hokkaido/A0110/A011002/1020035/",
     "image": "img/f060.jpg",
     "description": "在斜里市区，不在乌托罗。午餐有海鲜盖饭、海鲜天妇罗盖饭和荞麦；晚上变居酒屋，有当地酒。从美幌去乌托罗的路上可停。",
-    "address": "斜里郡斜里町新光町64"
+    "address": "斜里郡斜里町新光町64",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.65200,43.90077?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f061",
@@ -236,7 +245,7 @@
     "hours": "11:00–20:00（最后点餐 19:30）",
     "closed": "周一休息（协会资料）",
     "review": "食べログ 3.38（查阅时）",
-    "drive": "从美幌站开车约50分",
+    "drive": "从北见约 84 公里，从美幌木屋约 59 公里。普通路况单程分别约 1 小时、45 分钟，雪天另留时间。",
     "url": "https://www.shiretoko.asia/detail/tomoni",
     "lat": 43.9009288,
     "lng": 144.6842221,
@@ -246,7 +255,8 @@
     "photoSource": "https://www.shiretoko.asia/detail/tomoni",
     "image": "img/f061.jpg",
     "description": "斜里的家常饭馆，用当地食材做日常定食。比乌托罗海鲜店更有生活气息。",
-    "address": "斜里郡斜里町以久科北106-4"
+    "address": "斜里郡斜里町以久科北106-4",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.68422,43.90093?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f062",
@@ -260,7 +270,7 @@
     "hours": "19:00–深夜（协会资料写可到凌晨1:00入店）",
     "closed": "无休（以协会为准）",
     "review": "食べログ 3.17（查阅时）",
-    "drive": "从美幌约 2–2.5 小时（单程，雪天更久）",
+    "drive": "从美幌生态木屋去乌托罗约 94 公里，冬季单程预留 2–2.5 小时。",
     "url": "https://www.shiretoko.asia/detail/prikaderic",
     "lat": 44.0706927,
     "lng": 144.9945026,
@@ -270,7 +280,8 @@
     "photoSource": "https://www.shiretoko.asia/detail/prikaderic",
     "image": "img/f062.jpg",
     "description": "乌托罗晚上少有的、冬天也无休开到很晚的酒吧食堂，适合看完流冰或泡完温泉后喝一杯、再吃点小菜。",
-    "address": "斜里郡斜里町ウトロ東220"
+    "address": "斜里郡斜里町ウトロ東220",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.99450,44.07069?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f063",
@@ -284,7 +295,7 @@
     "hours": "10:30–16:00（常见资料）",
     "closed": "多为平日休息、周末和祝日开。请先打电话 0152-23-8066。",
     "review": "食べログ 3.08",
-    "drive": "从美幌站开车约50分",
+    "drive": "从北见约 76 公里，从美幌木屋约 51 公里。普通路况单程分别约 1 小时、40 分钟，雪天另留时间。",
     "url": "https://okacafe0103.wixsite.com/okacafe/contact",
     "lat": 43.8875886,
     "lng": 144.590962,
@@ -294,7 +305,8 @@
     "photoSource": "https://tabelog.com/hokkaido/A0110/A011002/1055891/",
     "image": "img/f063.jpg",
     "description": "在斜里的农田中间，先看到斜里岳和知床群山，再用当地食材吃汤咖喱和咖啡。有资料写主要是周六、周日和祝日营业，2026年3月仍有人去过。",
-    "address": "斜里郡斜里町大栄103"
+    "address": "斜里郡斜里町大栄103",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.59096,43.88759?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f064",
@@ -308,7 +320,7 @@
     "hours": "11:00–16:00，最后点餐 15:30（清里町）",
     "closed": "场馆通常除年末年初外开放。旧经营方已结束营业，当前餐厅与菜单请向道之驿确认。",
     "review": "食べログ 3.06（查阅时）",
-    "drive": "从美幌站开车约45分",
+    "drive": "从北见约 76 公里，从美幌木屋约 51 公里。普通路况单程分别约 1 小时、40 分钟，雪天另留时间。",
     "url": "https://www.town.kiyosato.hokkaido.jp/tourism/?content=1051",
     "statusNote": "场馆通常除年末年初外开放。旧经营方已结束营业，当前餐厅与菜单请向道之驿确认。",
     "lat": 43.7905345,
@@ -319,7 +331,8 @@
     "photoSource": "https://www.kiyosatokankou.com/restaurant.html",
     "image": "img/f064.jpg",
     "description": "清里道之驿适合停车吃午餐，当季菜色向馆方确认。",
-    "address": "斜里郡清里町字神威1071 道の駅 パパスランドさっつる"
+    "address": "斜里郡清里町字神威1071 道の駅 パパスランドさっつる",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.53406,43.79053?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f065",
@@ -333,7 +346,7 @@
     "hours": "冬季 10:30–16:00（夏季 10:00–16:30）",
     "closed": "除年末年初外无休",
     "review": "食べログ 3.21（查阅时）",
-    "drive": "从美幌站开车约45分",
+    "drive": "从北见约 77 公里，从美幌木屋约 52 公里。普通路况单程分别约 1 小时、45 分钟，雪天另留时间。",
     "url": "https://www.kiyosatokankou.com/restaurant.html",
     "lat": 43.8284923,
     "lng": 144.585784,
@@ -343,7 +356,8 @@
     "photoSource": "https://www.kiyosatokankou.com/restaurant.html",
     "image": "img/f065.jpg",
     "description": "在清里町观光协会所在地，可以边看斜里岳边吃午餐和下午茶。冬季也开门，只是结束得比夏天早一点。",
-    "address": "斜里郡清里町羽衣町62 きよ～る"
+    "address": "斜里郡清里町羽衣町62 きよ～る",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.58578,43.82849?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f066",
@@ -357,7 +371,7 @@
     "hours": "11:00–14:00；晚餐仅接受预约",
     "closed": "周日休息",
     "review": "食べログ 3.09（查阅时）",
-    "drive": "从美幌站开车约45分",
+    "drive": "从北见约 77 公里，从美幌木屋约 52 公里。普通路况单程分别约 1 小时、40 分钟，雪天另留时间。",
     "url": "https://www.kiyosatokankou.com/restaurant.html",
     "lat": 43.838539,
     "lng": 144.5957075,
@@ -367,7 +381,8 @@
     "photoSource": "https://www.kiyosatokankou.com/restaurant.html",
     "image": "img/f066.jpg",
     "description": "用清里「サチク麦王」猪肉做的姜汁烧肉定食和猪肉盖饭，拉面也很受当地人欢迎。只开午餐，晚上要预约。",
-    "address": "斜里郡清里町水元町5"
+    "address": "斜里郡清里町水元町5",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.59571,43.83854?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f067",
@@ -381,7 +396,7 @@
     "hours": "11:00–14:00，每日约30碗，售完即止",
     "closed": "周一、周二休息，另每月第二、第三个周日休",
     "review": "食べログ 3.25（查阅时）",
-    "drive": "从美幌站开车约45分",
+    "drive": "从北见约 74 公里，从美幌木屋约 49 公里。普通路况单程分别约 1 小时、45 分钟，雪天另留时间。",
     "url": "https://www.kiyosatokankou.com/restaurant.html",
     "lat": 43.8159592,
     "lng": 144.5603204,
@@ -391,7 +406,8 @@
     "photoSource": "https://www.kiyosatokankou.com/restaurant.html",
     "image": "img/f067.jpg",
     "description": "店主每天只做约30份、用自家粉碎荞麦粉打的荞麦。卖完就收，想吃要早点到。",
-    "address": "斜里郡清里町神威414-6"
+    "address": "斜里郡清里町神威414-6",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.56032,43.81596?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f068",
@@ -405,7 +421,7 @@
     "hours": "11:00–13:30",
     "closed": "不定休，请电话 0152-26-7830",
     "review": "食べログ 3.02（查阅时）",
-    "drive": "从美幌站开车约45分",
+    "drive": "从北见约 77 公里，从美幌木屋约 52 公里。普通路况单程分别约 1 小时、40 分钟，雪天另留时间。",
     "url": "https://www.kiyosatokankou.com/restaurant.html",
     "lat": 43.8380984,
     "lng": 144.5966657,
@@ -415,7 +431,8 @@
     "photoSource": "https://www.kiyosatokankou.com/restaurant.html",
     "image": "img/f068.jpg",
     "description": "清里镇上的拉面店，推荐自制麻油酱油拉面。只开中午一小段，不定休，去之前最好先问。",
-    "address": "斜里郡清里町水元町11-16"
+    "address": "斜里郡清里町水元町11-16",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.59667,43.83810?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f069",
@@ -429,7 +446,7 @@
     "hours": "10:30–14:00（LO 13:30）",
     "closed": "不定休，请行前确认。",
     "review": "食べログ 3.03（查阅时）",
-    "drive": "从美幌站开车约45分",
+    "drive": "从北见约 77 公里，从美幌木屋约 52 公里。普通路况单程分别约 1 小时、40 分钟，雪天另留时间。",
     "url": "https://www.kiyosatokankou.com/restaurant.html",
     "lat": 43.8341098,
     "lng": 144.5915448,
@@ -439,7 +456,8 @@
     "photoSource": "https://www.kiyosatokankou.com/restaurant.html",
     "image": "img/f069.jpg",
     "description": "用高汤做底的汤咖喱专门店，会放很多当地蔬菜。也可前一天预约打包。",
-    "address": "斜里郡清里町羽衣町43-3"
+    "address": "斜里郡清里町羽衣町43-3",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.59154,43.83411?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f070",
@@ -453,7 +471,7 @@
     "hours": "17:00–22:30",
     "closed": "周三休息",
     "review": "食べログ 3.06（查阅时）",
-    "drive": "从美幌站开车约45分",
+    "drive": "从北见约 77 公里，从美幌木屋约 52 公里。普通路况单程分别约 1 小时、40 分钟，雪天另留时间。",
     "url": "https://www.kiyosatokankou.com/restaurant.html",
     "lat": 43.8374065,
     "lng": 144.5967482,
@@ -463,7 +481,8 @@
     "photoSource": "https://www.kiyosatokankou.com/restaurant.html",
     "image": "img/f070.jpg",
     "description": "用清里当地食材做创作料理的晚饭店。如果白天在清里、小清水一带玩，晚上可以考虑在这里吃。",
-    "address": "斜里郡清里町羽衣町24"
+    "address": "斜里郡清里町羽衣町24",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.59675,43.83741?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f071",
@@ -477,7 +496,7 @@
     "hours": "9:00–19:00（馆内餐厅时间可能更短，出发前再确认）",
     "closed": "元旦休息，其余无休",
     "review": "食べログ 3.20（查阅时）",
-    "drive": "从美幌站开车约40分",
+    "drive": "从北见约 67 公里，从美幌木屋约 42 公里。普通路况单程分别约 55 分钟、35 分钟，雪天另留时间。",
     "url": "https://www.town.koshimizu.hokkaido.jp/sightseeing/detail/00007056.html",
     "lat": 43.9336796,
     "lng": 144.4534966,
@@ -487,7 +506,8 @@
     "photoSource": "https://tabelog.com/hokkaido/A0110/A011002/1054120/",
     "image": "img/f071.jpg",
     "description": "小清水是土豆之町。驿站轻食有「整颗土豆咖喱」、恋面、以及「なんじゃこりゃスティック」等。自驾停下来正好。",
-    "address": "斜里郡小清水町字浜小清水474-7"
+    "address": "斜里郡小清水町字浜小清水474-7",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.45350,43.93368?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f072",
@@ -501,7 +521,7 @@
     "hours": "周一、二、四至周日 11:00–19:00",
     "closed": "每周三休息",
     "review": "食べログ 3.11",
-    "drive": "从美幌站开车约40分",
+    "drive": "从北见约 67 公里，从美幌木屋约 42 公里。普通路况单程分别约 55 分钟、35 分钟，雪天另留时间。",
     "url": "https://www.town.koshimizu.hokkaido.jp/sightseeing/detail/00007049.html",
     "lat": 43.9338863,
     "lng": 144.452403,
@@ -511,7 +531,8 @@
     "photoSource": "https://tabelog.com/hokkaido/A0110/A011002/1009612/",
     "image": "img/f072.jpg",
     "description": "就在道之驿はなやか小清水旁边，当地拉面店，开车方便。",
-    "address": "斜里郡小清水町字小清水474"
+    "address": "斜里郡小清水町字小清水474",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.45240,43.93389?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f073",
@@ -525,7 +546,7 @@
     "hours": "周一至周三、周五至周日 11:00–16:00（汤卖完即止）",
     "closed": "每周四休息，此外也可能临时休息",
     "review": "食べログ 3.38（查阅时）",
-    "drive": "从美幌站开车约40分",
+    "drive": "从北见约 74 公里，从美幌木屋约 48 公里。普通路况单程分别约 55 分钟、35 分钟，雪天另留时间。",
     "url": "https://www.jagaimo-kaido.com/2017/09/25/%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%b3%e3%81%8d%e3%81%a3%e3%81%95-%e3%81%88%e3%81%8d%e3%81%b0%e3%81%97%e3%82%83/",
     "lat": 43.9213943,
     "lng": 144.5202171,
@@ -535,7 +556,8 @@
     "photoSource": "https://tabelog.com/hokkaido/A0110/A011002/1004179/",
     "image": "img/f073.jpg",
     "description": "在小清水止别一带的拉面茶馆，风格比较有个性。不定休，要先打电话。",
-    "address": "斜里郡小清水町止別1 JR止別駅舎内"
+    "address": "斜里郡小清水町止別1 JR止別駅舎内",
+    "driveSource": "https://routing.openstreetmap.de/routed-car/table/v1/driving/143.882577,43.802717;144.089145,43.838219;144.52022,43.92139?sources=0;1&destinations=2&annotations=duration,distance"
   },
   {
     "id": "f074",
