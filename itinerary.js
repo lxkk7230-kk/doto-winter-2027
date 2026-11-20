@@ -1,12 +1,12 @@
 (() => {
   'use strict';
   const plans = window.DOTO_PLANS;
-  const staySequence = '网走周边 2 晚 · 美幌 2 晚 · 相生 3 晚';
+  const staySequence = '美幌站前ルポ 2 晚 · 生态木屋 2 晚 · 相生 3 晚';
   const meta = {
     A:{label:'推荐行程',title:'7 日乘破冰船',photo:'a02',detail:'8 日轻松换住，9 日从木屋去知床'},
-    B:{label:'停航备选',title:'8 日上午补船',photo:'a01',detail:'7 日留网走，8 日下船后照常入住木屋'}
+    B:{label:'停航备选',title:'8 日上午补船',photo:'a01',detail:'7 日留美幌，8 日下船后照常入住木屋'}
   };
-  const names = {airport:'女满别机场',abashiriBase:'网走周边（待订）',s05:'美幌生态木屋',s02:'相生住处',a31:'相生道之驿',a01:'流冰祭',a02:'破冰船',a12:'流冰徒步',a20:'湖面滑冰',a22:'伊克罗',a24:'冬華美烟花',f001:'钏路市中心',orix:'Orix 还车'};
+  const names = {airport:'女满别机场',s01:'美幌站前ルポ',s05:'美幌生态木屋',s02:'相生住处',a31:'相生道之驿',a01:'流冰祭',a02:'破冰船',a12:'流冰徒步',a20:'湖面滑冰',a22:'伊克罗',a24:'冬華美烟花',f001:'钏路市中心',orix:'Orix 还车'};
   const week = ['六','日','一','二','三','四','五','六'];
   const dates = [6,7,8,9,10,11,12,13];
   const esc = v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -65,7 +65,7 @@
     }
     const entry=root.querySelector('.rt-stay-entry');
     entry.href=url(scheme,'stays');
-    entry.innerHTML=icon('home',18)+'<span>网走周边（待订） <i>→</i> 美幌生态木屋（已约 8、9 日） <i>→</i> Aioi House</span><b>查看住宿日期与房型</b>';
+    entry.innerHTML=icon('home',18)+'<span>美幌站前ルポ（待订） <i>→</i> 美幌生态木屋（已约 8、9 日） <i>→</i> Aioi House</span><b>查看住宿日期与房型</b>';
     const daily=plans[scheme].days;
     const day=variant?plans[scheme].alternatives[variant]:daily[date];
     const colors=window.dotoMap.dayColors;
@@ -76,7 +76,7 @@
     const nav=root.querySelector('.rt-days');
     nav.innerHTML='<a href="'+url(scheme)+'" class="rt-all" '+(!date?'aria-current="true"':'')+'>'+icon('map',18)+' 八天总览</a>'+
       dates.map(d=>{
-        const item=daily[d]; const night=d===13?'返抵羽田':d<=7?'住网走 · 待订':d<=9?'住美幌木屋 · 已约':'住相生';
+        const item=daily[d]; const night=d===13?'返抵羽田':d<=7?'住美幌ルポ · 待订':d<=9?'住美幌木屋 · 已约':'住相生';
         return '<a href="'+url(scheme,d)+'" data-rt-day="'+d+'" class="rt-day" style="--day:'+colors[d]+'" '+(d===date?'aria-current="date"':'')+'><span class="rt-cal"><b>2/'+d+'</b><small>周'+week[d-6]+'</small></span><span class="rt-daytext"><strong>'+esc(item.short)+'</strong><small>'+night+(d===7||d===8?' <i></i> 方案差异':'')+'</small></span>'+icon('chevron',14)+'</a>';
       }).join('');
     const selector=root.querySelector('.rt-mobile-picker select');
@@ -105,7 +105,7 @@
         return id && window.DOTO_ROUTES.points[id]?'<button type="button" data-rt-focus="'+esc(id)+'">'+tag+'</button>':'<span>'+tag+'</span>';
       }).join('<i aria-hidden="true">›</i>');
     }
-    const modes=date>=6&&date<=8?'网走以 JR 網走駅示意，确定房源后再按实际地址导航':date===11?'实线自驾 · 虚线步行约 '+geo.walkKm+' 公里 · P 为停车场':date===6||date===13?'实线自驾 · 虚线为机场接驳':'沿道路估算，雪天预留时间';
+    const modes=date===11?'实线自驾 · 虚线步行约 '+geo.walkKm+' 公里 · P 为停车场':date===6||date===13?'实线自驾 · 虚线为机场接驳':'沿道路估算，雪天预留时间';
     root.querySelector('.rt-foot').innerHTML=date?
       '<b style="--day:'+colors[date]+'"><i></i>'+esc(distance||'当日路线')+'</b><span>'+esc(day.summary)+'</span><small>'+esc(modes)+'</small>':
       '<b>'+icon('home',15)+' 住宿顺序</b><span>'+staySequence+'。选一天看当天的停靠顺序。</span>';

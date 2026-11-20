@@ -5,7 +5,7 @@
     eco: 'https://www.town.bihoro.hokkaido.jp/site/kanko/2590.html',
     airbnb2: 'https://www.airbnb.jp/rooms/1425790170855532409',
     booking: window.dotoStaySearch.aioi,
-    abashiri: window.dotoStaySearch.abashiri,
+    repos: window.dotoStaySearch.repos,
     jal: 'https://www.jal.co.jp/jp/ja/', airdo: 'https://www.airdo.jp/',
     orix: 'https://car.orix.co.jp/shops/?shops_pk=27',
     car: 'https://www.tabirai.net/car/hokkaido/search/rentacar.aspx?SYF=20270206&SYT=20270213&SAFG=1&SATG=1&SAF=101206&SAT=101206&SSM=2&SYFT=15%3A00&SYTT=08%3A00&STP=6&SPF=101&SPT=101',
@@ -35,10 +35,10 @@
   function logistics(inventory, scheme) {
     const dates = window.dotoStayDates();
     const shopping = '2/10 周三换住相生，出美幌前或途经津别镇时买好晚餐与次日早餐。相生道之驿冬季营业到 16:00。';
-    return title('七晚住宿','2/6 网走周边两晚 → 2/8 美幌两晚 → 2/10 津别相生三晚。两个方案的住宿相同。') +
-      transportCard('第一段 · ' + dates.abashiriDates + ' · 两晚','网走及周边 · 待订',
-        '预算待核。四人合住一整栋，需要两间各有房门的独立卧室和停车位。选房时看户型图或询问房东。',
-        stayOverview(scheme)) +
+    return title('七晚住宿','2/6 美幌站前ルポ两晚 → 2/8 美幌生态木屋两晚 → 2/10 津别相生三晚。两个方案的住宿相同。') +
+      transportCard('第一段 · ' + dates.reposDates + ' · 两晚','美幌站前ルポ · 首选待订',
+        '两晚人均约 ¥19,654（约 825 元）。二楼两间卧室均有房门和三张单人床，客厅与两间卧室各配空调和煤油暖炉。',
+        link('repos','指定日期报价') + stayOverview(scheme)) +
       '<div class="dg-twocol">' + stay('s05', inventory.get('s05'),
         '第二段 · ' + dates.ecoDates + ' · 两晚', '美幌生态木屋 · びほろエコハウス',
         '一楼东西各有一间独立双床卧室，中间是客厅和餐厅。', '已约好，两晚人均 ¥7,150 · 约 300 元',
@@ -61,13 +61,13 @@
     const costs = [
       ['机票往返','JAL 去程，AIRDO 回程','¥27,225','约 1,140 元/人'],
       ['七座四驱租车','7 天，含雪胎与免责补偿','¥23,522','约 990 元/人'],
-      ['首两晚住宿',dates.abashiriDates + ' · 两晚 · 待订','待选房','两晚人均待核'],
+      ['美幌站前ルポ',dates.reposDates + ' · 两晚 · 首选待订','约 ¥19,654','约 825 元/人'],
       ['美幌生态木屋',dates.ecoDates + ' · 两晚 · 已约好','¥7,150','约 300 元/人 · 整栋每晚 ¥14,300（约 601 元），四人平摊'],
       ['津别相生住宿',dates.aioiDates + ' · Aioi House 三晚原报价','¥16,500','约 690 元/人']
     ];
-    const known = 27225 + 23522 + dates.ecoPerPerson + dates.aioiPrice;
-    const heading = title('已知人均小计 ¥' + known.toLocaleString('zh-CN') + ' · 约 ' + Math.round(known * .042).toLocaleString('zh-CN') + ' 元',
-      '小计含机票、租车、美幌木屋两晚和相生三晚。只差 2 月 6、7 日两晚的房费。');
+    const total = 27225 + 23522 + dates.reposPerPerson + dates.ecoPerPerson + dates.aioiPrice;
+    const heading = title('人均参考合计约 ¥' + Math.round(total).toLocaleString('zh-CN') + ' · 约 ' + Math.round(total * .042).toLocaleString('zh-CN') + ' 元',
+      '含往返机票、七座四驱租车与七晚住宿。前两晚按美幌站前ルポ四人整栋报价估算，最终以订房明细为准。');
     return heading + '<div class="dg-budget">' +
       costs.map(([name,info,amount,detail]) => '<div><span><b>' + name + '</b><small>' + info + '</small></span><span><b>' + amount + '</b><small>' + detail + '</small></span></div>').join('') + '</div>' +
       '<div class="dg-twocol dg-budget-notes">' + transportCard('可选 NOC','¥2,310 · 约 100 元/人','额外租车保障，单独决定是否购买。','') +

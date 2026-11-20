@@ -2,7 +2,7 @@
   'use strict';
 
   const dayColors = {6:'#ac4833',7:'#2b6c9e',8:'#136f59',9:'#95558c',10:'#aa651c',11:'#236d83',12:'#585395',13:'#706950'};
-  const stays = new Set(['abashiriBase','s05','s02']);
+  const stays = new Set(['s01','s05','s02']);
   const atlasBounds = {7:[112,44,118,48],8:[227,90,234,96],9:[457,182,465,191],10:[915,365,931,382]};
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -60,7 +60,7 @@
         icon:L.divIcon({className:'rt-pin',iconSize:[size,25],iconAnchor:[size/2,12],html:'<span class="'+(!day?'rt-overpin':'rt-pin-num')+'" style="--pin:'+color+'">'+(day?esc(tag):'')+'</span>'})}).addTo(pins);
       const different = [...new Set(entries.map(e=>e.id))];
       const tooltip = different.length>1?different.map(id=>data.points[id].name).join(' · '):name;
-      const overviewLabel=id==='abashiriBase'?'<b>首两晚·待定</b><br>（以网走站示意）':'<b>'+esc(name)+'</b>';
+      const overviewLabel='<b>'+esc(name)+'</b>';
       marker.bindTooltip(day ? esc(tooltip) : overviewLabel,{permanent:!day,direction:direction||'right',offset:[direction==='left'?-5:5,0],className:day?'rt-tip':'rt-placelabel'});
       function popup(preferred) {
         const chosen = preferred || id;
@@ -69,7 +69,7 @@
         const el = document.createElement('div');
         el.className='rt-popup';
         const img=place?.image?'<img src="'+esc(place.image)+'" alt="">':'';
-        const hint=day || chosen==='abashiriBase' ? (geo.note||place?.highlight||'') : '';
+        const hint=day || chosen==='s01' ? (geo.note||place?.highlight||'') : '';
         el.innerHTML=img+'<strong>'+esc(preferred?geo.name:name)+'</strong>'+(hint?'<p>'+esc(hint)+'</p>':'');
         if (stays.has(chosen)) {
           const stay=document.createElement('a');
@@ -130,7 +130,7 @@
       tracks.clearLayers(); pins.clearLayers(); groups=new Map(); bounds=L.latLngBounds([]);
       if(!selected) {
         Object.keys(data.days[scheme]).forEach(d=>drawDay(+d,true));
-        const labels=[['abashiriBase',data.points.abashiriBase.name,'right'],['s05','美幌生态木屋','right'],['s02','相生 · Aioi House','right'],['a12','乌托罗','left'],['a22','阿寒湖','right']];
+        const labels=[['s01','美幌站前ルポ','right'],['s05','美幌生态木屋','left'],['s02','相生 · Aioi House','right'],['a12','乌托罗','left'],['a22','阿寒湖','right']];
         labels.forEach(([id,name,dir])=>{const p=data.points[id];if(p)stopMarker(id,p,[],0,name,dir);});
       } else {
         drawDay(selected,false);
