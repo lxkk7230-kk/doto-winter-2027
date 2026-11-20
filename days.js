@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const abashiri = '网走市区 · 住处待订';
+  const abashiri = '网走周边 · 住处待订';
   const bihoro = '美幌 · びほろエコハウス';
   const aioi = '津别相生 · Aioi House';
   const stop = (time, name, note, id, mapId) => ({ time, name, note, id, mapId });
@@ -15,26 +15,26 @@
   const embark = stop('09:30–10:30','网走乘おーろら破冰船','建议提前订 09:30 班，09:10 前办完手续。航程约 1 小时，人均 ¥7,000（约 290 元）。','a02');
   const cabinArrival = stop('约 15:00','入住びほろエコハウス','按你们与木屋约定的时间交接钥匙。住 8、9 日两晚，10 日上午退房。','s05');
   const arrival = {
-    short:'网走流冰祭晚场', title:'抵达后住网走，晚上看流冰祭', summary:'女满别机场 → 网走市区 → 网走商港埠头 → 市区', night:abashiri, hero:'a01',
+    short:'网走流冰祭晚场', title:'抵达后去网走，晚上看流冰祭', summary:'女满别机场 → 网走市区 → 网走商港埠头 → 市区', night:abashiri, hero:'a01',
     stops:[
       stop('12:20–14:00','JAL 羽田飞女满别','14:00 抵达，取四驱车。机场至网走市区通常约 30 分钟，冬季另留余量。','airport'),
-      townStop('取车后','到网走放行李','建议首两晚连住网走市区。图上用 JR 網走駅表示区域，确认房源后请按房东地址导航。'),
+      townStop('取车后','按房东要求领钥匙','图上暂用 JR 網走駅示意。住ビホロノビ可先到 KITEN 领钥匙；住来運请留足路程，在 21:00 前办完入住。'),
       stop('傍晚','網走流氷まつり','到商港埠头看冰雕和晚场，计划至 20:00。入场人均 ¥0（0 元）。','a01'),
-      townStop('看完后','在网走过夜','附近吃完晚饭，就回市区住处。')
+      townStop('看完后','回首两晚的住处','若住斜里来運，建议 19:00 左右从祭典离开。实际出发时间看雪况和最晚入住时间。')
     ],
     note:'找整栋且有两间独立卧室的住处。第二天的码头也在网走市区。', links:[link('流冰祭官方日程','https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html'),access]
   };
   const boat = {
     short:'网走坐破冰船', title:'上午看流冰，下午留白',summary:'网走市区 → 破冰船码头 → 市区',night:abashiri,hero:'a02',
     stops:[
-      townStop('早餐后','从网走住处出发','到道の駅流氷街道網走的码头，按实际住址安排出门时间。'),embark,
-      townStop('下船后自由','在网走连住第二晚','在港边吃个午饭，下午想休息就回住处。')
+      townStop('早餐后','从住处去网走港','到道の駅流氷街道網走的码头，按实际住址安排出门时间。'),embark,
+      townStop('下船后自由','原住处连住第二晚','在港边吃个午饭，下午想休息就回住处。')
     ], note:'若船方取消 7 日的班次，切换到停航备选，问 8 日上午还有没有船位。',links:[sailing]
   };
   const moveToCabin = {
-    short:'入住美幌小木屋',title:'网走退房，下午搬进约好的小木屋',summary:'网走市区 → 美幌生态木屋',night:bihoro,hero:'s05',
+    short:'入住美幌小木屋',title:'退房后，下午搬进美幌小木屋',summary:'网走市区 → 美幌生态木屋',night:bihoro,hero:'s05',
     stops:[
-      townStop('上午退房','告别网走','睡饱、吃过早餐再走。网走到美幌冬季预留约 45–60 分钟，途中可以顺路买菜。'),
+      townStop('上午退房','前两晚住处退房','从网走市区出发，雪天到木屋预留 45–60 分钟。若住来運，须在 09:00 前退房；若住ビホロノビ，转场仅约 8 公里。'),
       cabinArrival
     ],note:'今天只换住处。知床的车程留给明天。',links:[cabin]
   };

@@ -60,7 +60,7 @@
         icon:L.divIcon({className:'rt-pin',iconSize:[size,25],iconAnchor:[size/2,12],html:'<span class="'+(!day?'rt-overpin':'rt-pin-num')+'" style="--pin:'+color+'">'+(day?esc(tag):'')+'</span>'})}).addTo(pins);
       const different = [...new Set(entries.map(e=>e.id))];
       const tooltip = different.length>1?different.map(id=>data.points[id].name).join(' · '):name;
-      const overviewLabel=id==='abashiriBase'?'<b>网走市区·待定</b><br>（以网走站示意）':'<b>'+esc(name)+'</b>';
+      const overviewLabel=id==='abashiriBase'?'<b>首两晚·待定</b><br>（以网走站示意）':'<b>'+esc(name)+'</b>';
       marker.bindTooltip(day ? esc(tooltip) : overviewLabel,{permanent:!day,direction:direction||'right',offset:[direction==='left'?-5:5,0],className:day?'rt-tip':'rt-placelabel'});
       function popup(preferred) {
         const chosen = preferred || id;

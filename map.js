@@ -18,8 +18,8 @@ function createAtlas({boundsIndex,icon,esc,items,renderPopup,tip,toggle,showDeta
   const firstMarker=L.marker([firstArea.lat,firstArea.lng],{
     title:'网走市区 · 2/6、7 住处待订',alt:'网走首两晚住宿区域参考',keyboard:true,riseOnHover:true,zIndexOffset:500,
     icon:L.divIcon({className:'atlas-pin marker-stay lodging-pin',iconSize:[34,38],iconAnchor:[17,36],popupAnchor:[0,-30],html:'<span class="pinshape">'+icon('home',17)+'</span><span class="lodging-name">网走 · 住处待订</span>'})
-  }).bindTooltip('2/6、7 两晚推荐区域 · 以 JR 網走駅示意',{direction:'top',offset:[0,-28]})
-    .bindPopup('<strong>网走市区 · 首两晚待订</strong><p>2 月 6 日入住，8 日退房。图钉位于 JR 網走駅，实际位置以最后选定的房源为准。</p><a href="#guide/A/stays">查看住宿安排</a>');
+  }).bindTooltip('2/6、7 待选房 · 路线暂以 JR 網走駅示意',{direction:'top',offset:[0,-28]})
+    .bindPopup('<strong>网走周边 · 首两晚待订</strong><p>2 月 6 日入住，8 日退房。图钉位于 JR 網走駅，实际位置以最后选定的房源为准。</p><a href="#guide/A/stays">查看住宿安排</a>');
   const towns=[['网走市区',44.014,144.26,.13],['乌托罗',44.07,144.99,.08],['钏路市区',42.984,144.38,.09],['阿寒湖温泉',43.434,144.092,.08],['川汤温泉',43.638,144.435,.06],['斜里町',43.912,144.664,.08]];
   function clusterLabel(c){if(map.getZoom()>10.5||c.getChildCount()<5)return '';const pt=c.getLatLng();const t=towns.find(([,lat,lng,r])=>Math.hypot(pt.lat-lat,(pt.lng-lng)*.72)<r);return t?'<span class="cluster-name">'+t[0]+'</span>':''}
   const cluster=L.markerClusterGroup({showCoverageOnHover:false,spiderfyOnMaxZoom:true,zoomToBoundsOnClick:true,animate:!reduced,removeOutsideVisibleBounds:true,maxClusterRadius:z=>z>=13?32:z>=10?36:38,

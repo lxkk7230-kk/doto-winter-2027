@@ -1,12 +1,12 @@
 (() => {
   'use strict';
   const plans = window.DOTO_PLANS;
-  const staySequence = '网走 2 晚 · 美幌 2 晚 · 相生 3 晚';
+  const staySequence = '网走周边 2 晚 · 美幌 2 晚 · 相生 3 晚';
   const meta = {
     A:{label:'推荐行程',title:'7 日乘破冰船',photo:'a02',detail:'8 日轻松换住，9 日从木屋去知床'},
     B:{label:'停航备选',title:'8 日上午补船',photo:'a01',detail:'7 日留网走，8 日下船后照常入住木屋'}
   };
-  const names = {airport:'女满别机场',abashiriBase:'网走市区（待订）',s05:'美幌生态木屋',s02:'相生住处',a31:'相生道之驿',a01:'流冰祭',a02:'破冰船',a12:'流冰徒步',a20:'湖面滑冰',a22:'伊克罗',a24:'冬華美烟花',f001:'钏路市中心',orix:'Orix 还车'};
+  const names = {airport:'女满别机场',abashiriBase:'网走周边（待订）',s05:'美幌生态木屋',s02:'相生住处',a31:'相生道之驿',a01:'流冰祭',a02:'破冰船',a12:'流冰徒步',a20:'湖面滑冰',a22:'伊克罗',a24:'冬華美烟花',f001:'钏路市中心',orix:'Orix 还车'};
   const week = ['六','日','一','二','三','四','五','六'];
   const dates = [6,7,8,9,10,11,12,13];
   const esc = v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -65,7 +65,7 @@
     }
     const entry=root.querySelector('.rt-stay-entry');
     entry.href=url(scheme,'stays');
-    entry.innerHTML=icon('home',18)+'<span>网走市区（待订） <i>→</i> 美幌生态木屋（已约 8、9 日） <i>→</i> Aioi House</span><b>查看住宿日期与房型</b>';
+    entry.innerHTML=icon('home',18)+'<span>网走周边（待订） <i>→</i> 美幌生态木屋（已约 8、9 日） <i>→</i> Aioi House</span><b>查看住宿日期与房型</b>';
     const daily=plans[scheme].days;
     const day=variant?plans[scheme].alternatives[variant]:daily[date];
     const colors=window.dotoMap.dayColors;
