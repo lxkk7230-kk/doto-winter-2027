@@ -4,7 +4,8 @@
   const urls = {
     eco: 'https://www.town.bihoro.hokkaido.jp/site/kanko/2590.html',
     airbnb2: 'https://www.airbnb.jp/rooms/1425790170855532409',
-    booking: 'https://www.booking.com/searchresults.html?ss=Aioi+House+Tsubetsu',
+    booking: window.dotoStaySearch.aioi,
+    abashiri: window.dotoStaySearch.abashiri,
     jal: 'https://www.jal.co.jp/jp/ja/', airdo: 'https://www.airdo.jp/',
     orix: 'https://car.orix.co.jp/shops/?shops_pk=27',
     car: 'https://www.tabirai.net/car/hokkaido/search/rentacar.aspx?SYF=20270206&SYT=20270213&SAFG=1&SATG=1&SAF=101206&SAT=101206&SSM=2&SYFT=15%3A00&SYTT=08%3A00&STP=6&SPF=101&SPT=101',
@@ -29,27 +30,24 @@
     return '<article class="dg-stay"><img src="' + escape(item?.image || 'img/' + id + '.jpg') + '" alt="' + escape(name) + '" loading="lazy"><div><p class="dg-tag">' + nights + '</p><h4>' + name + '</h4><b class="dg-price">' + rate + '</b><p>' + room + '</p><p>' + policy + '</p><div class="dg-links">' + links + '</div></div></article>';
   }
 
-  const stayOverview = scheme => '<a href="#guide/' + (scheme === 'B' ? 'B' : 'A') + '/stays">查看两处住宿与房型</a>';
+  const stayOverview = scheme => '<a href="#guide/' + (scheme === 'B' ? 'B' : 'A') + '/stays">查看三段住宿与房型</a>';
 
   function logistics(inventory, scheme) {
-    const moveEarly = scheme === 'B';
-    const dates = window.dotoStayDates(scheme);
-    const shopping = moveEarly
-      ? '2/9 周二换住。沿国道 240 号去相生，经过津别镇时买菜。道の駅あいおい周二休息。'
-      : '2/10 周三换住。出美幌前买好晚餐和次日早餐。若需补给，道の駅あいおい冬季一般 09:00–16:00，周三通常营业。';
-    return title('两处整栋住处','四人分住两间独立卧室。2 月 ' + dates.changeDay + ' 日从美幌换住津别相生。') +
+    const dates = window.dotoStayDates();
+    const shopping = '2/10 周三换住相生，出美幌前或途经津别镇时买好晚餐与次日早餐。相生道之驿冬季营业到 16:00。';
+    return title('七晚住宿','2/6 网走两晚 → 2/8 美幌两晚 → 2/10 津别相生三晚。两个方案的住宿相同。') +
+      transportCard('第一段 · ' + dates.abashiriDates + ' · 两晚','网走市区 · 待订',
+        '预算待核。四人合住一整栋，需要两间各有房门的独立卧室和停车位。选房时看户型图或询问房东。',
+        link('abashiri','搜索网走 · 两晚四人')) +
       '<div class="dg-twocol">' + stay('s05', inventory.get('s05'),
-        dates.ecoDates + ' · ' + dates.ecoNights + ' 晚',
-        '美幌生态木屋 · びほろエコハウス', '美幌町在みどりの村设立的整栋环保示范住宅。一楼东西两间独立卧室各有两张单人床，中间是客厅和餐厅。',
-        dates.ecoNights + ' 晚人均 ¥' + dates.ecoPrice.toLocaleString('zh-CN') + ' · 约 ' + Math.round(dates.ecoPrice * .042) + ' 元',
-        '按町政府研修住宿公示价估算。运营方接受住宿预约，2/6 起的空房、家庭旅行使用条件和最终收费请致电 050-1732-8726。',
-        link('eco','町政府价目与预约') + stayOverview(scheme)) +
+        '第二段 · ' + dates.ecoDates + ' · 两晚', '美幌生态木屋 · びほろエコハウス',
+        '一楼东西各有一间独立双床卧室，中间是客厅和餐厅。', '本人已约好 · 金额待补',
+        '8 日入住，8、9 日过夜，10 日退房。', link('eco','美幌町设施介绍') + stayOverview(scheme)) +
       stay('s02', inventory.get('s02'),
-        dates.aioiDates + ' · ' + dates.aioiNights + ' 晚',
-        '津别相生 · Aioi House', '约 50 平方米整栋，一间双人床卧室，一间双单人床卧室。相生至阿寒湖温泉街约 19 公里，车程约 25 分钟。',
-        moveEarly ? '4 晚房价待查' : '3 晚原报价人均 ¥16,500 · 约 690 元',
-        moveEarly ? '按 2/9–2/13 在 Booking 核对四人整栋的空房、总价与取消条款。' : '原 Booking 报价列 2/9 前免费取消，实际房价和取消截止时刻以预订页为准。',
-        link('booking','Booking 搜索') + link('airbnb2','房东照片')) + '</div>' +
+        '第三段 · ' + dates.aioiDates + ' · 三晚', '津别相生 · Aioi House',
+        '约 50 平方米整栋，一间双人床卧室，一间双单人床卧室。至阿寒湖温泉街约 19 公里，车程约 25 分钟。',
+        '三晚原报价人均 ¥16,500 · 约 690 元', '沿用原安排。房价与取消条件以实际预订渠道为准。',
+        link('booking','Booking 查询 · 三晚四人') + link('airbnb2','房东照片')) + '</div>' +
       title('航班与四驱租车','时间均为日本当地时间。') +
       '<div class="dg-threecol">' +
       transportCard('2/6 周六 · JAL','12:20 羽田 · 14:00 女満別','去程固定中午起飞，留出首日晚场时间。',link('jal','JAL 官网')) +
@@ -59,25 +57,22 @@
   }
 
   function budget(scheme) {
-    const dates = window.dotoStayDates(scheme);
-    const moveEarly = dates.aioiPrice === null;
+    const dates = window.dotoStayDates();
     const costs = [
       ['机票往返','JAL 去程，AIRDO 回程','¥27,225','约 1,140 元/人'],
       ['七座四驱租车','7 天，含雪胎与免责补偿','¥23,522','约 990 元/人'],
-      ['美幌生态木屋','びほろエコハウス · 研修公示价 · ' + dates.ecoDates,
-        '¥' + dates.ecoPrice.toLocaleString('zh-CN'), '约 ' + Math.round(dates.ecoPrice * .042) + ' 元/人'],
-      ['相生住宿','Aioi House · ' + dates.aioiDates,
-        moveEarly ? '待核价' : '¥16,500', moveEarly ? '四晚整栋待询' : '约 690 元/人']
+      ['网走市区住宿',dates.abashiriDates + ' · 两晚 · 待订','待选房','两晚人均待核'],
+      ['美幌生态木屋',dates.ecoDates + ' · 两晚 · 已约好','金额待补','按实际约定费用计入'],
+      ['津别相生住宿',dates.aioiDates + ' · Aioi House 三晚原报价','¥16,500','约 690 元/人']
     ];
-    const known = 27225 + 23522 + dates.ecoPrice + (dates.aioiPrice || 0);
-    const heading = title((moveEarly ? '已知部分每人约 ' : '预算每人约 ') + '¥' + known.toLocaleString('zh-CN') + ' · 约 ' + Math.round(known * .042).toLocaleString('zh-CN') + ' 元',
-      moveEarly ? '含机票、租车及生态木屋三晚研修公示价。相生四晚待核，确认后才能计算七晚总额。'
-        : '含机票、租车、美幌生态木屋四晚研修公示价，以及相生三晚的原 Booking 报价。');
+    const known = 27225 + 23522 + dates.aioiPrice;
+    const heading = title('已知人均小计 ¥' + known.toLocaleString('zh-CN') + ' · 约 ' + Math.round(known * .042).toLocaleString('zh-CN') + ' 元',
+      '小计包含机票、租车和相生三晚。网走两晚选定、木屋两晚费用补入后，即可算出完整人均预算。');
     return heading + '<div class="dg-budget">' +
       costs.map(([name,info,amount,detail]) => '<div><span><b>' + name + '</b><small>' + info + '</small></span><span><b>' + amount + '</b><small>' + detail + '</small></span></div>').join('') + '</div>' +
       '<div class="dg-twocol dg-budget-notes">' + transportCard('可选 NOC','¥2,310 · 约 100 元/人','额外租车保障，单独决定是否购买。','') +
       transportCard('另付费用','按实际选择','油费、门票、体验和餐食均另付。日程与地图列出的活动、餐食价格为人均参考。','') +
-      '</div><p class="dg-note">生态木屋按四位成人分摊，实际空房和收费以运营方回复为准。人民币按 100 日元约合 4.20 元换算。</p><div class="dg-links">' + stayOverview(scheme) + '</div>';
+      '</div><p class="dg-note">住宿与租车按四位成人平摊。人民币按 100 日元约合 4.20 元换算。</p><div class="dg-links">' + stayOverview(scheme) + '</div>';
   }
 
   function winter() {
@@ -91,7 +86,7 @@
       ['上冰、雪鞋与岸上等候',[
         '父母五十多岁。シンラ开放年龄 7–74 岁、约 1.5 小时、人均 ¥8,000（约 340 元）；ピッキオ知床与ゴジラ岩観光也可分别咨询，最终以运营商年龄及健康条件为准。',
         'ピッキオ知床参考 09:00、15:00，人均 ¥7,000 起（约 290 元起）；ゴジラ岩観光参考 10:00、13:30、15:30，人均 ¥9,000（约 380 元）。须提前报名。',
-        '请量力。须能自行穿脱干式服、在不平冰面行走。风浪大或冰未接岸时可能停办。岸上可选道の駅うとろ、港边ゴジラ岩，或开放日的知床世界遺産センター。',
+        '请量力。须能自行穿脱干式服、在不平冰面行走。风浪大或冰未接岸时可能停办。2/9 是周二，知床世界遺産センター休馆。家人可在道の駅うとろ休息或在港边看ゴジラ岩。',
         '小清水海岸雪鞋年龄范围 8–70 岁。冬季知床五湖雪鞋约 3.5 公里、4.5 小时，13–74 岁，适合健脚者。'
       ]],
       ['冬季休业与场次冲突',[

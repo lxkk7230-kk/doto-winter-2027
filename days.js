@@ -1,30 +1,57 @@
 (() => {
   'use strict';
+  const abashiri = '网走市区 · 住处待订';
   const bihoro = '美幌 · びほろエコハウス';
   const aioi = '津别相生 · Aioi House';
   const stop = (time, name, note, id, mapId) => ({ time, name, note, id, mapId });
   const link = (name, url) => ({ name, url });
   const roads = link('北海道冬季封路', 'https://www.kushiro.pref.hokkaido.lg.jp/kk/kkk/kanrika/toukikou.html');
   const station = link('相生道之驿', 'https://michinoeki-aioi.com/');
+  const abashiriMap = 'abashiriBase';
+  const access = link('机场到网走市区', 'https://visit-abashiri.jp/access/');
+  const sailing = link('おーろら船班', 'https://www.ms-aurora.com/abashiri/prices/');
+  const cabin = link('美幌木屋入住信息', 'https://bihoro.jp/hotel/127/');
+  const townStop = (time, name, note) => stop(time, name, note, undefined, abashiriMap);
+  const embark = stop('09:30–10:30','网走乘おーろら破冰船','建议提前订 09:30 班，09:10 前办完手续。航程约 1 小时，人均 ¥7,000（约 290 元）。','a02');
+  const cabinArrival = stop('约 15:00','入住びほろエコハウス','按你们与木屋约定的时间交接钥匙。住 8、9 日两晚，10 日上午退房。','s05');
   const arrival = {
-    short:'网走流冰祭晚场', title:'安顿好，只去网走看晚场', summary:'女满别机场 → 美幌木屋 → 网走港 → 木屋', night:bihoro, hero:'a01',
+    short:'网走流冰祭晚场', title:'抵达后住网走，晚上看流冰祭', summary:'女满别机场 → 网走市区 → 网走商港埠头 → 市区', night:abashiri, hero:'a01',
     stops:[
-      stop('12:20–14:00','JAL 羽田飞女满别','到达后取四驱车。','airport'),
-      stop('约 15:00','美幌木屋放行李','机场至木屋约 15–25 分钟。木屋的入住和交钥匙时间请提前电话确认。','s05'),
-      stop('15:40 后出发','網走流氷まつり','木屋至网走港约 30–40 分钟。晚场至 20:00，人均 ¥0（0 元）。','a01'),
-      stop('看完后','回木屋','晚饭在网走或回美幌吃，随当晚胃口。','s05')
+      stop('12:20–14:00','JAL 羽田飞女满别','14:00 抵达，取四驱车。机场至网走市区通常约 30 分钟，冬季另留余量。','airport'),
+      townStop('取车后','到网走放行李','建议首两晚连住网走市区。图上用 JR 網走駅表示区域，确认房源后请按房东地址导航。'),
+      stop('傍晚','網走流氷まつり','到商港埠头看冰雕和晚场，计划至 20:00。入场人均 ¥0（0 元）。','a01'),
+      townStop('看完后','在网走过夜','附近吃完晚饭，就回市区住处。')
     ],
-    note:'当天唯一要赶的是流冰祭晚场。', links:[link('流冰祭官方日程','https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html')]
+    note:'找整栋且有两间独立卧室的住处。第二天的码头也在网走市区。', links:[link('流冰祭官方日程','https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html'),access]
   };
   const boat = {
-    short:'网走坐破冰船', title:'坐一班破冰船，下午留白',summary:'美幌木屋 → 网走港 → 木屋',night:bihoro,hero:'a02',
+    short:'网走坐破冰船', title:'上午看流冰，下午留白',summary:'网走市区 → 破冰船码头 → 市区',night:abashiri,hero:'a02',
     stops:[
-      stop('约 08:00','木屋出发','去网走港约 30–40 分钟，给雪路和办手续留时间。','s05'),
-      stop('09:30–10:30','流氷観光砕氷船 おーろら','建议提前订 09:30 班，09:10 前办手续。人均 ¥7,000（约 290 元）。','a02'),
-      stop('下船后自由','回美幌或在港边吃午饭','几点回木屋都可以。','s05')
-    ],
-    note:'若 7 日停航，先确认 8 日船位，再问向导能否把知床移到 9 日。',links:[link('おーろら船班','https://www.ms-aurora.com/abashiri/prices/')]
+      townStop('早餐后','从网走住处出发','到道の駅流氷街道網走的码头，按实际住址安排出门时间。'),embark,
+      townStop('下船后自由','在网走连住第二晚','在港边吃个午饭，下午想休息就回住处。')
+    ], note:'若船方取消 7 日的班次，切换到停航备选，问 8 日上午还有没有船位。',links:[sailing]
   };
+  const moveToCabin = {
+    short:'入住美幌小木屋',title:'网走退房，下午搬进约好的小木屋',summary:'网走市区 → 美幌生态木屋',night:bihoro,hero:'s05',
+    stops:[
+      townStop('上午退房','告别网走','睡饱、吃过早餐再走。网走到美幌冬季预留约 45–60 分钟，途中可以顺路买菜。'),
+      cabinArrival
+    ],note:'今天只换住处。知床的车程留给明天。',links:[cabin]
+  };
+  const weatherDay = {
+    short:'停航时留在网走',title:'船停航，就在网走休息一天',summary:'网走市区自由活动 · 当晚续住',night:abashiri,hero:'a01',
+    stops:[townStop('全天自由','留在网走市区','先联系船公司问 8 日上午的空位。如果想再看流冰祭，周日白天计划至 16:00 开放。')],
+    note:'第二晚继续住同一处。地图标的是网走站周边，今天不用按路线开车。',links:[sailing]
+  };
+  const makeupBoat = {
+    short:'补船后入住小木屋',title:'上午在网走补船，下午再去美幌',summary:'网走市区 → 破冰船码头 → 美幌生态木屋',night:bihoro,hero:'a02',
+    stops:[
+      townStop('早餐后','网走退房','按船班安排退房和行李，给码头手续预留至少 20 分钟。'),
+      {...embark, time:'上午 · 以改订为准',note:'改订成功再去码头。航程约 1 小时，人均 ¥7,000（约 290 元）。若仍停航，下午照常去木屋。'},
+      cabinArrival
+    ],note:'午饭后再向美幌出发。9 日仍从木屋往返知床。',links:[sailing,cabin]
+  };
+
   const iceWalk = {
     short:'知床走流冰',title:'把这一天留给乌托罗的流冰',summary:'美幌木屋 → ウトロ集合点 → 木屋',night:bihoro,hero:'a12',
     stops:[
@@ -34,32 +61,13 @@
     ],
     note:'不上冰的家人可在道の駅うとろ等。风浪大或流冰未接岸时，以向导通知为准。', links:[link('シンラ集合与场次','https://www.shinra.or.jp/ryuhyo_walk.html')]
   };
-  const northReserve = {
-    short:'美幌自由日',title:'给流冰留一天，也可以睡到自然醒',summary:'自由日 · 地图示意想看海雕时的往返',night:bihoro,hero:'a09',
-    stops:[
-      stop('上午','在木屋慢慢吃早餐','前两天都顺利，今天就由你们安排。','s05'),
-      stop('有兴致才去','网走看海雕','当天只挑这一件就够。自然堂向导行程约 90 分钟，人均 ¥5,000（约 210 元），需确认集合与空位。','a09'),
-      stop('下午','回木屋','也可以整天留在美幌，明天再换住处。','s05')
-    ],
-    note:'若船和知床顺延，今天直接用来补知床，观鸟留给下次。',links:[link('自然堂观鸟','https://www.jinendo.net/program_w/program03/')]
-  };
   const transfer = {
     short:'美幌换住相生',title:'买好食材，直接去相生住下',summary:'美幌木屋 → 经津别镇 → Aioi House',night:aioi,hero:'s02',
     stops:[
-      stop('上午退房','离开美幌木屋','在美幌或顺路的津别镇买好晚饭和早餐。','s05'),
+      stop('上午 10:00 前','美幌木屋退房','在美幌或顺路的津别镇买好晚饭和早餐。','s05'),
       stop('下午','入住 Aioi House','沿国道 240 号到相生，两处住处相距约 40 公里，冬季可留 1 小时，另计采购和等候入住。','s02')
     ],
-    note:'这是全程唯一一次搬行李。把下午留给新住处和周围，不绕去湖区。',links:[station,roads]
-  };
-  const earlyTransfer = {...transfer,note:'方案二在周二提前一天换住，相生道之驿周二休，可在津别镇买菜。若冰上活动顺延至今天，提前与向导核对场次和到店时间；想给天气留完整一天，选方案一更宽松。'};
-  const mashu = {
-    short:'天气好去摩周湖',title:'有能见度，就去摩周湖看一眼',summary:'相生 → 经弟子屈镇 → 摩周第一展望台 → 原路回相生',night:aioi,hero:'a28',
-    stops:[
-      stop('早餐后','相生出发','先查展望台开放和山上能见度，再决定出门。','s02'),
-      stop('上午或午后','摩周湖カムイテラス','经弟子屈镇，从南线到第一展望台。冬季停车人均 ¥0（0 元）。停车后短走即可看湖。','a28'),
-      stop('看够就走','回相生','走同一条南线下山，可顺路在弟子屈吃碗拉面。','s02')
-    ],
-    note:'只选一个湖。北侧去川汤的道道 52 号冬季封闭；遇大雪就在相生休息。',links:[link('摩周第一展望台','https://mashuko-iozan.jp/mashuko-kamui-terrace'),roads]
+    note:'10 日上午结束已约的两晚木屋住宿。接下来连住相生三晚。',links:[station,roads]
   };
   const lakeAkan = {
     short:'阿寒湖滑冰、烟花',title:'一个下午和晚上，都在阿寒湖',summary:'相生 → 阿寒湖温泉街和湖岸 → 相生',night:aioi,hero:'a24',
@@ -99,9 +107,9 @@
     ],
     note:'早餐和行李前一晚准备好。',links:[link('Orix 女満別空港店','https://car.orix.co.jp/shops/?shops_pk=27'),link('AIRDO','https://www.airdo.jp/')]
   };
-  const common = {6:arrival,7:boat,8:iceWalk,11:lakeAkan,12:freeDay,13:departure};
+  const common = {6:arrival,9:iceWalk,10:transfer,11:lakeAkan,12:freeDay,13:departure};
   window.DOTO_PLANS = {
-    A:{days:{...common,9:northReserve,10:transfer},alternatives:{kushiro}},
-    B:{days:{...common,9:earlyTransfer,10:mashu},alternatives:{kushiro}}
+    A:{days:{...common,7:boat,8:moveToCabin},alternatives:{kushiro}},
+    B:{days:{...common,7:weatherDay,8:makeupBoat},alternatives:{kushiro}}
   };
 })();

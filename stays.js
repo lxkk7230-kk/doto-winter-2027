@@ -1,85 +1,92 @@
 (() => {
   'use strict';
 
-  // Four adults share the town's training-accommodation rate of ¥13,000 per night.
-  function stayDates(scheme) {
-    const ecoNights = scheme === 'B' ? 3 : 4;
-    const changeDay = 6 + ecoNights;
-    const aioiNights = 7 - ecoNights;
-    return {
-      changeDay, ecoNights, aioiNights,
-      ecoDates: '2/6–2/' + changeDay,
-      aioiDates: '2/' + changeDay + '–2/13',
-      ecoPrice: 3250 * ecoNights,
-      aioiPrice: aioiNights === 3 ? 16500 : null
-    };
+  const dates = {
+    abashiriDates: '2/6–2/8', abashiriNights: 2,
+    ecoDates: '2/8–2/10', ecoNights: 2,
+    aioiDates: '2/10–2/13', aioiNights: 3, aioiPrice: 16500
+  };
+
+  function bookingSearch(destination, checkin, checkout) {
+    const url = new URL('https://www.booking.com/searchresults.zh-cn.html');
+    url.search = new URLSearchParams({
+      ss: destination, checkin, checkout, group_adults: '4',
+      group_children: '0', no_rooms: '1', selected_currency: 'JPY'
+    }).toString();
+    return url.href;
   }
+  const search = {
+    abashiri: bookingSearch('北海道 網走市', '2027-02-06', '2027-02-08'),
+    aioi: bookingSearch('Aioi House Tsubetsu', '2027-02-10', '2027-02-13')
+  };
 
   const asset = file => window.dotoFloorplan ? window.dotoFloorplan(file) : file;
   const external = (url, label) => '<a target="_blank" rel="noopener noreferrer" href="' + esc(url) + '">' + esc(label) + ' ↗</a>';
   const detail = id => '<button type="button" data-rt-place="' + esc(id) + '">地点详情与地图</button>';
 
   function photoRow(place, caption) {
-    const photos = [{image:place.image, caption}, ...(place.gallery || []).map(photo => ({
-      image:asset(photo.image), caption:photo.caption
-    }))];
+    const photos = [{image: place.image, caption}, ...(place.gallery || [])];
     return '<div class="stay-pair">' + photos.map(photo =>
-      '<a href="' + esc(photo.image) + '" target="_blank" rel="noopener" aria-label="放大' + esc(place.name + ' · ' + photo.caption) + '">' +
-      '<img src="' + esc(photo.image) + '" alt="' + esc(place.name + ' · ' + photo.caption) + '"><span>' + esc(photo.caption) + '</span></a>'
+      '<a href="' + esc(asset(photo.image)) + '" target="_blank" rel="noopener" aria-label="放大' + esc(place.name + ' · ' + photo.caption) + '">' +
+      '<img src="' + esc(asset(photo.image)) + '" alt="' + esc(place.name + ' · ' + photo.caption) + '"><span>' + esc(photo.caption) + '</span></a>'
     ).join('') + '</div>';
   }
 
   function roomCard(place, info) {
-    const price = info.amount === null
-      ? '待核价<small>四晚人均</small>'
-      : '¥' + info.amount.toLocaleString('zh-CN') + '<small>约 ' + info.yuan + ' 元 / 人</small>';
-    return '<article class="stay-card">' + photoRow(place, info.caption) +
+    return '<article class="stay-card">' + (place ? photoRow(place, info.caption) : '') +
       '<div class="stay-copy"><div class="stay-status">' + esc(info.stay) + '</div><div class="stay-heading"><div><h2>' +
-      esc(info.name) + '</h2><p lang="ja">' + esc(place.name) + '</p></div><div class="stay-price">' + price + '</div></div>' +
+      esc(info.name) + '</h2>' + (place ? '<p lang="ja">' + esc(place.name) + '</p>' : '') +
+      '</div><div class="stay-price">' + esc(info.price) + '<small>' + esc(info.priceNote) + '</small></div></div>' +
       '<p class="stay-desc">' + esc(info.description) + '</p><dl class="stay-facts">' +
       info.facts.map(([label, value]) => '<dt>' + esc(label) + '</dt><dd>' + esc(value) + '</dd>').join('') +
-      '</dl><div class="stay-links">' + detail(place.id) + info.links + '</div></div></article>';
+      '</dl><div class="stay-links">' + (place ? detail(place.id) : '') + info.links + '</div></div></article>';
   }
 
   function render(inventory, scheme) {
-    const dates = stayDates(scheme);
     const eco = inventory.get('s05');
     const aioi = inventory.get('s02');
-    const toggle = (id, label) => '<a href="#guide/' + id + '/stays" ' + (id === scheme ? 'aria-current="true"' : '') + '>' + label + '</a>';
-    const ecoCard = roomCard(eco, {
-      name: '美幌生态木屋', caption: '起居室', stay: '前段 · ' + dates.ecoDates + ' · ' + dates.ecoNights + ' 晚',
-      amount: dates.ecoPrice, yuan: Math.round(dates.ecoPrice * .042),
-      description: '美幌町在「みどりの村」建的环保示范住宅，由株式会社パンクチュアル管理，整栋对外受理住宿预约。',
+    const abashiriCard = roomCard(null, {
+      name: '网走市区 · 房源待订', stay: '第一段 · ' + dates.abashiriDates + ' · 两晚',
+      price: '待选房', priceNote: '两晚人均待核',
+      description: '6 日和 7 日住网走。第一晚去流冰祭，第二天从网走港坐破冰船。',
       facts: [
-        ['房间', '一楼东西两端各有一间独立双床房，共用中间的挑高客厅和餐厅。'],
-        ['位置', '美幌站西侧，有停车场。到网走流冰祭约 33 公里，到乌托罗约 93 公里。'],
-        ['价格与预约', '按町政府公示的研修住宿价估算，每晚每人 ¥3,250（约 137 元）。2/6 起的空房、家庭观光入住手续及含税实付请致电 050-1732-8726 确认。']
+        ['入住条件', '四位成人合住一整栋，两对各有一间能独立关门的卧室，并可停车。'],
+        ['挑选房源', '打开搜索后选择整套或整栋。查看户型图或向房东确认两间卧室都有房门，再核对两晚含税总价。']
       ],
-      links: external(asset('img/plan-eco.png'), '放大卧室平面图') + external(eco.url, '町政府价目与预约')
+      links: external(search.abashiri, '搜索网走 · 两晚四人')
+    });
+    const ecoCard = roomCard(eco, {
+      name: '美幌生态木屋', caption: '起居室', stay: '第二段 · ' + dates.ecoDates + ' · 两晚',
+      price: '已约好', priceNote: '两晚金额待补',
+      description: '2 月 8 日入住，8、9 日过夜，10 日退房。家人已向木屋约好这两晚。',
+      facts: [
+        ['房间', '一楼东西两端各有一间独立双床房，中间是共用客厅与餐厅。'],
+        ['位置', '美幌町「みどりの村」内，设有停车场。雪天去乌托罗单程预留 2–2.5 小时。'],
+        ['设施', '美幌町的环保示范住宅，由株式会社パンクチュアル管理。住宿联系 050-1732-8726。']
+      ],
+      links: external(asset('img/plan-eco.png'), '放大卧室平面图') + external(eco.url, '美幌町设施介绍')
     });
     const aioiCard = roomCard(aioi, {
-      name: '津别相生小屋', caption: '双人卧室', stay: '后段 · ' + dates.aioiDates + ' · ' + dates.aioiNights + ' 晚',
-      amount: dates.aioiPrice, yuan: 690,
-      description: '位于津別町相生，女满别机场与阿寒湖之间。约 50 平方米的整栋小屋，可自己做饭。',
+      name: '津别相生小屋', caption: '双人卧室', stay: '第三段 · ' + dates.aioiDates + ' · 三晚',
+      price: '¥16,500', priceNote: '约 690 元 / 人',
+      description: '沿用原安排。2 月 10 日入住，13 日 06:30 从这里出发去女满别机场。',
       facts: [
-        ['房间', '两间独立卧室，一间放一张双人床，另一间放两张单人床。'],
-        ['位置', '至阿寒湖温泉街约 19 公里，通常开车约 25 分钟。附近缺少商店，入住前买好晚餐和早餐。'],
-        ['价格与预约', dates.aioiPrice === null
-          ? '需按 2/9 入住、2/13 退房重新查询四人整栋的四晚总价、空房和取消期限。'
-          : '沿用 Booking 的三晚参考报价。原条款列 2/9 前可免费取消，当前房态、价格和具体截止时间以下单页为准。']
+        ['房间', '约 50 平方米整栋，可做饭。两间独立卧室分别设一张双人床和两张单人床。'],
+        ['位置', '到阿寒湖温泉街约 25 分钟，到女满别机场约 1 小时。入住前在美幌或津别镇买好食材。'],
+        ['房价', '按 Booking 原三晚整栋报价由四人平摊。取消条件以实际预订渠道为准。']
       ],
-      links: external(aioi.url, 'Booking 查询') + external(aioi.photoSource, '房东房型照片')
+      links: external(search.aioi, 'Booking 查询 · 三晚四人') + external(aioi.photoSource, '房东房型照片')
     });
 
-    return '<div class="stay-research"><div class="stay-back"><a href="#guide/' + scheme + '">‹ 返回' +
-      (scheme === 'B' ? '方案二' : '方案一') + '路线</a></div><header class="stay-intro"><div><h1>两处住宿</h1>' +
-      '<p>先住美幌生态木屋，<strong>2 月 ' + dates.changeDay + ' 日换住津别相生</strong>，住到 13 日返程。</p></div>' +
-      '<nav class="stay-switch" aria-label="选择住宿方案">' +
-      toggle('A','方案一 · 4＋3 晚') + toggle('B','方案二 · 3＋4 晚') + '</nav></header>' +
-      '<div class="stay-subhead"><h2>美幌 → 津别相生</h2><span>整栋 · 每段价格按四位成人平摊</span></div><div class="stay-grid">' +
-      ecoCard + aioiCard + '</div><p class="stay-foot">两栋之间的直接公路距离约 40 公里。换住当天的游览路线与车程见按日行程。人民币按 100 日元约合 4.20 元换算。</p></div>';
+    return '<div class="stay-research"><div class="stay-back"><a href="#guide/' + (scheme === 'B' ? 'B' : 'A') + '">‹ 返回' +
+      (scheme === 'B' ? '方案二' : '方案一') + '路线</a></div><header class="stay-intro"><div><h1>三段住宿</h1>' +
+      '<p>网走市区 <strong>2 晚</strong> → 美幌生态木屋 <strong>2 晚</strong> → 津别相生 <strong>3 晚</strong></p></div></header>' +
+      '<div class="stay-subhead"><p>两套路线共用这七晚住宿。7 日船班遇停航时，8 日仍按约入住木屋。</p></div>' + abashiriCard +
+      '<div class="stay-subhead"><h2>美幌与相生的房型</h2></div><div class="stay-grid">' +
+      ecoCard + aioiCard + '</div></div>';
   }
 
-  window.dotoStayDates = stayDates;
+  window.dotoStayDates = () => dates;
+  window.dotoStaySearch = search;
   window.dotoStayResearch = render;
 })();

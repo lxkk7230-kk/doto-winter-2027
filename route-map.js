@@ -2,6 +2,7 @@
   'use strict';
 
   const dayColors = {6:'#ac4833',7:'#2b6c9e',8:'#136f59',9:'#95558c',10:'#aa651c',11:'#236d83',12:'#585395',13:'#706950'};
+  const stays = new Set(['abashiriBase','s05','s02']);
   const atlasBounds = {7:[112,44,118,48],8:[227,90,234,96],9:[457,182,465,191],10:[915,365,931,382]};
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -52,14 +53,15 @@
     function stopMarker(id, point, nums, day, label, direction, entries=[]) {
       const item = inventory.get(id);
       const tag = nums.join('·');
-      const color = day ? dayColors[day] : (id==='s05' || id==='s02' ? '#173f3a' : '#4d615c');
+      const color = day ? dayColors[day] : (stays.has(id) ? '#173f3a' : '#4d615c');
       const name = label || point.name || item?.title || id;
       const size = tag.length>2?34:25;
       const marker = L.marker([point.lat,point.lng],{title:name,alt:name,keyboard:true,riseOnHover:true,
         icon:L.divIcon({className:'rt-pin',iconSize:[size,25],iconAnchor:[size/2,12],html:'<span class="'+(!day?'rt-overpin':'rt-pin-num')+'" style="--pin:'+color+'">'+(day?esc(tag):'')+'</span>'})}).addTo(pins);
       const different = [...new Set(entries.map(e=>e.id))];
       const tooltip = different.length>1?different.map(id=>data.points[id].name).join(' · '):name;
-      marker.bindTooltip(day ? esc(tooltip) : '<b>'+esc(name)+'</b>',{permanent:!day,direction:direction||'right',offset:[direction==='left'?-5:5,0],className:day?'rt-tip':'rt-placelabel'});
+      const overviewLabel=id==='abashiriBase'?'<b>网走市区·待定</b><br>（以网走站示意）':'<b>'+esc(name)+'</b>';
+      marker.bindTooltip(day ? esc(tooltip) : overviewLabel,{permanent:!day,direction:direction||'right',offset:[direction==='left'?-5:5,0],className:day?'rt-tip':'rt-placelabel'});
       function popup(preferred) {
         const chosen = preferred || id;
         const place = inventory.get(chosen);
@@ -67,9 +69,9 @@
         const el = document.createElement('div');
         el.className='rt-popup';
         const img=place?.image?'<img src="'+esc(place.image)+'" alt="">':'';
-        const hint=day?(geo.note||place?.highlight||''):'';
+        const hint=day || chosen==='abashiriBase' ? (geo.note||place?.highlight||'') : '';
         el.innerHTML=img+'<strong>'+esc(preferred?geo.name:name)+'</strong>'+(hint?'<p>'+esc(hint)+'</p>':'');
-        if (chosen==='s05' || chosen==='s02') {
+        if (stays.has(chosen)) {
           const stay=document.createElement('a');
           stay.className='rt-poplink';
           stay.href='#guide/'+scheme+'/stays';
@@ -127,12 +129,8 @@
       map.closePopup();
       tracks.clearLayers(); pins.clearLayers(); groups=new Map(); bounds=L.latLngBounds([]);
       if(!selected) {
-        Object.keys(data.days[scheme]).forEach(d=>{
-          if (scheme==='A' && +d===9) return;
-          drawDay(+d,true);
-        });
-        const labels=[['s05','美幌生态木屋','left'],['s02','相生 · Aioi House','left'],['a02','网走','right'],['a12','乌托罗','left'],['a22','阿寒湖','right']];
-        if(scheme==='B') labels.push(['a28','摩周湖','right']);
+        Object.keys(data.days[scheme]).forEach(d=>drawDay(+d,true));
+        const labels=[['abashiriBase',data.points.abashiriBase.name,'right'],['s05','美幌生态木屋','right'],['s02','相生 · Aioi House','right'],['a12','乌托罗','left'],['a22','阿寒湖','right']];
         labels.forEach(([id,name,dir])=>{const p=data.points[id];if(p)stopMarker(id,p,[],0,name,dir);});
       } else {
         drawDay(selected,false);

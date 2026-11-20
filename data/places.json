@@ -12,7 +12,7 @@
     "hours": "2/6 10:00–20:00，2/7 10:00–16:00",
     "closed": "只办两天，第一晚固定",
     "review": "适合父母。海边风大，穿防滑鞋，累了就回车休息。",
-    "drive": "美幌约 30–40 分钟",
+    "drive": "网走前两晚住市区，车程随最终房址确定。美幌约 30–40 分钟。",
     "url": "https://visit-abashiri.jp/event/b9b5c81d6a90669b636d2b1511eafef4416fbcc5.html",
     "lat": 44.0203333,
     "lng": 144.28275,
@@ -36,7 +36,7 @@
     "hours": "2 月 9:30 / 11:00 / 12:30 / 14:00 / 15:30，约 1 小时",
     "closed": "视海况、流冰和人数可能调整",
     "review": "适合父母。甲板风大，步行不稳时留在舱内。",
-    "drive": "美幌约 30–40 分钟",
+    "drive": "网走前两晚住市区，车程随最终房址确定。美幌约 30–40 分钟。",
     "url": "https://www.ms-aurora.com/abashiri/prices/",
     "lat": 44.0220409,
     "lng": 144.273901,
@@ -44,7 +44,7 @@
     "geoSource": "https://www.visit-hokkaido.jp/event/detail_10045.html",
     "image": "img/a02.jpg",
     "photoSource": "https://visit-abashiri.jp/play/666a64111dd7d0e1423d3e12b650d167eca2ae00.html",
-    "extra": "优先 2/7，提前预约并在开船前 20 分钟办好手续。若停航，改 2/8，把知床顺延；无流冰时可能改成海上观光。",
+    "extra": "优先 2/7，提前预约并在开船前 20 分钟办好手续。若 7 日停航，8 日退房后按船公司公布的班次再试，当天仍入住美幌木屋。两套路线都在 9 日去知床。无流冰时可能改成海上观光。",
     "links": []
   },
   {
@@ -60,7 +60,7 @@
     "hours": "冬季 9:00–16:30，最后入馆 16:00",
     "closed": "全年开放",
     "review": "适合父母。父母按成人票，展望台可单独免费参观；馆方另有 75 岁起的优惠票 ¥790（约 33 元）。",
-    "drive": "美幌约 30–40 分钟",
+    "drive": "网走前两晚住市区，车程随最终房址确定。美幌约 30–40 分钟。",
     "url": "https://www.ryuhyokan.com/use/",
     "lat": 44.0005808,
     "lng": 144.239651,
@@ -84,7 +84,7 @@
     "hours": "9:00–17:00，最后入馆 16:00",
     "closed": "出发前查当日公告",
     "review": "适合父母。展馆之间有露天路段，路滑时缩短路线。",
-    "drive": "美幌约 20 分钟，雪天另留时间",
+    "drive": "网走前两晚住市区，车程随最终房址确定。美幌约 20 分钟，雪天另留时间。",
     "url": "https://www.kangoku.jp/info/visit",
     "lat": 43.9956819,
     "lng": 144.229321,
@@ -108,7 +108,7 @@
     "hours": "白天随到随看，冬季公厕约 9:00–16:00",
     "closed": "暴风雪或封路时取消",
     "review": "适合短停。父母在平坦处观看，避开崖边和冰缘。",
-    "drive": "美幌约 35–45 分钟",
+    "drive": "网走前两晚住市区，车程随最终房址确定。美幌约 35–45 分钟。",
     "url": "https://visit-abashiri.jp/scenery/b1b92ba8835b04de0cdaf87843cb6d0769a68f3d.html",
     "lat": 44.11222,
     "lng": 144.24306,
@@ -132,7 +132,7 @@
     "hours": "约 130 分钟；拟 1/15–3/22，可能提前结束",
     "closed": "按结冰情况开放，须预约",
     "review": "较适合父母。低温久坐，厚袜和保暖外套很重要。",
-    "drive": "美幌至网走市区约 30–40 分钟",
+    "drive": "网走前两晚住市区，车程随最终房址确定。美幌至网走市区约 30–40 分钟。",
     "url": "https://www.jinendo.net/program01",
     "lat": 44.0220409,
     "lng": 144.273901,
@@ -204,7 +204,7 @@
     "hours": "2027/1/15–3/22，约 12:30 开始，含接送约 90 分钟。集合时刻因接送地点略有差别。",
     "closed": "天气影响观鸟，无法保证目击",
     "review": "向导开车找海雕，下车后可免费借双筒望远镜观察，适合全家一起参加。",
-    "drive": "美幌至网走市区约 30–40 分钟",
+    "drive": "网走前两晚住市区，车程随最终房址确定。美幌至网走市区约 30–40 分钟。",
     "url": "https://www.jinendo.net/program_w/program03/",
     "lat": 44.0220409,
     "lng": 144.273901,
@@ -212,7 +212,7 @@
     "geoSource": "https://www.jinendo.net/program_w/program03/",
     "image": "img/a09.jpg",
     "photoSource": "https://www.jinendo.net/programlist_w/",
-    "extra": "方案一建议 2/9 在此集合。也可约 JR 網走駅或网走市区指定酒店接送。实际观鸟地点随海雕活动而变。",
+    "extra": "可约在破冰船码头、JR 網走駅或网走市区的指定住处接送。实际观鸟地点随海雕活动而变。",
     "links": []
   },
   {
@@ -260,7 +260,7 @@
     "geoSource": "https://www.town.bihoro.hokkaido.jp/site/kanko/1582.html",
     "image": "img/a11.jpg",
     "photoSource": "https://www.bihoro-k.com/html/towninfo-tougenoyu.html",
-    "extra": "建议 2/9 晚去，出发前查维护公告。",
+    "extra": "在美幌住宿时可选，出发前查休息日与维护公告。",
     "links": []
   },
   {
@@ -276,7 +276,7 @@
     "hours": "约 1.5–2 小时，须提前报名",
     "closed": "流冰未接岸、风浪大时可能改期或停办",
     "review": "请量力。父母五十多岁，三家年龄条件均符合。每位参加者须能自行穿脱潜水服，并在凹凸冰面上行走。",
-    "drive": "美幌至乌托罗约 2–2.5 小时单程",
+    "drive": "2/9 从美幌生态木屋去乌托罗，单程约 2–2.5 小时，雪天另留余量。",
     "url": "https://www.shinra.or.jp/ryuhyo_walk.html",
     "lat": 44.069034,
     "lng": 144.990695,
@@ -360,7 +360,7 @@
     "price": "进站免费（¥0 / 0 元），餐饮另计",
     "hours": "冬季 9:00–17:00，餐厅约 10:00–15:00",
     "closed": "年末年初及部分冬季日期休馆，行前查公告",
-    "review": "非常适合父母。乌托罗的暖房休息点。",
+    "review": "2/9 知床世界遺産センター周二休馆。不参加流冰走的家人可以在道之驿休息等候。",
     "drive": "美幌约 2–2.5 小时",
     "url": "https://www.shiretoko.asia/detail/tourist/utoromichi",
     "lat": 44.069034,
@@ -382,11 +382,11 @@
     "highlight": "在室内看知床动物、爪痕模型和自然展览，与道之驿相邻。",
     "signature": "",
     "price": "免费（¥0 / 0 元）",
-    "hours": "冬季 9:00–16:30",
-    "closed": "冬季周二休；若知床顺延至 2/9，请改去道の駅",
-    "review": "适合父母。有无障碍卫生间，适合不上冰时等候。",
+    "hours": "冬季 10/21–4/19 通常 9:00–16:30，周二休馆。",
+    "closed": "冬季周二休馆。2/9 正逢周二，岸上等候请去旁边的道の駅うとろ・シリエトク。",
+    "review": "开放日适合父母。2/9 的室内休息点选道之驿。",
     "drive": "美幌约 2–2.5 小时",
-    "url": "https://www.shiretoko.asia/detail/tourist/shiretoko_whcc",
+    "url": "https://policies.env.go.jp/park/shiretoko/whcc/index.html",
     "lat": 44.0694826,
     "lng": 144.991301,
     "precision": "设施位置",
@@ -394,7 +394,12 @@
     "image": "img/a16.jpg",
     "photoSource": "https://www.shiretoko.asia/detail/tourist/shiretoko_whcc",
     "extra": "与知床自然センター为不同设施。",
-    "links": []
+    "links": [
+      {
+        "name": "环境省 · 本季开放时间",
+        "url": "https://policies.env.go.jp/park/shiretoko/whcc/news/2026/20261021/"
+      }
+    ]
   },
   {
     "id": "a17",
@@ -917,9 +922,9 @@
     "type": "备选住宿",
     "highlight": "两对各住一间。两间独立卧室都在二楼，每间有三张单人床。一楼是客厅、浴室和卫生间。",
     "signature": "",
-    "price": "四晚税前约 ¥35,248/人（约 1,480 元） · 三晚税前约 ¥27,451/人（约 1,153 元）",
+    "price": "备选房源，人均价按实际入住日期重查",
     "hours": "15:00–22:00 入住，10:00 前退房。",
-    "closed": "比价时 Airbnb 在两个日期组合均显示 2/5 前可免费取消，具体截止时刻见订单条件。",
+    "closed": "房态、含税总价及取消期限均需按实际日期重查。",
     "review": "美幌站前整栋，冬季也能停三辆车。夜里从卧室去卫生间需要下楼。",
     "drive": "女满别机场至住处约 15 分钟",
     "url": "https://www.airbnb.jp/rooms/1806958276032753119",
@@ -929,16 +934,8 @@
     "geoSource": "https://travel.rakuten.co.jp/HOTEL/194144/rtmap.html",
     "image": "img/s01.jpg",
     "photoSource": "https://www.airbnb.jp/rooms/1806958276032753119",
-    "extra": "原行程写作 Guest House Le Pou，原四晚参考价为每人 ¥33,188（约 1,394 元）。本次四位成人的 Airbnb 页面显示四晚整栋 ¥140,990、三晚整栋 ¥109,802，均为税前显示价。最终应付以结算明细为准。",
+    "extra": "美幌站前的备选整栋。原行程亦记为 Guest House Le Pou。",
     "links": [
-      {
-        "name": "Airbnb · 四晚四人",
-        "url": "https://www.airbnb.jp/rooms/1806958276032753119?check_in=2027-02-06&check_out=2027-02-10&adults=4&guests=4&currency=JPY"
-      },
-      {
-        "name": "Airbnb · 三晚四人",
-        "url": "https://www.airbnb.jp/rooms/1806958276032753119?check_in=2027-02-06&check_out=2027-02-09&adults=4&guests=4&currency=JPY"
-      },
       {
         "name": "楽天トラベル · 登记名称与照片",
         "url": "https://travel.rakuten.co.jp/HOTEL/194144/194144.html"
@@ -955,19 +952,19 @@
     "type": "行程住宿",
     "highlight": "约 50 平方米的整栋小屋，四人分住两间独立卧室。一间有一张双人床，另一间有两张单人床。",
     "signature": "",
-    "price": "三晚 ¥16,500/人（约 690 元）",
-    "hours": "方案一 2/10–2/13，住三晚。方案二 2/9–2/13，住四晚，需重新报价。",
-    "closed": "原 Booking 三晚报价列 2/9 前可免费取消。改为四晚需另核价格和取消期限。",
-    "review": "从住处步行难买到食材。方案一在美幌出发前买，方案二在津别镇买。道の駅あいおい周二休息。",
+    "price": "三晚原报价 ¥16,500/人（约 690 元）",
+    "hours": "按原安排于 2/10 入住，10、11、12 日过夜，2/13 退房。",
+    "closed": "取消条件以实际预订渠道为准。",
+    "review": "附近缺少超市或饭馆。换住当天可提前在美幌或津别镇备齐食材。",
     "drive": "到阿寒湖约 25 分钟，到女满别机场约 1 小时",
-    "url": "https://www.booking.com/searchresults.html?ss=Aioi+House+Tsubetsu",
+    "url": "https://www.booking.com/searchresults.zh-cn.html?ss=Aioi+House+Tsubetsu&checkin=2027-02-10&checkout=2027-02-13&group_adults=4&group_children=0&no_rooms=1&selected_currency=JPY",
     "lat": 43.5433286,
     "lng": 143.9826059,
     "precision": "图钉取自公开的住宿地点。到店停车和入住入口以房东指引为准。",
     "geoSource": "https://www.google.co.jp/travel/hotels/entity/CgoIjK6Tyc6X_5Q4EAE",
     "image": "img/s02.jpg",
     "photoSource": "https://www.airbnb.jp/rooms/1425790170855532409",
-    "extra": "人均按四人入住、Booking 三晚整栋报价 ¥66,000（约 2,770 元）折算。Airbnb 页可对照房间照片，取消期限以实际预订渠道为准。",
+    "extra": "原 Booking 报价按三晚整栋、四位成人分摊。Airbnb 可查看同一处房源的卧室实拍。",
     "links": [
       {
         "name": "同一房源照片 · Airbnb",
@@ -992,9 +989,9 @@
     "type": "备选住宿",
     "signature": "",
     "highlight": "2023 年翻新的 103 平方米整栋。二楼两间卧室各有独立房门，一间双床，一间铺日式床垫。一楼另有一间铺双人床垫的卧室。",
-    "price": "四晚 ¥25,400/人（约 1,067 元） · 三晚 ¥19,550/人（约 821 元）",
+    "price": "备选房源，人均价按实际入住日期重查",
     "hours": "入住 15:00–19:00，10:00 退房。先到 Working Space KITEN 办手续，再开约 10 分钟到房子。钥匙最快 11:00 可领。",
-    "closed": "2/6–2/10 经营方公开日历未标占用，采用申请制，需等经营方确认。官网列入住前一天取消收房费 50%，当天 70%，无通知未到 100%。",
+    "closed": "采用申请制，空房与取消条款须由经营方确认。",
     "review": "卧室分布在两层，浴室和厕所均在一楼。有厨房、桑拿小屋和约三个普通车位。经营方提供各间实拍与价目。",
     "drive": "女满别机场至住处约 20 分钟，另留领取钥匙的时间。",
     "lat": 43.7875153,
@@ -1005,7 +1002,7 @@
     "url": "https://www.active-management.co.jp/guesthouse-bihoronobi/",
     "image": "img/s04.jpg",
     "photoSource": "https://www.active-management.co.jp/guesthouse-bihoronobi/",
-    "extra": "按四位成人及经营方公布费率计算，房费每人每晚 ¥5,750（约 242 元），三晚起清扫费四人平摊每人 ¥2,000（约 84 元），另含每人每晚 ¥100（约 4 元）住宿税。两档合计均已计入清扫费及住宿税。确认电话 050-1732-8726。",
+    "extra": "比价时请按实际晚数和四位成人查询，并核对清扫费和住宿税。经营方电话 050-1732-8726。",
     "links": [
       {
         "name": "町方户型图 · 看二楼两扇房门",
@@ -1033,9 +1030,9 @@
     "type": "行程住宿",
     "signature": "",
     "highlight": "两对可各用一楼一间双床房。Room 1 与 Room 2 分处东西两端，各自有入口，公共餐厅与客厅在中间。楼上还有第三间双床房。",
-    "price": "四晚 ¥13,000/人（约 546 元） · 三晚 ¥9,750/人（约 410 元）",
-    "hours": "15:00 入住，10:00 退房。提前六个月起电话受理。",
-    "closed": "町方对外受理整栋住宿预约，公布的是研修住宿价。2/6 起连续三晚或四晚的房态、普通家庭入住手续和最终费用请电话确认，050-1732-8726。",
+    "price": "两晚已约好，人均金额待补",
+    "hours": "2/8 入住，2/8、2/9 连住两晚，2/10 退房。设施标示 15:00 入住、10:00 退房，交接以实际约定为准。",
+    "closed": "本人已约好这两晚，具体费用按实际约定。",
     "review": "2010 年落成的北海道木材示范住宅。设厨房、浴室、停车场。Room 2 内有卫生间和洗手台。",
     "drive": "位于美幌町西侧的みどりの村。雪天请按机场至美幌一带约 15–25 分钟预留。",
     "lat": 43.8382187152,
@@ -1046,7 +1043,7 @@
     "url": "https://www.town.bihoro.hokkaido.jp/site/kanko/2590.html",
     "image": "img/s05.jpg",
     "photoSource": "https://bihoro.jp/hotel/127/",
-    "extra": "官方四人价折每晚每人 ¥3,250（约 137 元）。表中金额按晚数计算，额外税费如有以电话为准。官网将冬季 10% 暖气附加说明列在按小时租用一栏。",
+    "extra": "美幌町的环保示范住宅，由株式会社パンクチュアル管理。当地住宿联系 050-1732-8726。",
     "links": [
       {
         "name": "町方平面图 · 一楼两间双床房",
@@ -1078,9 +1075,9 @@
     "type": "备选住宿",
     "signature": "",
     "highlight": "建议一对用一楼 A11 双床卧室，另一对独用二楼卧室区。A11 实拍可见房门，二楼两间之间是宽通口，平面图标有通向梯厅的门。",
-    "price": "四晚 ¥31,625/人（约 1,328 元） · 三晚 ¥24,250/人（约 1,019 元）",
-    "hours": "2/6 入住，2/9 或 2/10 退房。房东提供自助入住，交接时间见当次房源规则。",
-    "closed": "11/19 查询，两档都显示 2/1 前免费取消，具体截止时刻以订单条件为准。",
+    "price": "备选房源，人均价按实际入住日期重查",
+    "hours": "房东提供自助入住，交接时间见当次房源规则。",
+    "closed": "请按实际日期重查房态、含税总价及取消期限。",
     "review": "Airbnb 评分 4.84/5（31 条）。114 平方米、两个卫生间，门前可停 2–3 辆车。室内各房间设有暖气。",
     "drive": "女满别机场至住处约 12 分钟（房东估计），超市约 5 分钟内车程。",
     "lat": 43.8246,
@@ -1088,10 +1085,10 @@
     "address": "北海道網走郡美幌町（门牌以房东入住指引为准）",
     "precision": "房源公开地图位置，未公开门牌。导航按房名搜索，最后一段请跟随入住指引。",
     "geoSource": "https://www.airbnb.jp/rooms/1248045537734551104",
-    "url": "https://www.airbnb.jp/rooms/1248045537734551104?check_in=2027-02-06&check_out=2027-02-10&adults=4&guests=4&currency=JPY",
+    "url": "https://www.airbnb.jp/rooms/1248045537734551104",
     "image": "img/s06.jpg",
     "photoSource": "https://www.airbnb.jp/rooms/1248045537734551104",
-    "extra": "Airbnb 已按四位成人显示四晚 ¥126,500、三晚 ¥97,000。价格明细标示无额外手续费，未单列当地住宿税。两对之间要能关门，请按一楼、二楼分住。",
+    "extra": "两对分用一楼和二楼卧室时，可结合房东平面图核对通往梯厅的门和楼梯位置。",
     "links": [
       {
         "name": "房东平面图 · A11 与二楼通口",
@@ -1100,10 +1097,6 @@
       {
         "name": "一楼卧室 · 房门实拍",
         "url": "https://a0.muscache.com/im/pictures/miso/Hosting-1248045537734551104/original/53c3a0f1-7434-4729-a6bb-b841baad9f97.jpeg"
-      },
-      {
-        "name": "Airbnb · 三晚四人",
-        "url": "https://www.airbnb.jp/rooms/1248045537734551104?check_in=2027-02-06&check_out=2027-02-09&adults=4&guests=4&currency=JPY"
       }
     ]
   },
@@ -1149,7 +1142,7 @@
     "hours": "2/6 JAL 羽田 12:20–女满别 14:00；2/13 AIRDO 女满别 09:15–羽田 11:10",
     "closed": "航班与还车时间按本次计划固定",
     "review": "父母和行李都要留够转乘、托运时间。",
-    "drive": "美幌约 15 分钟，相生约 1 小时，须另留雪路余量",
+    "drive": "首日前往网走市区，车程随房址确定。相生到机场约 1 小时，须另留雪路余量。",
     "url": "https://www.hokkaido-airports.com/ja/memanbetsu/",
     "lat": 43.8815542,
     "lng": 144.1596852,

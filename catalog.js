@@ -18,7 +18,7 @@
   const alerts = {
     f022: '2/7、2/8 店休', f058: '冬季营业待确认', f078: '出发前确认总本店地址',
     f046: '返程起飞时尚未开门', f047: '返程起飞时尚未开门', dinner: '钏路一日游可选',
-    a01: '2/6 晚固定', a02: '优先 2/7', a12: '请量力，提前报名',
+    a01: '2/6 晚固定', a02: '优先 2/7', a12: '计划 2/9 · 提前报名',
     a20: '必做滑冰 · 视冰场开放', a22: '2/11 节日 15:00', a24: '2027 场次待公布', a18: '仅随认证向导进入',
   };
 
@@ -65,7 +65,7 @@
   function hero(ctx, items, food) {
     const item = items.find(p => p.id === (food?'f028':'a02')) || items[0];
     const title = food ? '道东美食图鉴' : '冬季玩乐菜单';
-    const kicker = food ? '沿着自驾环线吃什么' : '从两处住宿出发';
+    const kicker = food ? '沿着自驾环线吃什么' : '按地区挑选想去的地方';
     const desc = food ? '网走的炭烤生羊肉、川汤的拉面、阿寒湖畔的阿伊努料理，沿途按口味挑一餐。' : '在海上看流冰，去湖边看天鹅，或找间温泉歇脚。挑好想去的地方，再决定哪天出发。';
     const count = food ? items.filter(p=>/^f\d{3}$/.test(p.id)).length : items.length;
     const stats = food ? count+' 家自选餐厅 · 另收钏路「炉ばた」' : count+' 项体验 · 4 个地区';
